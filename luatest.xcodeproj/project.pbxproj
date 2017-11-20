@@ -11,6 +11,10 @@
 		E866BCEF1FC2821000B395C5 /* LuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCED1FC2821000B395C5 /* LuaContext.m */; };
 		E866BCF51FC285E900B395C5 /* lwiginternal.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF21FC285E900B395C5 /* lwiginternal.c */; };
 		E866BCF61FC285E900B395C5 /* lenvlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF31FC285E900B395C5 /* lenvlib.c */; };
+		E866BCFB1FC2900200B395C5 /* ohm.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF81FC2883700B395C5 /* ohm.lua */; };
+		E866BCFC1FC2900200B395C5 /* ohm.luac in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF71FC2883700B395C5 /* ohm.luac */; };
+		E866BCFD1FC2900200B395C5 /* testsuite.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF91FC2883700B395C5 /* testsuite.lua */; };
+		E866BCFE1FC2900200B395C5 /* Wherigo.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCFA1FC28E5900B395C5 /* Wherigo.lua */; };
 		E88E4D411FC278D900E784F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E4D401FC278D900E784F9 /* main.m */; };
 		E88E4DDA1FC279FF00E784F9 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA41FC279F900E784F9 /* lmathlib.c */; };
 		E88E4DDB1FC279FF00E784F9 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA81FC279F900E784F9 /* linit.c */; };
@@ -47,12 +51,16 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		E88E4D3B1FC278D900E784F9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				E866BCFB1FC2900200B395C5 /* ohm.lua in CopyFiles */,
+				E866BCFC1FC2900200B395C5 /* ohm.luac in CopyFiles */,
+				E866BCFD1FC2900200B395C5 /* testsuite.lua in CopyFiles */,
+				E866BCFE1FC2900200B395C5 /* Wherigo.lua in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -66,6 +74,10 @@
 		E866BCF21FC285E900B395C5 /* lwiginternal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lwiginternal.c; sourceTree = "<group>"; };
 		E866BCF31FC285E900B395C5 /* lenvlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lenvlib.c; sourceTree = "<group>"; };
 		E866BCF41FC285E900B395C5 /* lwiginternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lwiginternal.h; sourceTree = "<group>"; };
+		E866BCF71FC2883700B395C5 /* ohm.luac */ = {isa = PBXFileReference; lastKnownFileType = file; path = ohm.luac; sourceTree = "<group>"; };
+		E866BCF81FC2883700B395C5 /* ohm.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ohm.lua; sourceTree = "<group>"; };
+		E866BCF91FC2883700B395C5 /* testsuite.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testsuite.lua; sourceTree = "<group>"; };
+		E866BCFA1FC28E5900B395C5 /* Wherigo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Wherigo.lua; sourceTree = "<group>"; };
 		E88E4D3D1FC278D900E784F9 /* luatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = luatest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88E4D401FC278D900E784F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88E4DA31FC279F900E784F9 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstate.h; path = "lua-5.1.5/src/lstate.h"; sourceTree = SOURCE_ROOT; };
@@ -137,6 +149,10 @@
 		E866BCF01FC2853300B395C5 /* cartridges */ = {
 			isa = PBXGroup;
 			children = (
+				E866BCF81FC2883700B395C5 /* ohm.lua */,
+				E866BCF71FC2883700B395C5 /* ohm.luac */,
+				E866BCF91FC2883700B395C5 /* testsuite.lua */,
+				E866BCFA1FC28E5900B395C5 /* Wherigo.lua */,
 			);
 			path = cartridges;
 			sourceTree = "<group>";
