@@ -15,6 +15,7 @@
 		E866BCFC1FC2900200B395C5 /* ohm.luac in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF71FC2883700B395C5 /* ohm.luac */; };
 		E866BCFD1FC2900200B395C5 /* testsuite.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF91FC2883700B395C5 /* testsuite.lua */; };
 		E866BCFE1FC2900200B395C5 /* Wherigo.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCFA1FC28E5900B395C5 /* Wherigo.lua */; };
+		E866BD021FC2EB9000B395C5 /* WIG.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BD011FC2EB9000B395C5 /* WIG.m */; };
 		E88E4D411FC278D900E784F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E4D401FC278D900E784F9 /* main.m */; };
 		E88E4DDA1FC279FF00E784F9 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA41FC279F900E784F9 /* lmathlib.c */; };
 		E88E4DDB1FC279FF00E784F9 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA81FC279F900E784F9 /* linit.c */; };
@@ -78,6 +79,8 @@
 		E866BCF81FC2883700B395C5 /* ohm.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ohm.lua; sourceTree = "<group>"; };
 		E866BCF91FC2883700B395C5 /* testsuite.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testsuite.lua; sourceTree = "<group>"; };
 		E866BCFA1FC28E5900B395C5 /* Wherigo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Wherigo.lua; sourceTree = "<group>"; };
+		E866BD001FC2EB9000B395C5 /* WIG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIG.h; sourceTree = "<group>"; };
+		E866BD011FC2EB9000B395C5 /* WIG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIG.m; sourceTree = "<group>"; };
 		E88E4D3D1FC278D900E784F9 /* luatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = luatest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88E4D401FC278D900E784F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88E4DA31FC279F900E784F9 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstate.h; path = "lua-5.1.5/src/lstate.h"; sourceTree = SOURCE_ROOT; };
@@ -160,6 +163,8 @@
 		E866BCFF1FC2EB3D00B395C5 /* Wherigo library */ = {
 			isa = PBXGroup;
 			children = (
+				E866BD001FC2EB9000B395C5 /* WIG.h */,
+				E866BD011FC2EB9000B395C5 /* WIG.m */,
 			);
 			path = "Wherigo library";
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				E88E4DE51FC279FF00E784F9 /* lvm.c in Sources */,
 				E88E4DEB1FC279FF00E784F9 /* print.c in Sources */,
 				E88E4DF51FC279FF00E784F9 /* lstring.c in Sources */,
+				E866BD021FC2EB9000B395C5 /* WIG.m in Sources */,
 				E88E4DE81FC279FF00E784F9 /* lbaselib.c in Sources */,
 				E88E4DF81FC279FF00E784F9 /* lparser.c in Sources */,
 				E88E4DDB1FC279FF00E784F9 /* linit.c in Sources */,
