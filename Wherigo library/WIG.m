@@ -41,8 +41,11 @@
         NSLog(@"Error parsing lua code: %@", error);
         return;
     }
-    self.G_ = self.ctx[@"_G"];
-    self.cart = self.ctx[@"cart"];
+    NSLog(@"G_");
+    self.G_ = [self.ctx globalVar:@"_G"];
+    NSLog(@"cart");
+    self.cart = [self.ctx globalVar:@"cart"];
+    NSLog(@"---");
 
     myScript = LUA_STRING(
         cart.OnStart()
@@ -68,9 +71,9 @@
 - (void)messageBoxCallback
 {
     NSString *myScript = LUA_STRING(
-        for k,v in pairs(Wherigo) do
-            print(k, v)
-        end
+        -- for k,v in pairs(Wherigo) do
+        --     print(k, v)
+        -- end
         Wherigo._MessageBoxResponse(1)
     );
     [self runScript:myScript];
