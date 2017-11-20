@@ -67,11 +67,11 @@ static int luaPanicked(lua_State *L) {
 
 static const luaL_Reg loadedlibs[] = {
   {"_G", luaopen_base},
-//  {LUA_LOADLIBNAME, luaopen_package},
+  {LUA_LOADLIBNAME, luaopen_package},
 //  {LUA_COLIBNAME, luaopen_coroutine},
   {LUA_TABLIBNAME, luaopen_table},
 //  {LUA_IOLIBNAME, luaopen_io},
-//  {LUA_OSLIBNAME, luaopen_os},
+  {LUA_OSLIBNAME, luaopen_os},
   {LUA_STRLIBNAME, luaopen_string},
 //  {LUA_BITLIBNAME, luaopen_bit32},
   {LUA_MATHLIBNAME, luaopen_math},
@@ -423,10 +423,12 @@ static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen) {
                 lua_pushnil(L);  /* first key */
                 while( lua_next(L, -2) ) {
                     int index = lua_tonumber(L, -2) - 1;
-                    id object = toObjC2(L, -1, seen);
-                    if( ! object )
-                        object = [NSNull null];
-                    result[index] = object;
+                    if (index >= 0) {
+                        id object = toObjC2(L, -1, seen);
+                        if( ! object )
+                            object = [NSNull null];
+                        result[index] = object;
+                    }
                     lua_pop(L, 1);
                 }
             }
