@@ -959,6 +959,7 @@ Wherigo.ZCommand.metatable = {
 --   @return ZCommand object
 function Wherigo.ZCommand.new(table)
 	table = table or {}
+
 	-- ReciprocatedCmds
 	-- EmptyTargetListText
 	local self = {
@@ -1598,6 +1599,9 @@ function Wherigo.ZCartridge.new(  )
 	self.AllZItems = {}
 	self.AllZones = {}
 	self.AllZTimers = {}
+	self.AllZTasks = {}
+	self.AllZMedias = {}
+	self.AllZInputs = {}
 	self.Company = Env._Company
 	self.Activity = Env._Activity
 	self.ZVariables = {}
@@ -1656,6 +1660,8 @@ function Wherigo.ZCartridge.new(  )
 			return self.AllZItems
 		elseif t == "Timer" then
 			return self.AllZTimers
+		elseif t == "Task" then
+			return self.AllZTasks
 		elseif t == "ZCharacter" then
 			return self.AllZCharacters
 			end
@@ -1730,6 +1736,7 @@ for k,v in pairs(Wherigo.ZObject.metatable) do Wherigo.ZMedia.metatable[k] = v e
 function Wherigo.ZMedia.new( cartridge )
 	self = Wherigo.ZObject.new(cartridge)
 	self._classname = Wherigo.CLASS_ZMEDIA
+	table.insert(self.Cartridge.AllZMedias, self)
 	--[[
 	self.AltText = ''
 	self.Description = ''
@@ -1825,6 +1832,7 @@ function Wherigo.ZTask.new( cartridge, container )
 	-- export CompletedTime
 	local self = Wherigo.ZObject.new( cartridge, container )
 	self._classname = Wherigo.CLASS_ZTASK
+	table.insert(self.Cartridge.AllZTasks, self)
 	if self._active == nil then
 		self._active = true
 		end
@@ -1999,6 +2007,7 @@ for k,v in pairs(Wherigo.ZObject.metatable) do Wherigo.ZInput.metatable[k] = v e
 --   @return 	ZTimer object
 function Wherigo.ZInput.new( cartridge )
 	local self = Wherigo.ZObject.new( cartridge )
+	table.insert(self.Cartridge.AllZInputs, self)
 	self._classname = Wherigo.CLASS_ZINPUT
 	--[[
 	OnGetInput event
