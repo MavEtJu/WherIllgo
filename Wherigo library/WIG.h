@@ -12,4 +12,8 @@
 
 - (void)run:(NSString *)filename;
 
+- (void)messageBoxCallback;
+
 @end
+
+extern WIG *wig;

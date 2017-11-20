@@ -65,4 +65,15 @@
     }
 }
 
+- (void)messageBoxCallback
+{
+    NSString *myScript = LUA_STRING(
+        for k,v in pairs(Wherigo) do
+            print(k, v)
+        end
+        Wherigo._MessageBoxResponse(1)
+    );
+    [self runScript:myScript];
+}
+
 @end
