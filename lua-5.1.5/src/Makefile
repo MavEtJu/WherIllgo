@@ -8,7 +8,7 @@
 PLAT= none
 
 CC= gcc
-CFLAGS= -O2 -Wall $(MYCFLAGS)
+CFLAGS= -O2 -Wall $(MYCFLAGS) $(BCFLAG)
 AR= ar rcu
 RANLIB= ranlib
 RM= rm -f
@@ -17,6 +17,12 @@ LIBS= -lm $(MYLIBS)
 MYCFLAGS=
 MYLDFLAGS=
 MYLIBS=
+
+# ++ lua 32 bit ============= {{
+BCFLAG = 
+#
+# BCFLAG = -DLUA_ENABLE_32BIT
+# ++ lua 32 bit ============= }}
 
 # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
 

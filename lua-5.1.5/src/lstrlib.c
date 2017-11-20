@@ -19,6 +19,7 @@
 #include "lauxlib.h"
 #include "lualib.h"
 
+/* #define IS_STRICT_FORMAT 1*/
 
 /* macro to `unsign' a character */
 #define uchar(c)        ((unsigned char)(c))
@@ -798,7 +799,11 @@ static int str_format (lua_State *L) {
         }
         case 's': {
           size_t l;
+#ifdef IS_STRICT_FORMAT
           const char *s = luaL_checklstring(L, arg, &l);
+#else
+          const char *s = lua_tolstring(L, arg, &l);
+#endif
           if (!strchr(form, '.') && l >= 100) {
             /* no precision and string is too long to be formatted;
                keep original string */
