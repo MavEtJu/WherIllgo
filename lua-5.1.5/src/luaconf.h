@@ -11,6 +11,7 @@
 #include <limits.h>
 #include <stddef.h>
 
+#define LUA_ENABLE_32BIT 1
 #ifdef LUA_ENABLE_32BIT
 #include <stdint.h>
 typedef int32_t bcint;
