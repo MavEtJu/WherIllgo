@@ -157,12 +157,20 @@
 			path = cartridges;
 			sourceTree = "<group>";
 		};
+		E866BCFF1FC2EB3D00B395C5 /* Wherigo library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Wherigo library";
+			sourceTree = "<group>";
+		};
 		E88E4D341FC278D900E784F9 = {
 			isa = PBXGroup;
 			children = (
 				E88E4DA11FC279D200E784F9 /* lua-5.1.5 */,
 				E866BCF01FC2853300B395C5 /* cartridges */,
-				E88E4DF91FC27AFB00E784F9 /* wherigo */,
+				E88E4DF91FC27AFB00E784F9 /* Wherigo LUA */,
+				E866BCFF1FC2EB3D00B395C5 /* Wherigo library */,
 				E88E4D3F1FC278D900E784F9 /* luatest */,
 				E88E4D3E1FC278D900E784F9 /* Products */,
 			);
@@ -250,7 +258,7 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		E88E4DF91FC27AFB00E784F9 /* wherigo */ = {
+		E88E4DF91FC27AFB00E784F9 /* Wherigo LUA */ = {
 			isa = PBXGroup;
 			children = (
 				E866BCF31FC285E900B395C5 /* lenvlib.c */,
@@ -258,7 +266,7 @@
 				E866BCF21FC285E900B395C5 /* lwiginternal.c */,
 				E866BCF41FC285E900B395C5 /* lwiginternal.h */,
 			);
-			path = wherigo;
+			path = "Wherigo LUA";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
