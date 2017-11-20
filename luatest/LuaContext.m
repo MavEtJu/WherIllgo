@@ -364,12 +364,34 @@ static const luaL_Reg loadedlibs[] = {
     return YES;
 }
 
+#define IGNORE_NONE         0
+#define IGNORE_GLOBAL       1 << 0
+#define IGNORE_CARTRIDGE    1 << 1
+#define IGNORE_SELF         1 << 2
+
 static inline id toObjC(lua_State *L, int index) {
     NSMutableDictionary *seen = [NSMutableDictionary dictionaryWithCapacity:20];
-    return toObjC2(L, index, seen);
+    return toObjC2(L, index, seen, 0, 1000, IGNORE_NONE);
 }
 
-static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen) {
+- (id)globalVar:(id)key {
+    if( ! [key isKindOfClass:[NSString class]] ) {
+        if( [key respondsToSelector:@selector(stringValue)] )
+            key = [key stringValue];
+        else
+            key = [key description];
+    }
+    lua_getglobal(L, [key UTF8String]);
+    NSMutableDictionary *seen = [NSMutableDictionary dictionaryWithCapacity:20];
+    id result = toObjC2(L, -1, seen, 0, 1000, IGNORE_CARTRIDGE | IGNORE_SELF | IGNORE_GLOBAL);
+    lua_pop(L, 1);
+    return result;
+}
+
+static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen, NSInteger currentDepth, NSInteger maxDepth, NSInteger ignoreList) {
+    if (currentDepth >= maxDepth)
+        return [NSString stringWithFormat:@"<<MaxDepth reached (%ld)>>", (long)maxDepth];
+
     switch( lua_type(L, index) ) {
         case LUA_TNIL:
             return nil;
@@ -407,8 +429,16 @@ static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen) {
                 
                 lua_pushnil(L);  /* first key */
                 while( lua_next(L, -2) ) {
-                    id key = toObjC2(L, -2, seen);
-                    id object = toObjC2(L, -1, seen);
+                    id key = toObjC2(L, -2, seen, currentDepth + 1, maxDepth, ignoreList);
+                    id object = nil;
+                    if (currentDepth > 0 && ((ignoreList & IGNORE_CARTRIDGE) != 0) && ([key isEqualToString:@"Cartridge"] == YES))
+                        object = @"<<ZCartridge ignored>>";
+                    else if (currentDepth > 0 && ((ignoreList & IGNORE_SELF) != 0) && ([key isEqualToString:@"self"] == YES))
+                        object = @"<<self ignored>>";
+                    else if (currentDepth > 0 && ((ignoreList & IGNORE_GLOBAL) != 0) && ([key isEqualToString:@"_G"] == YES))
+                        object = @"<<_G ignored>>";
+                    else
+                        object = toObjC2(L, -1, seen, currentDepth + 1, maxDepth, ignoreList);
                     if( ! key )
                         continue;
                     if( ! object )
@@ -424,7 +454,7 @@ static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen) {
                 while( lua_next(L, -2) ) {
                     int index = lua_tonumber(L, -2) - 1;
                     if (index >= 0) {
-                        id object = toObjC2(L, -1, seen);
+                        id object = toObjC2(L, -1, seen, currentDepth + 1, maxDepth, ignoreList);
                         if( ! object )
                             object = [NSNull null];
                         result[index] = object;
@@ -439,7 +469,7 @@ static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen) {
             return result;
         }
         case LUA_TFUNCTION:
-            return [NSString stringWithFormat:@"Function at 0x%x", (u_long)lua_topointer(L, index)];
+            return [NSString stringWithFormat:@"Function at 0x%x", (uint32)lua_topointer(L, index)];
         case LUA_TUSERDATA:
         case LUA_TTHREAD:
         case LUA_TLIGHTUSERDATA:

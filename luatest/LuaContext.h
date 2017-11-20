@@ -85,5 +85,6 @@ typedef NS_ENUM(NSUInteger, LuaErrorCode) {
  @param object The value to set `key` to in this context
  */
 - (void)setObject:(id)object forKeyedSubscript:(NSObject <NSCopying> *)key;
+- (id)globalVar:(id)key;
 
 @end
