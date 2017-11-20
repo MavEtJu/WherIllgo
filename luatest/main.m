@@ -29,16 +29,17 @@ void doLua(void)
 
     NSLog(@"globalVar is: %@", ctx[@"globalVar"]); // should print "globalVar is: [ 0.0, 1.0 ]"
 
-    id result = [ctx call:@"myFunction" args:@[ @0.5 ] error:&error];
+    id result = [ctx call:"myFunction" with:@[ @0.5 ] error:&error];
     if( error ) {
         NSLog(@"Error calling myFunction: %@", error);
         return;
     }
     NSLog(@"myFunction returned: %@", result); // should print "myFunction returned: '1'"
 
-    ctx[@"globalVar"] = @[ 0.2, 0.4 ];
+    ctx[@"globalVar"] = @[ @0.2, @0.4 ];
+    id foo = ctx[@"_G"];
 
-    result = [ctx call:@"myFunction" args:@[ @0.5 ] error:&error];
+    result = [ctx call:"myFunction" with:@[ @0.5 ] error:&error];
     if( error ) {
         NSLog(@"Error calling myFunction: %@", error);
         return;
@@ -50,6 +51,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        doLua();
     }
     return 0;
 }
