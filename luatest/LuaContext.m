@@ -360,6 +360,11 @@ static const luaL_Reg loadedlibs[] = {
 }
 
 static inline id toObjC(lua_State *L, int index) {
+    NSMutableDictionary *seen = [NSMutableDictionary dictionaryWithCapacity:20];
+    return toObjC2(L, index, seen);
+}
+
+static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen) {
     switch( lua_type(L, index) ) {
         case LUA_TNIL:
             return nil;
@@ -372,6 +377,12 @@ static inline id toObjC(lua_State *L, int index) {
         case LUA_TTABLE:
         {
             BOOL isDict = NO;
+
+            u_long p = (u_long)lua_topointer(L, index);
+            NSNumber *pp = [NSNumber numberWithUnsignedLong:p];
+            if ([seen objectForKey:pp] != nil)
+                return @"<<Loop detected>>";
+            [seen setObject:@"" forKey:pp];
 
             lua_pushvalue(L, index); // make sure the table is at the top
             lua_pushnil(L);  /* first key */
@@ -391,8 +402,8 @@ static inline id toObjC(lua_State *L, int index) {
                 
                 lua_pushnil(L);  /* first key */
                 while( lua_next(L, -2) ) {
-                    id key = toObjC(L, -2);
-                    id object = toObjC(L, -1);
+                    id key = toObjC2(L, -2, seen);
+                    id object = toObjC2(L, -1, seen);
                     if( ! key )
                         continue;
                     if( ! object )
@@ -407,18 +418,21 @@ static inline id toObjC(lua_State *L, int index) {
                 lua_pushnil(L);  /* first key */
                 while( lua_next(L, -2) ) {
                     int index = lua_tonumber(L, -2) - 1;
-                    id object = toObjC(L, -1);
+                    id object = toObjC2(L, -1, seen);
                     if( ! object )
                         object = [NSNull null];
                     result[index] = object;
                     lua_pop(L, 1);
                 }
             }
-              
+
+            [seen removeObjectForKey:pp];
+
             lua_pop(L, 1); // pop the table off
             return result;
         }
         case LUA_TFUNCTION:
+            return [NSString stringWithFormat:@"Function at 0x%x", (u_long)lua_topointer(L, index)];
         case LUA_TUSERDATA:
         case LUA_TTHREAD:
         case LUA_TLIGHTUSERDATA:
