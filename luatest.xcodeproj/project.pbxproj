@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E866BCEE1FC2821000B395C5 /* LuaExportMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */; };
 		E866BCEF1FC2821000B395C5 /* LuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCED1FC2821000B395C5 /* LuaContext.m */; };
+		E866BCF51FC285E900B395C5 /* lwiginternal.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF21FC285E900B395C5 /* lwiginternal.c */; };
+		E866BCF61FC285E900B395C5 /* lenvlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF31FC285E900B395C5 /* lenvlib.c */; };
 		E88E4D411FC278D900E784F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E4D401FC278D900E784F9 /* main.m */; };
 		E88E4DDA1FC279FF00E784F9 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA41FC279F900E784F9 /* lmathlib.c */; };
 		E88E4DDB1FC279FF00E784F9 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA81FC279F900E784F9 /* linit.c */; };
@@ -60,6 +62,10 @@
 		E866BCEB1FC2821000B395C5 /* LuaContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaContext.h; sourceTree = "<group>"; };
 		E866BCEC1FC2821000B395C5 /* LuaExportMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaExportMetaData.h; sourceTree = "<group>"; };
 		E866BCED1FC2821000B395C5 /* LuaContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaContext.m; sourceTree = "<group>"; };
+		E866BCF11FC285E900B395C5 /* lenvlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lenvlib.h; sourceTree = "<group>"; };
+		E866BCF21FC285E900B395C5 /* lwiginternal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lwiginternal.c; sourceTree = "<group>"; };
+		E866BCF31FC285E900B395C5 /* lenvlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lenvlib.c; sourceTree = "<group>"; };
+		E866BCF41FC285E900B395C5 /* lwiginternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lwiginternal.h; sourceTree = "<group>"; };
 		E88E4D3D1FC278D900E784F9 /* luatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = luatest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88E4D401FC278D900E784F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88E4DA31FC279F900E784F9 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstate.h; path = "lua-5.1.5/src/lstate.h"; sourceTree = SOURCE_ROOT; };
@@ -128,10 +134,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E866BCF01FC2853300B395C5 /* cartridges */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cartridges;
+			sourceTree = "<group>";
+		};
 		E88E4D341FC278D900E784F9 = {
 			isa = PBXGroup;
 			children = (
 				E88E4DA11FC279D200E784F9 /* lua-5.1.5 */,
+				E866BCF01FC2853300B395C5 /* cartridges */,
 				E88E4DF91FC27AFB00E784F9 /* wherigo */,
 				E88E4D3F1FC278D900E784F9 /* luatest */,
 				E88E4D3E1FC278D900E784F9 /* Products */,
@@ -223,6 +237,10 @@
 		E88E4DF91FC27AFB00E784F9 /* wherigo */ = {
 			isa = PBXGroup;
 			children = (
+				E866BCF31FC285E900B395C5 /* lenvlib.c */,
+				E866BCF11FC285E900B395C5 /* lenvlib.h */,
+				E866BCF21FC285E900B395C5 /* lwiginternal.c */,
+				E866BCF41FC285E900B395C5 /* lwiginternal.h */,
 			);
 			path = wherigo;
 			sourceTree = "<group>";
@@ -305,6 +323,7 @@
 				E88E4DF11FC279FF00E784F9 /* lstate.c in Sources */,
 				E866BCEE1FC2821000B395C5 /* LuaExportMetaData.m in Sources */,
 				E88E4DF21FC279FF00E784F9 /* ldebug.c in Sources */,
+				E866BCF51FC285E900B395C5 /* lwiginternal.c in Sources */,
 				E866BCEF1FC2821000B395C5 /* LuaContext.m in Sources */,
 				E88E4DEE1FC279FF00E784F9 /* ldump.c in Sources */,
 				E88E4DF31FC279FF00E784F9 /* loslib.c in Sources */,
@@ -316,6 +335,7 @@
 				E88E4DED1FC279FF00E784F9 /* liolib.c in Sources */,
 				E88E4DDF1FC279FF00E784F9 /* lstrlib.c in Sources */,
 				E88E4DDA1FC279FF00E784F9 /* lmathlib.c in Sources */,
+				E866BCF61FC285E900B395C5 /* lenvlib.c in Sources */,
 				E88E4DE11FC279FF00E784F9 /* ltm.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

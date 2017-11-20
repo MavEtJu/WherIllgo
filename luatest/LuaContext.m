@@ -17,6 +17,9 @@
 #import "lauxlib.h"
 #import "lualib.h"
 
+#import "lenvlib.h"
+#import "lwiginternal.h"
+
 #if LUA_VERSION_NUM <= 501
 #define LUA_OK 0
 #endif
@@ -73,6 +76,8 @@ static const luaL_Reg loadedlibs[] = {
 //  {LUA_BITLIBNAME, luaopen_bit32},
   {LUA_MATHLIBNAME, luaopen_math},
 //  {LUA_DBLIBNAME, luaopen_debug},
+  {LUA_ENV, luaopen_env},
+  {LUA_WIGINTERNAL, luaopen_WIGInternal}, 
   {NULL, NULL}
 };
 
