@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TasksViewController : UIViewController
+@interface TasksViewController : UITableViewController
+
+- (void)reloadData;
 
 @end

@@ -14,7 +14,17 @@
 {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor purpleColor];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"A"];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self reloadData];
+}
+
+- (void)reloadData
+{
 }
 
 @end

@@ -8,11 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "LocationsViewController.h"
-#import "InventoryViewController.h"
-#import "YouSeeViewController.h"
-#import "TasksViewController.h"
-#import "MapViewController.h"
+#import "main.h"
 
 #import "WIG.h"
 
@@ -24,20 +20,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    wig = [[WIG alloc] init];
+
     UITabBarController *tbc = [[UITabBarController alloc] init];
 
-    UIViewController *locs = [[LocationsViewController alloc] init];
-    locs.title = @"Locations";
-    UIViewController *inv = [[InventoryViewController alloc] init];
-    inv.title = @"Inventory";
-    UIViewController *yousee = [[YouSeeViewController alloc] init];
-    yousee.title = @"You See";
-    UIViewController *tasks = [[TasksViewController alloc] init];
-    tasks.title = @"Tasks";
-    UIViewController *map = [[MapViewController alloc] init];
-    map.title = @"Maps";
+    locationsViewController = [[LocationsViewController alloc] init];
+    locationsViewController.title = @"Locations";
+    inventoryViewController = [[InventoryViewController alloc] init];
+    inventoryViewController.title = @"Inventory";
+    youSeeViewController = [[YouSeeViewController alloc] init];
+    youSeeViewController.title = @"You See";
+    tasksViewController = [[TasksViewController alloc] init];
+    tasksViewController.title = @"Tasks";
+    mapViewController = [[MapViewController alloc] init];
+    mapViewController.title = @"Maps";
 
-    NSArray *controllers = @[locs, yousee, inv, tasks, map];
+    NSArray *controllers = @[
+        locationsViewController,
+        tasksViewController,
+        youSeeViewController,
+        inventoryViewController,
+        mapViewController
+    ];
 
     [tbc setViewControllers:controllers animated:YES];
 
@@ -45,7 +49,6 @@
     self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
 
-    wig = [[WIG alloc] init];
     [wig run:@"testsuite.lua"];
 
     return YES;

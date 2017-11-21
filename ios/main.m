@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+#import "main.h"
+
+YouSeeViewController *youSeeViewController;
+LocationsViewController *locationsViewController;
+MapViewController *mapViewController;
+InventoryViewController *inventoryViewController;
+TasksViewController *tasksViewController;
+
+
 int main(int argc, char * argv[])
 {
     @autoreleasepool {

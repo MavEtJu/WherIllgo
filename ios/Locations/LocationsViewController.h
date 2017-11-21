@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationsViewController : UIViewController
+@interface LocationsViewController : UITableViewController
+
+- (void)reloadData;
 
 @end

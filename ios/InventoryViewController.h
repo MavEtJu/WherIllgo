@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InventoryViewController : UIViewController
+@interface InventoryViewController : UITableViewController
+
+- (void)reloadData;
 
 @end

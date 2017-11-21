@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YouSeeViewController : UIViewController
+@interface YouSeeViewController : UITableViewController
+
+- (void)reloadData;
 
 @end
+
+
