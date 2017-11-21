@@ -512,7 +512,10 @@ static int str_find_aux (lua_State *L, int find) {
   }
   else {
     MatchState ms;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored  "-Wcomma"
     int anchor = (*p == '^') ? (p++, 1) : 0;
+#pragma GCC diagnostic pop
     const char *s1=s+init;
     ms.L = L;
     ms.src_init = s;
@@ -648,7 +651,10 @@ static int str_gsub (lua_State *L) {
   const char *p = luaL_checkstring(L, 2);
   int  tr = lua_type(L, 3);
   int max_s = luaL_optint(L, 4, srcl+1);
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored  "-Wcomma"
   int anchor = (*p == '^') ? (p++, 1) : 0;
+#pragma GCC diagnostic pop
   int n = 0;
   MatchState ms;
   luaL_Buffer b;

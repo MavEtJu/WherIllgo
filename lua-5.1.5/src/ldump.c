@@ -68,7 +68,10 @@ static void DumpString(const TString* s, DumpState* D)
  }
  else
  {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored  "-Wconversion"
   bcsize_t size=s->tsv.len+1;		/* include trailing '\0' */
+#pragma GCC diagnostic pop
   DumpVar(size,D);
   DumpBlock(getstr(s),size,D);
  }

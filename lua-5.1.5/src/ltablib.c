@@ -223,12 +223,18 @@ static void auxsort (lua_State *L, int l, int u) {
     i = l; j = u-1;
     for (;;) {  /* invariant: a[l..i] <= P <= a[j..u] */
       /* repeat ++i until a[i] >= P */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored  "-Wcomma"
       while (lua_rawgeti(L, 1, ++i), sort_comp(L, -1, -2)) {
+#pragma GCC diagnostic pop
         if (i>u) luaL_error(L, "invalid order function for sorting");
         lua_pop(L, 1);  /* remove a[i] */
       }
       /* repeat --j until a[j] <= P */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored  "-Wcomma"
       while (lua_rawgeti(L, 1, --j), sort_comp(L, -3, -1)) {
+#pragma GCC diagnostic pop
         if (j<l) luaL_error(L, "invalid order function for sorting");
         lua_pop(L, 1);  /* remove a[j] */
       }

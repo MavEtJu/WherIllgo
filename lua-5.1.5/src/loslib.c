@@ -57,7 +57,10 @@ static int os_rename (lua_State *L) {
 static int os_tmpname (lua_State *L) {
   char buff[LUA_TMPNAMBUFSIZE];
   int err;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored  "-Wdeprecated"
   lua_tmpnam(buff, err);
+    #pragma GCC diagnostic pop
   if (err)
     return luaL_error(L, "unable to generate a unique filename");
   lua_pushstring(L, buff);
