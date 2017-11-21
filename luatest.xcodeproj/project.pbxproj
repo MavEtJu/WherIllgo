@@ -7,76 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E866BCEE1FC2821000B395C5 /* LuaExportMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */; };
-		E866BCEF1FC2821000B395C5 /* LuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCED1FC2821000B395C5 /* LuaContext.m */; };
-		E866BCF51FC285E900B395C5 /* lwiginternal.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF21FC285E900B395C5 /* lwiginternal.c */; };
-		E866BCF61FC285E900B395C5 /* lenvlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF31FC285E900B395C5 /* lenvlib.c */; };
-		E866BCFB1FC2900200B395C5 /* ohm.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF81FC2883700B395C5 /* ohm.lua */; };
-		E866BCFC1FC2900200B395C5 /* ohm.luac in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF71FC2883700B395C5 /* ohm.luac */; };
-		E866BCFD1FC2900200B395C5 /* testsuite.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCF91FC2883700B395C5 /* testsuite.lua */; };
-		E866BCFE1FC2900200B395C5 /* Wherigo.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = E866BCFA1FC28E5900B395C5 /* Wherigo.lua */; };
-		E866BD021FC2EB9000B395C5 /* WIG.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BD011FC2EB9000B395C5 /* WIG.m */; };
-		E866BD081FC2F3C800B395C5 /* WIG-link.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BD061FC2F3C800B395C5 /* WIG-link.m */; };
-		E88E4D411FC278D900E784F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E4D401FC278D900E784F9 /* main.m */; };
-		E88E4DDA1FC279FF00E784F9 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA41FC279F900E784F9 /* lmathlib.c */; };
-		E88E4DDB1FC279FF00E784F9 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA81FC279F900E784F9 /* linit.c */; };
-		E88E4DDC1FC279FF00E784F9 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAA1FC279F900E784F9 /* lmem.c */; };
-		E88E4DDD1FC279FF00E784F9 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAB1FC279F900E784F9 /* ltablib.c */; };
-		E88E4DDE1FC279FF00E784F9 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAE1FC279F900E784F9 /* lobject.c */; };
-		E88E4DDF1FC279FF00E784F9 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAF1FC279F900E784F9 /* lstrlib.c */; };
-		E88E4DE01FC279FF00E784F9 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB11FC279FA00E784F9 /* lopcodes.c */; };
-		E88E4DE11FC279FF00E784F9 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB41FC279FA00E784F9 /* ltm.c */; };
-		E88E4DE21FC279FF00E784F9 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB51FC279FA00E784F9 /* lgc.c */; };
-		E88E4DE31FC279FF00E784F9 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB71FC279FA00E784F9 /* lundump.c */; };
-		E88E4DE41FC279FF00E784F9 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB91FC279FA00E784F9 /* lzio.c */; };
-		E88E4DE51FC279FF00E784F9 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBA1FC279FA00E784F9 /* lvm.c */; };
-		E88E4DE61FC279FF00E784F9 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBB1FC279FB00E784F9 /* lfunc.c */; };
-		E88E4DE71FC279FF00E784F9 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBC1FC279FB00E784F9 /* ldo.c */; };
-		E88E4DE81FC279FF00E784F9 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBF1FC279FB00E784F9 /* lbaselib.c */; };
-		E88E4DE91FC279FF00E784F9 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC01FC279FB00E784F9 /* ldblib.c */; };
-		E88E4DEA1FC279FF00E784F9 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC11FC279FB00E784F9 /* lapi.c */; };
-		E88E4DEB1FC279FF00E784F9 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC21FC279FB00E784F9 /* print.c */; };
-		E88E4DEC1FC279FF00E784F9 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC31FC279FC00E784F9 /* lcode.c */; };
-		E88E4DED1FC279FF00E784F9 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC51FC279FC00E784F9 /* liolib.c */; };
-		E88E4DEE1FC279FF00E784F9 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC61FC279FC00E784F9 /* ldump.c */; };
-		E88E4DEF1FC279FF00E784F9 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC91FC279FC00E784F9 /* loadlib.c */; };
-		E88E4DF01FC279FF00E784F9 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DCB1FC279FD00E784F9 /* ltable.c */; };
-		E88E4DF11FC279FF00E784F9 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DCC1FC279FD00E784F9 /* lstate.c */; };
-		E88E4DF21FC279FF00E784F9 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DCF1FC279FD00E784F9 /* ldebug.c */; };
-		E88E4DF31FC279FF00E784F9 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD01FC279FD00E784F9 /* loslib.c */; };
-		E88E4DF41FC279FF00E784F9 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD21FC279FE00E784F9 /* llex.c */; };
-		E88E4DF51FC279FF00E784F9 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD31FC279FE00E784F9 /* lstring.c */; };
-		E88E4DF71FC279FF00E784F9 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD71FC279FE00E784F9 /* lauxlib.c */; };
-		E88E4DF81FC279FF00E784F9 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD81FC279FE00E784F9 /* lparser.c */; };
-		E8F182001FC3936C00CC85C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F181FF1FC3936C00CC85C4 /* AppDelegate.m */; };
-		E8F182031FC3936C00CC85C4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F182021FC3936C00CC85C4 /* FirstViewController.m */; };
-		E8F182061FC3936C00CC85C4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F182051FC3936C00CC85C4 /* SecondViewController.m */; };
-		E8F182091FC3936C00CC85C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F182071FC3936C00CC85C4 /* Main.storyboard */; };
-		E8F1820B1FC3936C00CC85C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F1820A1FC3936C00CC85C4 /* Assets.xcassets */; };
-		E8F1820E1FC3936C00CC85C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F1820C1FC3936C00CC85C4 /* LaunchScreen.storyboard */; };
-		E8F182111FC3936C00CC85C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F182101FC3936C00CC85C4 /* main.m */; };
-		E8F182181FC394E800CC85C4 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F182171FC394E800CC85C4 /* LocationsViewController.m */; };
-		E8F1821B1FC3967700CC85C4 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F1821A1FC3967700CC85C4 /* InventoryViewController.m */; };
-		E8F1821E1FC3970600CC85C4 /* YouSeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F1821D1FC3970600CC85C4 /* YouSeeViewController.m */; };
-		E8F182211FC3971600CC85C4 /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F182201FC3971600CC85C4 /* TasksViewController.m */; };
-		E8F182241FC3972500CC85C4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F182231FC3972500CC85C4 /* MapViewController.m */; };
+		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
+		E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5111FC3B86600DC5BE7 /* TasksViewController.m */; };
+		E887F51F1FC3B86800DC5BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5131FC3B86600DC5BE7 /* main.m */; };
+		E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5151FC3B86700DC5BE7 /* AppDelegate.m */; };
+		E887F5211FC3B86800DC5BE7 /* YouSeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */; };
+		E887F5231FC3B86800DC5BE7 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */; };
+		E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */; };
+		E887F5251FC3B86800DC5BE7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F51B1FC3B86700DC5BE7 /* MapViewController.m */; };
+		E887F5261FC3B86800DC5BE7 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E887F51C1FC3B86700DC5BE7 /* Base.lproj */; };
+		E8A84B5D1FC3C03C00FF6A06 /* ohm.lua in Resources */ = {isa = PBXBuildFile; fileRef = E866BCF81FC2883700B395C5 /* ohm.lua */; };
+		E8A84B5E1FC3C03C00FF6A06 /* ohm.luac in Resources */ = {isa = PBXBuildFile; fileRef = E866BCF71FC2883700B395C5 /* ohm.luac */; };
+		E8A84B5F1FC3C03C00FF6A06 /* testsuite.lua in Resources */ = {isa = PBXBuildFile; fileRef = E866BCF91FC2883700B395C5 /* testsuite.lua */; };
+		E8A84B601FC3C03C00FF6A06 /* Wherigo.lua in Resources */ = {isa = PBXBuildFile; fileRef = E866BCFA1FC28E5900B395C5 /* Wherigo.lua */; };
+		E8A84B611FC3C04F00FF6A06 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC11FC279FB00E784F9 /* lapi.c */; };
+		E8A84B631FC3C04F00FF6A06 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD71FC279FE00E784F9 /* lauxlib.c */; };
+		E8A84B651FC3C04F00FF6A06 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBF1FC279FB00E784F9 /* lbaselib.c */; };
+		E8A84B661FC3C04F00FF6A06 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC31FC279FC00E784F9 /* lcode.c */; };
+		E8A84B681FC3C04F00FF6A06 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC01FC279FB00E784F9 /* ldblib.c */; };
+		E8A84B691FC3C04F00FF6A06 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DCF1FC279FD00E784F9 /* ldebug.c */; };
+		E8A84B6B1FC3C04F00FF6A06 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBC1FC279FB00E784F9 /* ldo.c */; };
+		E8A84B6D1FC3C04F00FF6A06 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC61FC279FC00E784F9 /* ldump.c */; };
+		E8A84B6E1FC3C04F00FF6A06 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBB1FC279FB00E784F9 /* lfunc.c */; };
+		E8A84B701FC3C04F00FF6A06 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB51FC279FA00E784F9 /* lgc.c */; };
+		E8A84B721FC3C04F00FF6A06 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA81FC279F900E784F9 /* linit.c */; };
+		E8A84B731FC3C04F00FF6A06 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC51FC279FC00E784F9 /* liolib.c */; };
+		E8A84B741FC3C04F00FF6A06 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD21FC279FE00E784F9 /* llex.c */; };
+		E8A84B771FC3C05000FF6A06 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DA41FC279F900E784F9 /* lmathlib.c */; };
+		E8A84B781FC3C05000FF6A06 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAA1FC279F900E784F9 /* lmem.c */; };
+		E8A84B7A1FC3C05000FF6A06 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC91FC279FC00E784F9 /* loadlib.c */; };
+		E8A84B7B1FC3C05000FF6A06 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAE1FC279F900E784F9 /* lobject.c */; };
+		E8A84B7D1FC3C05000FF6A06 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB11FC279FA00E784F9 /* lopcodes.c */; };
+		E8A84B7F1FC3C05000FF6A06 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD01FC279FD00E784F9 /* loslib.c */; };
+		E8A84B801FC3C05000FF6A06 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD81FC279FE00E784F9 /* lparser.c */; };
+		E8A84B821FC3C05000FF6A06 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DCC1FC279FD00E784F9 /* lstate.c */; };
+		E8A84B841FC3C05000FF6A06 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DD31FC279FE00E784F9 /* lstring.c */; };
+		E8A84B861FC3C05000FF6A06 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAF1FC279F900E784F9 /* lstrlib.c */; };
+		E8A84B871FC3C05000FF6A06 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DCB1FC279FD00E784F9 /* ltable.c */; };
+		E8A84B891FC3C05000FF6A06 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DAB1FC279F900E784F9 /* ltablib.c */; };
+		E8A84B8A1FC3C05000FF6A06 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB41FC279FA00E784F9 /* ltm.c */; };
+		E8A84B8F1FC3C05000FF6A06 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB71FC279FA00E784F9 /* lundump.c */; };
+		E8A84B911FC3C05000FF6A06 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DBA1FC279FA00E784F9 /* lvm.c */; };
+		E8A84B931FC3C05000FF6A06 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DB91FC279FA00E784F9 /* lzio.c */; };
+		E8A84B951FC3C05000FF6A06 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = E88E4DC21FC279FB00E784F9 /* print.c */; };
+		E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BD011FC2EB9000B395C5 /* WIG.m */; };
+		E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BD061FC2F3C800B395C5 /* WIG-link.m */; };
+		E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */; };
+		E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCED1FC2821000B395C5 /* LuaContext.m */; };
+		E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF31FC285E900B395C5 /* lenvlib.c */; };
+		E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF21FC285E900B395C5 /* lwiginternal.c */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E88E4D3B1FC278D900E784F9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				E866BCFB1FC2900200B395C5 /* ohm.lua in CopyFiles */,
-				E866BCFC1FC2900200B395C5 /* ohm.luac in CopyFiles */,
-				E866BCFD1FC2900200B395C5 /* testsuite.lua in CopyFiles */,
-				E866BCFE1FC2900200B395C5 /* Wherigo.lua in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E866BCE91FC2820F00B395C5 /* LuaExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaExport.h; sourceTree = "<group>"; };
@@ -96,8 +76,23 @@
 		E866BD011FC2EB9000B395C5 /* WIG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIG.m; sourceTree = "<group>"; };
 		E866BD061FC2F3C800B395C5 /* WIG-link.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WIG-link.m"; sourceTree = "<group>"; };
 		E866BD071FC2F3C800B395C5 /* WIG-link.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WIG-link.h"; sourceTree = "<group>"; };
-		E88E4D3D1FC278D900E784F9 /* luatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = luatest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E88E4D401FC278D900E784F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E887F4F61FC3B70C00DC5BE7 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E887F5091FC3B70C00DC5BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E887F50F1FC3B86600DC5BE7 /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
+		E887F5101FC3B86600DC5BE7 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		E887F5111FC3B86600DC5BE7 /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
+		E887F5121FC3B86600DC5BE7 /* YouSeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouSeeViewController.h; sourceTree = "<group>"; };
+		E887F5131FC3B86600DC5BE7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E887F5141FC3B86700DC5BE7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		E887F5151FC3B86700DC5BE7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouSeeViewController.m; sourceTree = "<group>"; };
+		E887F5181FC3B86700DC5BE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
+		E887F51B1FC3B86700DC5BE7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E887F51C1FC3B86700DC5BE7 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		E887F51D1FC3B86800DC5BE7 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
 		E88E4DA31FC279F900E784F9 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstate.h; path = "lua-5.1.5/src/lstate.h"; sourceTree = SOURCE_ROOT; };
 		E88E4DA41FC279F900E784F9 /* lmathlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lmathlib.c; path = "lua-5.1.5/src/lmathlib.c"; sourceTree = SOURCE_ROOT; };
 		E88E4DA51FC279F900E784F9 /* lmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lmem.h; path = "lua-5.1.5/src/lmem.h"; sourceTree = SOURCE_ROOT; };
@@ -151,46 +146,10 @@
 		E88E4DD51FC279FE00E784F9 /* lparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lparser.h; path = "lua-5.1.5/src/lparser.h"; sourceTree = SOURCE_ROOT; };
 		E88E4DD71FC279FE00E784F9 /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lauxlib.c; path = "lua-5.1.5/src/lauxlib.c"; sourceTree = SOURCE_ROOT; };
 		E88E4DD81FC279FE00E784F9 /* lparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lparser.c; path = "lua-5.1.5/src/lparser.c"; sourceTree = SOURCE_ROOT; };
-		E8F181DE1FC392E100CC85C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E8F181DF1FC392E100CC85C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E8F181EB1FC392E100CC85C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E8F181ED1FC392E100CC85C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E8F181F01FC392E100CC85C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E8F181F21FC392E100CC85C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8F181F31FC392E100CC85C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E8F181FC1FC3936C00CC85C4 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8F181FE1FC3936C00CC85C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E8F181FF1FC3936C00CC85C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E8F182011FC3936C00CC85C4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E8F182021FC3936C00CC85C4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E8F182041FC3936C00CC85C4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E8F182051FC3936C00CC85C4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E8F182081FC3936C00CC85C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E8F1820A1FC3936C00CC85C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E8F1820D1FC3936C00CC85C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E8F1820F1FC3936C00CC85C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8F182101FC3936C00CC85C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E8F182161FC394E800CC85C4 /* LocationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
-		E8F182171FC394E800CC85C4 /* LocationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
-		E8F182191FC3967700CC85C4 /* InventoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
-		E8F1821A1FC3967700CC85C4 /* InventoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
-		E8F1821C1FC3970600CC85C4 /* YouSeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouSeeViewController.h; sourceTree = "<group>"; };
-		E8F1821D1FC3970600CC85C4 /* YouSeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouSeeViewController.m; sourceTree = "<group>"; };
-		E8F1821F1FC3971600CC85C4 /* TasksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
-		E8F182201FC3971600CC85C4 /* TasksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
-		E8F182221FC3972500CC85C4 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		E8F182231FC3972500CC85C4 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E88E4D3A1FC278D900E784F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8F181F91FC3936C00CC85C4 /* Frameworks */ = {
+		E887F4F31FC3B70C00DC5BE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,6 +181,29 @@
 			path = "Wherigo library";
 			sourceTree = "<group>";
 		};
+		E887F4F71FC3B70C00DC5BE7 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				E887F5181FC3B86700DC5BE7 /* AppDelegate.h */,
+				E887F5151FC3B86700DC5BE7 /* AppDelegate.m */,
+				E887F51D1FC3B86800DC5BE7 /* InventoryViewController.h */,
+				E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */,
+				E887F5101FC3B86600DC5BE7 /* LocationsViewController.h */,
+				E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */,
+				E887F5131FC3B86600DC5BE7 /* main.m */,
+				E887F5141FC3B86700DC5BE7 /* MapViewController.h */,
+				E887F51B1FC3B86700DC5BE7 /* MapViewController.m */,
+				E887F50F1FC3B86600DC5BE7 /* TasksViewController.h */,
+				E887F5111FC3B86600DC5BE7 /* TasksViewController.m */,
+				E887F5121FC3B86600DC5BE7 /* YouSeeViewController.h */,
+				E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */,
+				E887F5091FC3B70C00DC5BE7 /* Info.plist */,
+				E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */,
+				E887F51C1FC3B86700DC5BE7 /* Base.lproj */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
 		E88E4D341FC278D900E784F9 = {
 			isa = PBXGroup;
 			children = (
@@ -230,9 +212,7 @@
 				E88E4DF91FC27AFB00E784F9 /* Wherigo LUA */,
 				E866BCFF1FC2EB3D00B395C5 /* Wherigo library */,
 				E8F182151FC393B400CC85C4 /* Lua Library */,
-				E88E4D3F1FC278D900E784F9 /* osx */,
-				E8F181DD1FC392E100CC85C4 /* ios */,
-				E8F181FD1FC3936C00CC85C4 /* ios */,
+				E887F4F71FC3B70C00DC5BE7 /* ios */,
 				E88E4D3E1FC278D900E784F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -240,18 +220,9 @@
 		E88E4D3E1FC278D900E784F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E88E4D3D1FC278D900E784F9 /* luatest */,
-				E8F181FC1FC3936C00CC85C4 /* ios.app */,
+				E887F4F61FC3B70C00DC5BE7 /* ios.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E88E4D3F1FC278D900E784F9 /* osx */ = {
-			isa = PBXGroup;
-			children = (
-				E88E4D401FC278D900E784F9 /* main.m */,
-			);
-			path = osx;
 			sourceTree = "<group>";
 		};
 		E88E4DA11FC279D200E784F9 /* lua-5.1.5 */ = {
@@ -326,48 +297,6 @@
 			path = "Wherigo LUA";
 			sourceTree = "<group>";
 		};
-		E8F181DD1FC392E100CC85C4 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				E8F181DE1FC392E100CC85C4 /* AppDelegate.h */,
-				E8F181DF1FC392E100CC85C4 /* AppDelegate.m */,
-				E8F182161FC394E800CC85C4 /* LocationsViewController.h */,
-				E8F182171FC394E800CC85C4 /* LocationsViewController.m */,
-				E8F182191FC3967700CC85C4 /* InventoryViewController.h */,
-				E8F1821A1FC3967700CC85C4 /* InventoryViewController.m */,
-				E8F1821C1FC3970600CC85C4 /* YouSeeViewController.h */,
-				E8F1821D1FC3970600CC85C4 /* YouSeeViewController.m */,
-				E8F1821F1FC3971600CC85C4 /* TasksViewController.h */,
-				E8F182201FC3971600CC85C4 /* TasksViewController.m */,
-				E8F182221FC3972500CC85C4 /* MapViewController.h */,
-				E8F182231FC3972500CC85C4 /* MapViewController.m */,
-				E8F181EA1FC392E100CC85C4 /* Main.storyboard */,
-				E8F181ED1FC392E100CC85C4 /* Assets.xcassets */,
-				E8F181EF1FC392E100CC85C4 /* LaunchScreen.storyboard */,
-				E8F181F21FC392E100CC85C4 /* Info.plist */,
-				E8F181F31FC392E100CC85C4 /* main.m */,
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
-		E8F181FD1FC3936C00CC85C4 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				E8F181FE1FC3936C00CC85C4 /* AppDelegate.h */,
-				E8F181FF1FC3936C00CC85C4 /* AppDelegate.m */,
-				E8F182011FC3936C00CC85C4 /* FirstViewController.h */,
-				E8F182021FC3936C00CC85C4 /* FirstViewController.m */,
-				E8F182041FC3936C00CC85C4 /* SecondViewController.h */,
-				E8F182051FC3936C00CC85C4 /* SecondViewController.m */,
-				E8F182071FC3936C00CC85C4 /* Main.storyboard */,
-				E8F1820A1FC3936C00CC85C4 /* Assets.xcassets */,
-				E8F1820C1FC3936C00CC85C4 /* LaunchScreen.storyboard */,
-				E8F1820F1FC3936C00CC85C4 /* Info.plist */,
-				E8F182101FC3936C00CC85C4 /* main.m */,
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
 		E8F182151FC393B400CC85C4 /* Lua Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,30 +312,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E88E4D3C1FC278D900E784F9 /* luatest */ = {
+		E887F4F51FC3B70C00DC5BE7 /* ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E88E4D441FC278D900E784F9 /* Build configuration list for PBXNativeTarget "luatest" */;
+			buildConfigurationList = E887F50C1FC3B70C00DC5BE7 /* Build configuration list for PBXNativeTarget "ios" */;
 			buildPhases = (
-				E88E4D391FC278D900E784F9 /* Sources */,
-				E88E4D3A1FC278D900E784F9 /* Frameworks */,
-				E88E4D3B1FC278D900E784F9 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = luatest;
-			productName = luatest;
-			productReference = E88E4D3D1FC278D900E784F9 /* luatest */;
-			productType = "com.apple.product-type.tool";
-		};
-		E8F181FB1FC3936C00CC85C4 /* ios */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E8F182121FC3936C00CC85C4 /* Build configuration list for PBXNativeTarget "ios" */;
-			buildPhases = (
-				E8F181F81FC3936C00CC85C4 /* Sources */,
-				E8F181F91FC3936C00CC85C4 /* Frameworks */,
-				E8F181FA1FC3936C00CC85C4 /* Resources */,
+				E887F4F21FC3B70C00DC5BE7 /* Sources */,
+				E887F4F31FC3B70C00DC5BE7 /* Frameworks */,
+				E887F4F41FC3B70C00DC5BE7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -414,7 +326,7 @@
 			);
 			name = ios;
 			productName = ios;
-			productReference = E8F181FC1FC3936C00CC85C4 /* ios.app */;
+			productReference = E887F4F61FC3B70C00DC5BE7 /* ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -426,11 +338,7 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Edwin Groothuis";
 				TargetAttributes = {
-					E88E4D3C1FC278D900E784F9 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-					};
-					E8F181FB1FC3936C00CC85C4 = {
+					E887F4F51FC3B70C00DC5BE7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -449,124 +357,116 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E88E4D3C1FC278D900E784F9 /* luatest */,
-				E8F181FB1FC3936C00CC85C4 /* ios */,
+				E887F4F51FC3B70C00DC5BE7 /* ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E8F181FA1FC3936C00CC85C4 /* Resources */ = {
+		E887F4F41FC3B70C00DC5BE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8F1820E1FC3936C00CC85C4 /* LaunchScreen.storyboard in Resources */,
-				E8F1820B1FC3936C00CC85C4 /* Assets.xcassets in Resources */,
-				E8F182091FC3936C00CC85C4 /* Main.storyboard in Resources */,
+				E8A84B5D1FC3C03C00FF6A06 /* ohm.lua in Resources */,
+				E8A84B5E1FC3C03C00FF6A06 /* ohm.luac in Resources */,
+				E8A84B5F1FC3C03C00FF6A06 /* testsuite.lua in Resources */,
+				E8A84B601FC3C03C00FF6A06 /* Wherigo.lua in Resources */,
+				E887F5261FC3B86800DC5BE7 /* Base.lproj in Resources */,
+				E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E88E4D391FC278D900E784F9 /* Sources */ = {
+		E887F4F21FC3B70C00DC5BE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E88E4DEC1FC279FF00E784F9 /* lcode.c in Sources */,
-				E88E4DEF1FC279FF00E784F9 /* loadlib.c in Sources */,
-				E88E4DF41FC279FF00E784F9 /* llex.c in Sources */,
-				E88E4DE91FC279FF00E784F9 /* ldblib.c in Sources */,
-				E88E4DE61FC279FF00E784F9 /* lfunc.c in Sources */,
-				E88E4DE41FC279FF00E784F9 /* lzio.c in Sources */,
-				E88E4DE21FC279FF00E784F9 /* lgc.c in Sources */,
-				E88E4DDC1FC279FF00E784F9 /* lmem.c in Sources */,
-				E88E4DE01FC279FF00E784F9 /* lopcodes.c in Sources */,
-				E88E4DE71FC279FF00E784F9 /* ldo.c in Sources */,
-				E88E4DDE1FC279FF00E784F9 /* lobject.c in Sources */,
-				E88E4DF71FC279FF00E784F9 /* lauxlib.c in Sources */,
-				E88E4DE51FC279FF00E784F9 /* lvm.c in Sources */,
-				E88E4DEB1FC279FF00E784F9 /* print.c in Sources */,
-				E88E4DF51FC279FF00E784F9 /* lstring.c in Sources */,
-				E866BD021FC2EB9000B395C5 /* WIG.m in Sources */,
-				E88E4DE81FC279FF00E784F9 /* lbaselib.c in Sources */,
-				E88E4DF81FC279FF00E784F9 /* lparser.c in Sources */,
-				E88E4DDB1FC279FF00E784F9 /* linit.c in Sources */,
-				E866BD081FC2F3C800B395C5 /* WIG-link.m in Sources */,
-				E88E4DF11FC279FF00E784F9 /* lstate.c in Sources */,
-				E866BCEE1FC2821000B395C5 /* LuaExportMetaData.m in Sources */,
-				E88E4DF21FC279FF00E784F9 /* ldebug.c in Sources */,
-				E866BCF51FC285E900B395C5 /* lwiginternal.c in Sources */,
-				E866BCEF1FC2821000B395C5 /* LuaContext.m in Sources */,
-				E88E4DEE1FC279FF00E784F9 /* ldump.c in Sources */,
-				E88E4DF31FC279FF00E784F9 /* loslib.c in Sources */,
-				E88E4DF01FC279FF00E784F9 /* ltable.c in Sources */,
-				E88E4D411FC278D900E784F9 /* main.m in Sources */,
-				E88E4DE31FC279FF00E784F9 /* lundump.c in Sources */,
-				E88E4DDD1FC279FF00E784F9 /* ltablib.c in Sources */,
-				E88E4DEA1FC279FF00E784F9 /* lapi.c in Sources */,
-				E88E4DED1FC279FF00E784F9 /* liolib.c in Sources */,
-				E88E4DDF1FC279FF00E784F9 /* lstrlib.c in Sources */,
-				E88E4DDA1FC279FF00E784F9 /* lmathlib.c in Sources */,
-				E866BCF61FC285E900B395C5 /* lenvlib.c in Sources */,
-				E88E4DE11FC279FF00E784F9 /* ltm.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8F181F81FC3936C00CC85C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8F182061FC3936C00CC85C4 /* SecondViewController.m in Sources */,
-				E8F182001FC3936C00CC85C4 /* AppDelegate.m in Sources */,
-				E8F182181FC394E800CC85C4 /* LocationsViewController.m in Sources */,
-				E8F182241FC3972500CC85C4 /* MapViewController.m in Sources */,
-				E8F182111FC3936C00CC85C4 /* main.m in Sources */,
-				E8F182031FC3936C00CC85C4 /* FirstViewController.m in Sources */,
-				E8F182211FC3971600CC85C4 /* TasksViewController.m in Sources */,
-				E8F1821E1FC3970600CC85C4 /* YouSeeViewController.m in Sources */,
-				E8F1821B1FC3967700CC85C4 /* InventoryViewController.m in Sources */,
+				E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */,
+				E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */,
+				E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */,
+				E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */,
+				E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */,
+				E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */,
+				E8A84B611FC3C04F00FF6A06 /* lapi.c in Sources */,
+				E8A84B631FC3C04F00FF6A06 /* lauxlib.c in Sources */,
+				E8A84B651FC3C04F00FF6A06 /* lbaselib.c in Sources */,
+				E8A84B661FC3C04F00FF6A06 /* lcode.c in Sources */,
+				E8A84B681FC3C04F00FF6A06 /* ldblib.c in Sources */,
+				E8A84B691FC3C04F00FF6A06 /* ldebug.c in Sources */,
+				E8A84B6B1FC3C04F00FF6A06 /* ldo.c in Sources */,
+				E8A84B6D1FC3C04F00FF6A06 /* ldump.c in Sources */,
+				E8A84B6E1FC3C04F00FF6A06 /* lfunc.c in Sources */,
+				E8A84B701FC3C04F00FF6A06 /* lgc.c in Sources */,
+				E8A84B721FC3C04F00FF6A06 /* linit.c in Sources */,
+				E8A84B731FC3C04F00FF6A06 /* liolib.c in Sources */,
+				E8A84B741FC3C04F00FF6A06 /* llex.c in Sources */,
+				E8A84B771FC3C05000FF6A06 /* lmathlib.c in Sources */,
+				E8A84B781FC3C05000FF6A06 /* lmem.c in Sources */,
+				E8A84B7A1FC3C05000FF6A06 /* loadlib.c in Sources */,
+				E8A84B7B1FC3C05000FF6A06 /* lobject.c in Sources */,
+				E8A84B7D1FC3C05000FF6A06 /* lopcodes.c in Sources */,
+				E8A84B7F1FC3C05000FF6A06 /* loslib.c in Sources */,
+				E8A84B801FC3C05000FF6A06 /* lparser.c in Sources */,
+				E8A84B821FC3C05000FF6A06 /* lstate.c in Sources */,
+				E8A84B841FC3C05000FF6A06 /* lstring.c in Sources */,
+				E8A84B861FC3C05000FF6A06 /* lstrlib.c in Sources */,
+				E8A84B871FC3C05000FF6A06 /* ltable.c in Sources */,
+				E8A84B891FC3C05000FF6A06 /* ltablib.c in Sources */,
+				E8A84B8A1FC3C05000FF6A06 /* ltm.c in Sources */,
+				E8A84B8F1FC3C05000FF6A06 /* lundump.c in Sources */,
+				E8A84B911FC3C05000FF6A06 /* lvm.c in Sources */,
+				E8A84B931FC3C05000FF6A06 /* lzio.c in Sources */,
+				E8A84B951FC3C05000FF6A06 /* print.c in Sources */,
+				E887F51F1FC3B86800DC5BE7 /* main.m in Sources */,
+				E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */,
+				E887F5231FC3B86800DC5BE7 /* LocationsViewController.m in Sources */,
+				E887F5211FC3B86800DC5BE7 /* YouSeeViewController.m in Sources */,
+				E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */,
+				E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */,
+				E887F5251FC3B86800DC5BE7 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		E8F181EA1FC392E100CC85C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8F181EB1FC392E100CC85C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E8F181EF1FC392E100CC85C4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8F181F01FC392E100CC85C4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		E8F182071FC3936C00CC85C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8F182081FC3936C00CC85C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E8F1820C1FC3936C00CC85C4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8F1820D1FC3936C00CC85C4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		E887F50D1FC3B70C00DC5BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NRQ2A5FE8M;
+				INFOPLIST_FILE = ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.mavetju.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E887F50E1FC3B70C00DC5BE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NRQ2A5FE8M;
+				INFOPLIST_FILE = ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.mavetju.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		E88E4D421FC278D900E784F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -670,85 +570,23 @@
 			};
 			name = Release;
 		};
-		E88E4D451FC278D900E784F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRQ2A5FE8M;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E88E4D461FC278D900E784F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRQ2A5FE8M;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		E8F182131FC3936C00CC85C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRQ2A5FE8M;
-				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.mavetju.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E8F182141FC3936C00CC85C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRQ2A5FE8M;
-				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.mavetju.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E887F50C1FC3B70C00DC5BE7 /* Build configuration list for PBXNativeTarget "ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E887F50D1FC3B70C00DC5BE7 /* Debug */,
+				E887F50E1FC3B70C00DC5BE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E88E4D381FC278D900E784F9 /* Build configuration list for PBXProject "luatest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E88E4D421FC278D900E784F9 /* Debug */,
 				E88E4D431FC278D900E784F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E88E4D441FC278D900E784F9 /* Build configuration list for PBXNativeTarget "luatest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E88E4D451FC278D900E784F9 /* Debug */,
-				E88E4D461FC278D900E784F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E8F182121FC3936C00CC85C4 /* Build configuration list for PBXNativeTarget "ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8F182131FC3936C00CC85C4 /* Debug */,
-				E8F182141FC3936C00CC85C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
