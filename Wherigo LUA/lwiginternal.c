@@ -32,7 +32,7 @@ static int wigLogMessage (lua_State *L) {
 
 static int wigShowStatusText (lua_State *L) {
     const char *s = luaL_checkstring(L, 1);
-    printf("StatusText!\n", s);
+    printf("StatusText!\n");
     printf("> text: %s\n", s);
     return 0;
 }
