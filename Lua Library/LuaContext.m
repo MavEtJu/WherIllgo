@@ -469,7 +469,7 @@ static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen, NSI
             return result;
         }
         case LUA_TFUNCTION:
-            return [NSString stringWithFormat:@"Function at 0x%x", (uint32)lua_topointer(L, index)];
+            return [NSString stringWithFormat:@"Function at 0x%x", (UInt32)lua_topointer(L, index)];
         case LUA_TUSERDATA:
         case LUA_TTHREAD:
         case LUA_TLIGHTUSERDATA:
