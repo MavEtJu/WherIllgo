@@ -10,6 +10,8 @@
 
 #import "LuaContext.h"
 
+WIG *wig = nil;
+
 @interface WIG ()
 
 @property (nonatomic, retain) LuaContext *ctx;
@@ -31,6 +33,12 @@
 
 - (void)run:(NSString *)filename
 {
+
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    NSString *dir = [[NSBundle mainBundle] resourcePath];
+    if ([filemgr changeCurrentDirectoryPath:dir] == NO)
+        NSLog(@"Cannot change current directory");
+
     NSError *error = nil;
     NSString *myScript = [NSString stringWithFormat:LUA_STRING(
         f = loadfile("%@")
@@ -71,9 +79,6 @@
 - (void)messageBoxCallback
 {
     NSString *myScript = LUA_STRING(
-        -- for k,v in pairs(Wherigo) do
-        --     print(k, v)
-        -- end
         Wherigo._MessageBoxResponse(1)
     );
     [self runScript:myScript];
