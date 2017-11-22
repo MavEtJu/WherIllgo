@@ -77,7 +77,7 @@ WIG *wig = nil;
 /*
  * Interaction with objects
  */
-- (NSDictionary *)dictionaryZTasks
+- (NSDictionary<NSString *, WIGZTask *> *)dictionaryZTasks
 {
     NSMutableDictionary *zs = [NSMutableDictionary dictionaryWithCapacity:10];
 
@@ -89,22 +89,24 @@ WIG *wig = nil;
         NSString *type = [dict objectForKey:@"_classname"];
         if ([type isEqualToString:@"ZTask"] == NO)
             return;
-        [zs setObject:dict forKey:key];
+        WIGZTask *task = [[WIGZTask alloc] init];
+        [task importFromDict:dict];
+        [zs setObject:task forKey:key];
     }];
 
     return zs;
 }
 
-- (NSArray *)arrayZTasks
+- (NSArray<WIGZTask *> *)arrayZTasks
 {
-    NSDictionary *tasks = [self dictionaryZTasks];
+    NSDictionary<NSString *, WIGZTask *> *tasks = [self dictionaryZTasks];
     NSMutableArray *zs = [NSMutableArray arrayWithCapacity:[tasks count]];
     for (NSInteger idx = 0; idx < [tasks count]; idx++) {
         [zs addObject:[NSNull null]];
     }
 
-    [tasks enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, NSDictionary * _Nonnull task, BOOL * _Nonnull stop) {
-        NSInteger idx = [[task objectForKey:@"SortOrder"] integerValue] - 1;
+    [tasks enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, WIGZTask * _Nonnull task, BOOL * _Nonnull stop) {
+        NSInteger idx = task.sortOrder - 1;
         [zs replaceObjectAtIndex:idx withObject:task];
     }];
 

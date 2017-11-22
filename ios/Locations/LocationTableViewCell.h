@@ -18,6 +18,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *labelDebugVisible;
 @property (nonatomic, retain) IBOutlet UILabel *labelDebugState;
 @property (nonatomic, retain) IBOutlet UILabel *labelDebugShowObjects;
+
 @property (nonatomic, retain) IBOutlet UIImageView *ivMediaIcon;
 
 @end

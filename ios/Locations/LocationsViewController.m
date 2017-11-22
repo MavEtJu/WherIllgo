@@ -23,9 +23,7 @@
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"A"];
     [self.tableView registerNib:[UINib nibWithNibName:XIB_LOCATIONTABLEVIEWCELL bundle:nil] forCellReuseIdentifier:XIB_LOCATIONTABLEVIEWCELL];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated

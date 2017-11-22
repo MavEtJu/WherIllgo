@@ -17,6 +17,7 @@
 @class WIGZonePoint;
 @class WIGZMedia;
 @class WIGZMediaResource;
+@class WIGZTask;
 
 #import "WIGZObject.h"
 #import "WIGZCharacter.h"
@@ -27,6 +28,7 @@
 #import "WIGZMedia.h"
 #import "WIGZMediaResource.h"
 #import "WIGZonePoint.h"
+#import "WIGZTask.h"
 
 @interface WIG : NSObject
 
@@ -36,10 +38,10 @@
 - (void)run:(NSString *)filename;
 
 /* Various ZObjects */
-- (NSArray *)arrayZTasks;
-- (NSDictionary *)dictionaryZTasks;
-- (NSArray *)arrayZones;
-- (NSDictionary *)dictionaryZones;
+- (NSArray<WIGZTask *> *)arrayZTasks;
+- (NSDictionary<NSString *, WIGZTask *> *)dictionaryZTasks;
+- (NSArray<WIGZone *> *)arrayZones;
+- (NSDictionary<NSString *, WIGZone *> *)dictionaryZones;
 - (NSArray *)arrayYouSee;
 - (NSDictionary *)dictionaryYouSee;
 - (NSArray *)arrayZItemsInventory;

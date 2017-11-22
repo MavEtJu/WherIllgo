@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81A56631FC524B9008E9873 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56611FC524B9008E9873 /* TaskTableViewCell.m */; };
+		E81A56641FC524B9008E9873 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */; };
+		E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56661FC5272B008E9873 /* WIGZTask.m */; };
 		E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */; };
 		E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E481FC51D1400AE6ACC /* WIGUI.m */; };
 		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
@@ -104,6 +107,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81A56601FC524B9008E9873 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		E81A56611FC524B9008E9873 /* TaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		E81A56651FC5272B008E9873 /* WIGZTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZTask.h; sourceTree = "<group>"; };
+		E81A56661FC5272B008E9873 /* WIGZTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZTask.m; sourceTree = "<group>"; };
 		E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMediaResource.h; sourceTree = "<group>"; };
 		E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMediaResource.m; sourceTree = "<group>"; };
 		E8503E471FC51D1400AE6ACC /* WIGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGUI.h; sourceTree = "<group>"; };
@@ -261,6 +269,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81A565F1FC52483008E9873 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E887F50F1FC3B86600DC5BE7 /* TasksViewController.h */,
+				E887F5111FC3B86600DC5BE7 /* TasksViewController.m */,
+				E81A56601FC524B9008E9873 /* TaskTableViewCell.h */,
+				E81A56611FC524B9008E9873 /* TaskTableViewCell.m */,
+				E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		E8503E431FC51C4E00AE6ACC /* WIG Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +298,8 @@
 				E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */,
 				E8A84BF81FC4E4A900FF6A06 /* WIGZonePoint.h */,
 				E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */,
+				E81A56651FC5272B008E9873 /* WIGZTask.h */,
+				E81A56661FC5272B008E9873 /* WIGZTask.m */,
 				E8A84BFB1FC4E4B600FF6A06 /* WIGZMedia.h */,
 				E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */,
 				E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */,
@@ -318,11 +340,10 @@
 				E887F5151FC3B86700DC5BE7 /* AppDelegate.m */,
 				E887F51D1FC3B86800DC5BE7 /* InventoryViewController.h */,
 				E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */,
+				E81A565F1FC52483008E9873 /* Tasks */,
 				E8A84B9D1FC43BEB00FF6A06 /* Locations */,
 				E887F5141FC3B86700DC5BE7 /* MapViewController.h */,
 				E887F51B1FC3B86700DC5BE7 /* MapViewController.m */,
-				E887F50F1FC3B86600DC5BE7 /* TasksViewController.h */,
-				E887F5111FC3B86600DC5BE7 /* TasksViewController.m */,
 				E887F5121FC3B86600DC5BE7 /* YouSeeViewController.h */,
 				E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */,
 				E8A84B9C1FC40AAE00FF6A06 /* main.h */,
@@ -590,6 +611,7 @@
 				E8A84BCE1FC4432C00FF6A06 /* sound_high.wav in Resources */,
 				E8A84BE31FC4432C00FF6A06 /* sound_high.mp3 in Resources */,
 				E8A84BCD1FC4432C00FF6A06 /* nullsound.mp3 in Resources */,
+				E81A56641FC524B9008E9873 /* TaskTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +624,7 @@
 			files = (
 				E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */,
 				E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */,
+				E81A56631FC524B9008E9873 /* TaskTableViewCell.m in Sources */,
 				E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */,
 				E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */,
 				E8A84BEE1FC4E47700FF6A06 /* WIGZCartridge.m in Sources */,
@@ -640,6 +663,7 @@
 				E8A84B871FC3C05000FF6A06 /* ltable.c in Sources */,
 				E8A84B891FC3C05000FF6A06 /* ltablib.c in Sources */,
 				E8A84B8A1FC3C05000FF6A06 /* ltm.c in Sources */,
+				E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */,
 				E8A84B8F1FC3C05000FF6A06 /* lundump.c in Sources */,
 				E8A84B911FC3C05000FF6A06 /* lvm.c in Sources */,
 				E8A84B931FC3C05000FF6A06 /* lzio.c in Sources */,
