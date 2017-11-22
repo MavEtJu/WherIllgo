@@ -17,8 +17,6 @@ WIG *wig = nil;
 @interface WIG ()
 
 @property (nonatomic, retain) LuaContext *ctx;
-@property (nonatomic, retain) NSDictionary *G_;
-@property (nonatomic, retain) NSDictionary *cart;
 
 @end
 
@@ -52,11 +50,7 @@ WIG *wig = nil;
         NSLog(@"Error parsing lua code: %@", error);
         return;
     }
-    NSLog(@"G_");
-    self.G_ = [self.ctx globalVar:@"_G"];
-    NSLog(@"cart");
-    self.cart = [self.ctx globalVar:@"cart"];
-    NSLog(@"---");
+    NSLog(@"Author: %@", self.cartridge.author);
 
     myScript = LUA_STRING(
         cart.OnStart()
@@ -129,7 +123,9 @@ WIG *wig = nil;
         NSString *type = [dict objectForKey:@"_classname"];
         if ([type isEqualToString:@"Zone"] == NO)
             return;
-        [zs setObject:dict forKey:key];
+        WIGZone *zone = [[WIGZone alloc] init];
+        [zone importFromDict:dict];
+        [zs setObject:zone forKey:key];
     }];
 
     return zs;
@@ -199,6 +195,14 @@ WIG *wig = nil;
 {
     NSDictionary *zones = [self dictionaryZItemsInventory];
     return [zones allValues];
+}
+
+- (WIGZCartridge *)cartridge
+{
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    WIGZCartridge *cartridge = [[WIGZCartridge alloc] init];
+    [cartridge importFromDict:[g objectForKey:@"cart"]];
+    return cartridge;
 }
 
 /*

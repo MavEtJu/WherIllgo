@@ -7,7 +7,7 @@
 		<key>ios.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>luatest.xcscheme</key>
 		<dict>

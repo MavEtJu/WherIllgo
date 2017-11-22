@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */; };
 		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
 		E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5111FC3B86600DC5BE7 /* TasksViewController.m */; };
 		E887F51F1FC3B86800DC5BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5131FC3B86600DC5BE7 /* main.m */; };
@@ -91,9 +92,19 @@
 		E8A84BE31FC4432C00FF6A06 /* sound_high.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BC21FC4432B00FF6A06 /* sound_high.mp3 */; };
 		E8A84BE41FC4432C00FF6A06 /* testbild.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BC31FC4432B00FF6A06 /* testbild.jpg */; };
 		E8A84BE51FC4432C00FF6A06 /* phone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BC41FC4432B00FF6A06 /* phone.mp3 */; };
+		E8A84BE81FC4DF7C00FF6A06 /* WIGZObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BE71FC4DF7C00FF6A06 /* WIGZObject.m */; };
+		E8A84BEB1FC4E46500FF6A06 /* WIGZCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BEA1FC4E46500FF6A06 /* WIGZCharacter.m */; };
+		E8A84BEE1FC4E47700FF6A06 /* WIGZCartridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BED1FC4E47700FF6A06 /* WIGZCartridge.m */; };
+		E8A84BF11FC4E48400FF6A06 /* WIGDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BF01FC4E48400FF6A06 /* WIGDistance.m */; };
+		E8A84BF41FC4E48F00FF6A06 /* WIGZCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BF31FC4E48F00FF6A06 /* WIGZCommand.m */; };
+		E8A84BF71FC4E49D00FF6A06 /* WIGZone.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */; };
+		E8A84BFA1FC4E4A900FF6A06 /* WIGZonePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */; };
+		E8A84BFD1FC4E4B600FF6A06 /* WIGZMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMediaResource.h; sourceTree = "<group>"; };
+		E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMediaResource.m; sourceTree = "<group>"; };
 		E866BCE91FC2820F00B395C5 /* LuaExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaExport.h; sourceTree = "<group>"; };
 		E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaExportMetaData.m; sourceTree = "<group>"; };
 		E866BCEB1FC2821000B395C5 /* LuaContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaContext.h; sourceTree = "<group>"; };
@@ -218,6 +229,22 @@
 		E8A84BC21FC4432B00FF6A06 /* sound_high.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_high.mp3; sourceTree = "<group>"; };
 		E8A84BC31FC4432B00FF6A06 /* testbild.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testbild.jpg; sourceTree = "<group>"; };
 		E8A84BC41FC4432B00FF6A06 /* phone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = phone.mp3; sourceTree = "<group>"; };
+		E8A84BE61FC4DF7C00FF6A06 /* WIGZObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZObject.h; sourceTree = "<group>"; };
+		E8A84BE71FC4DF7C00FF6A06 /* WIGZObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZObject.m; sourceTree = "<group>"; };
+		E8A84BE91FC4E46500FF6A06 /* WIGZCharacter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZCharacter.h; sourceTree = "<group>"; };
+		E8A84BEA1FC4E46500FF6A06 /* WIGZCharacter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZCharacter.m; sourceTree = "<group>"; };
+		E8A84BEC1FC4E47700FF6A06 /* WIGZCartridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZCartridge.h; sourceTree = "<group>"; };
+		E8A84BED1FC4E47700FF6A06 /* WIGZCartridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZCartridge.m; sourceTree = "<group>"; };
+		E8A84BEF1FC4E48400FF6A06 /* WIGDistance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGDistance.h; sourceTree = "<group>"; };
+		E8A84BF01FC4E48400FF6A06 /* WIGDistance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGDistance.m; sourceTree = "<group>"; };
+		E8A84BF21FC4E48F00FF6A06 /* WIGZCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZCommand.h; sourceTree = "<group>"; };
+		E8A84BF31FC4E48F00FF6A06 /* WIGZCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZCommand.m; sourceTree = "<group>"; };
+		E8A84BF51FC4E49D00FF6A06 /* WIGZone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZone.h; sourceTree = "<group>"; };
+		E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZone.m; sourceTree = "<group>"; };
+		E8A84BF81FC4E4A900FF6A06 /* WIGZonePoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZonePoint.h; sourceTree = "<group>"; };
+		E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZonePoint.m; sourceTree = "<group>"; };
+		E8A84BFB1FC4E4B600FF6A06 /* WIGZMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMedia.h; sourceTree = "<group>"; };
+		E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMedia.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +276,24 @@
 				E866BD011FC2EB9000B395C5 /* WIG.m */,
 				E866BD071FC2F3C800B395C5 /* WIG-link.h */,
 				E866BD061FC2F3C800B395C5 /* WIG-link.m */,
+				E8A84BE61FC4DF7C00FF6A06 /* WIGZObject.h */,
+				E8A84BE71FC4DF7C00FF6A06 /* WIGZObject.m */,
+				E8A84BE91FC4E46500FF6A06 /* WIGZCharacter.h */,
+				E8A84BEA1FC4E46500FF6A06 /* WIGZCharacter.m */,
+				E8A84BEC1FC4E47700FF6A06 /* WIGZCartridge.h */,
+				E8A84BED1FC4E47700FF6A06 /* WIGZCartridge.m */,
+				E8A84BEF1FC4E48400FF6A06 /* WIGDistance.h */,
+				E8A84BF01FC4E48400FF6A06 /* WIGDistance.m */,
+				E8A84BF21FC4E48F00FF6A06 /* WIGZCommand.h */,
+				E8A84BF31FC4E48F00FF6A06 /* WIGZCommand.m */,
+				E8A84BF51FC4E49D00FF6A06 /* WIGZone.h */,
+				E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */,
+				E8A84BF81FC4E4A900FF6A06 /* WIGZonePoint.h */,
+				E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */,
+				E8A84BFB1FC4E4B600FF6A06 /* WIGZMedia.h */,
+				E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */,
+				E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */,
+				E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */,
 			);
 			path = "Wherigo library";
 			sourceTree = "<group>";
@@ -545,13 +590,16 @@
 				E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */,
 				E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */,
 				E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */,
+				E8A84BEE1FC4E47700FF6A06 /* WIGZCartridge.m in Sources */,
 				E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */,
 				E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */,
 				E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */,
 				E8A84B611FC3C04F00FF6A06 /* lapi.c in Sources */,
+				E8A84BFA1FC4E4A900FF6A06 /* WIGZonePoint.m in Sources */,
 				E8A84B631FC3C04F00FF6A06 /* lauxlib.c in Sources */,
 				E8A84B651FC3C04F00FF6A06 /* lbaselib.c in Sources */,
 				E8A84B661FC3C04F00FF6A06 /* lcode.c in Sources */,
+				E8A84BF71FC4E49D00FF6A06 /* WIGZone.m in Sources */,
 				E8A84B681FC3C04F00FF6A06 /* ldblib.c in Sources */,
 				E8A84B691FC3C04F00FF6A06 /* ldebug.c in Sources */,
 				E8A84B6B1FC3C04F00FF6A06 /* ldo.c in Sources */,
@@ -567,10 +615,14 @@
 				E8A84B7B1FC3C05000FF6A06 /* lobject.c in Sources */,
 				E8A84B7D1FC3C05000FF6A06 /* lopcodes.c in Sources */,
 				E8A84B7F1FC3C05000FF6A06 /* loslib.c in Sources */,
+				E8A84BF11FC4E48400FF6A06 /* WIGDistance.m in Sources */,
 				E8A84B801FC3C05000FF6A06 /* lparser.c in Sources */,
+				E8A84BEB1FC4E46500FF6A06 /* WIGZCharacter.m in Sources */,
 				E8A84B821FC3C05000FF6A06 /* lstate.c in Sources */,
 				E8A84B841FC3C05000FF6A06 /* lstring.c in Sources */,
+				E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */,
 				E8A84B861FC3C05000FF6A06 /* lstrlib.c in Sources */,
+				E8A84BF41FC4E48F00FF6A06 /* WIGZCommand.m in Sources */,
 				E8A84B871FC3C05000FF6A06 /* ltable.c in Sources */,
 				E8A84B891FC3C05000FF6A06 /* ltablib.c in Sources */,
 				E8A84B8A1FC3C05000FF6A06 /* ltm.c in Sources */,
@@ -579,8 +631,10 @@
 				E8A84B931FC3C05000FF6A06 /* lzio.c in Sources */,
 				E8A84B951FC3C05000FF6A06 /* print.c in Sources */,
 				E887F51F1FC3B86800DC5BE7 /* main.m in Sources */,
+				E8A84BFD1FC4E4B600FF6A06 /* WIGZMedia.m in Sources */,
 				E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */,
 				E887F5231FC3B86800DC5BE7 /* LocationsViewController.m in Sources */,
+				E8A84BE81FC4DF7C00FF6A06 /* WIGZObject.m in Sources */,
 				E887F5211FC3B86800DC5BE7 /* YouSeeViewController.m in Sources */,
 				E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */,
 				E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */,

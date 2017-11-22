@@ -13,7 +13,7 @@
 
 @interface LocationsViewController ()
 
-@property (nonatomic, retain) NSArray<NSDictionary *> *locations;
+@property (nonatomic, retain) NSArray<WIGZone *> *locations;
 
 @end
 
@@ -54,21 +54,19 @@
 {
     LocationTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_LOCATIONTABLEVIEWCELL forIndexPath:indexPath];
 
-    NSDictionary *location = [self.locations objectAtIndex:indexPath.row];
-    cell.labelName.text = [location objectForKey:@"Name"];
-    cell.labelDescription.text = [location objectForKey:@"Description"];
+    WIGZone *location = [self.locations objectAtIndex:indexPath.row];
+    cell.labelName.text = location.name;
+    cell.labelDescription.text = location.description_;
 
-    NSDictionary *media = [location objectForKey:@"Media"];
-    if ([media isKindOfClass:[NSDictionary class]] == YES) {
-        NSArray *resources = [media objectForKey:@"Resources"];
-        NSDictionary *resource = [resources firstObject];
-        cell.ivMediaIcon.image = [UIImage imageWithContentsOfFile:[resource objectForKey:@"Filename"]];
+    if (location.media != nil) {
+        WIGZMediaResource *resource = [location.media.resources firstObject];
+        cell.ivMediaIcon.image = [UIImage imageWithContentsOfFile:resource.filename];
     }
 
-    cell.labelDebugActive.text = [NSString stringWithFormat:@"Active: %@", [location objectForKey:@"_active"]];
-    cell.labelDebugVisible.text = [NSString stringWithFormat:@"Visible: %@", [location objectForKey:@"Visible"]];
-    cell.labelDebugShowObjects.text = [NSString stringWithFormat:@"Show objects: %@", [location objectForKey:@"ShowObjects"]];
-    cell.labelDebugState.text = [NSString stringWithFormat:@"State: %@", [location objectForKey:@"State"]];
+    cell.labelDebugActive.text = [NSString stringWithFormat:@"Active: %d", location.active];
+    cell.labelDebugVisible.text = [NSString stringWithFormat:@"Visible: %d", location.visible];
+    cell.labelDebugShowObjects.text = [NSString stringWithFormat:@"Show Objects: %@", location.showObjects];
+    cell.labelDebugState.text = [NSString stringWithFormat:@"State: %@", location.state];
 
     return cell;
 }
