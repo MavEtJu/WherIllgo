@@ -10,6 +10,13 @@
 		E81A56631FC524B9008E9873 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56611FC524B9008E9873 /* TaskTableViewCell.m */; };
 		E81A56641FC524B9008E9873 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */; };
 		E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56661FC5272B008E9873 /* WIGZTask.m */; };
+		E81A566C1FC57E6F008E9873 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A566B1FC57E6F008E9873 /* LocationViewController.m */; };
+		E81A56731FC58160008E9873 /* LocationHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56711FC58160008E9873 /* LocationHeaderTableViewCell.m */; };
+		E81A56741FC58160008E9873 /* LocationHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56721FC58160008E9873 /* LocationHeaderTableViewCell.xib */; };
+		E81A56781FC58177008E9873 /* LocationDebugTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56761FC58177008E9873 /* LocationDebugTableViewCell.m */; };
+		E81A56791FC58177008E9873 /* LocationDebugTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56771FC58177008E9873 /* LocationDebugTableViewCell.xib */; };
+		E81A567D1FC5818D008E9873 /* LocationItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A567B1FC5818D008E9873 /* LocationItemsTableViewCell.m */; };
+		E81A567E1FC5818D008E9873 /* LocationItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A567C1FC5818D008E9873 /* LocationItemsTableViewCell.xib */; };
 		E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */; };
 		E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E481FC51D1400AE6ACC /* WIGUI.m */; };
 		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
@@ -61,8 +68,8 @@
 		E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCED1FC2821000B395C5 /* LuaContext.m */; };
 		E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF31FC285E900B395C5 /* lenvlib.c */; };
 		E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF21FC285E900B395C5 /* lwiginternal.c */; };
-		E8A84BA11FC43C2300FF6A06 /* LocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84B9F1FC43C2300FF6A06 /* LocationTableViewCell.m */; };
-		E8A84BA21FC43C2300FF6A06 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BA01FC43C2300FF6A06 /* LocationTableViewCell.xib */; };
+		E8A84BA11FC43C2300FF6A06 /* LocationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84B9F1FC43C2300FF6A06 /* LocationsTableViewCell.m */; };
+		E8A84BA21FC43C2300FF6A06 /* LocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BA01FC43C2300FF6A06 /* LocationsTableViewCell.xib */; };
 		E8A84BC51FC4432C00FF6A06 /* 115x170.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BA41FC4432800FF6A06 /* 115x170.jpg */; };
 		E8A84BC61FC4432C00FF6A06 /* 540x800.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BA51FC4432800FF6A06 /* 540x800.jpg */; };
 		E8A84BC71FC4432C00FF6A06 /* Wherigo_Testsuite_EN.urwigo in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BA61FC4432800FF6A06 /* Wherigo_Testsuite_EN.urwigo */; };
@@ -112,6 +119,17 @@
 		E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		E81A56651FC5272B008E9873 /* WIGZTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZTask.h; sourceTree = "<group>"; };
 		E81A56661FC5272B008E9873 /* WIGZTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZTask.m; sourceTree = "<group>"; };
+		E81A566A1FC57E6F008E9873 /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		E81A566B1FC57E6F008E9873 /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		E81A56701FC58160008E9873 /* LocationHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHeaderTableViewCell.h; sourceTree = "<group>"; };
+		E81A56711FC58160008E9873 /* LocationHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHeaderTableViewCell.m; sourceTree = "<group>"; };
+		E81A56721FC58160008E9873 /* LocationHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E81A56751FC58177008E9873 /* LocationDebugTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDebugTableViewCell.h; sourceTree = "<group>"; };
+		E81A56761FC58177008E9873 /* LocationDebugTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDebugTableViewCell.m; sourceTree = "<group>"; };
+		E81A56771FC58177008E9873 /* LocationDebugTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDebugTableViewCell.xib; sourceTree = "<group>"; };
+		E81A567A1FC5818D008E9873 /* LocationItemsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationItemsTableViewCell.h; sourceTree = "<group>"; };
+		E81A567B1FC5818D008E9873 /* LocationItemsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationItemsTableViewCell.m; sourceTree = "<group>"; };
+		E81A567C1FC5818D008E9873 /* LocationItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationItemsTableViewCell.xib; sourceTree = "<group>"; };
 		E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMediaResource.h; sourceTree = "<group>"; };
 		E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMediaResource.m; sourceTree = "<group>"; };
 		E8503E471FC51D1400AE6ACC /* WIGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGUI.h; sourceTree = "<group>"; };
@@ -204,9 +222,9 @@
 		E88E4DD71FC279FE00E784F9 /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lauxlib.c; path = "lua-5.1.5/src/lauxlib.c"; sourceTree = SOURCE_ROOT; };
 		E88E4DD81FC279FE00E784F9 /* lparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lparser.c; path = "lua-5.1.5/src/lparser.c"; sourceTree = SOURCE_ROOT; };
 		E8A84B9C1FC40AAE00FF6A06 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		E8A84B9E1FC43C2300FF6A06 /* LocationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTableViewCell.h; sourceTree = "<group>"; };
-		E8A84B9F1FC43C2300FF6A06 /* LocationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTableViewCell.m; sourceTree = "<group>"; };
-		E8A84BA01FC43C2300FF6A06 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		E8A84B9E1FC43C2300FF6A06 /* LocationsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewCell.h; sourceTree = "<group>"; };
+		E8A84B9F1FC43C2300FF6A06 /* LocationsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewCell.m; sourceTree = "<group>"; };
+		E8A84BA01FC43C2300FF6A06 /* LocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsTableViewCell.xib; sourceTree = "<group>"; };
 		E8A84BA41FC4432800FF6A06 /* 115x170.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 115x170.jpg; sourceTree = "<group>"; };
 		E8A84BA51FC4432800FF6A06 /* 540x800.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 540x800.jpg; sourceTree = "<group>"; };
 		E8A84BA61FC4432800FF6A06 /* Wherigo_Testsuite_EN.urwigo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Wherigo_Testsuite_EN.urwigo; sourceTree = "<group>"; };
@@ -279,6 +297,36 @@
 				E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E81A56681FC57E41008E9873 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				E887F5101FC3B86600DC5BE7 /* LocationsViewController.h */,
+				E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */,
+				E8A84B9E1FC43C2300FF6A06 /* LocationsTableViewCell.h */,
+				E8A84B9F1FC43C2300FF6A06 /* LocationsTableViewCell.m */,
+				E8A84BA01FC43C2300FF6A06 /* LocationsTableViewCell.xib */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		E81A56691FC57E4F008E9873 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E81A566A1FC57E6F008E9873 /* LocationViewController.h */,
+				E81A566B1FC57E6F008E9873 /* LocationViewController.m */,
+				E81A56701FC58160008E9873 /* LocationHeaderTableViewCell.h */,
+				E81A56711FC58160008E9873 /* LocationHeaderTableViewCell.m */,
+				E81A56721FC58160008E9873 /* LocationHeaderTableViewCell.xib */,
+				E81A56751FC58177008E9873 /* LocationDebugTableViewCell.h */,
+				E81A56761FC58177008E9873 /* LocationDebugTableViewCell.m */,
+				E81A56771FC58177008E9873 /* LocationDebugTableViewCell.xib */,
+				E81A567A1FC5818D008E9873 /* LocationItemsTableViewCell.h */,
+				E81A567B1FC5818D008E9873 /* LocationItemsTableViewCell.m */,
+				E81A567C1FC5818D008E9873 /* LocationItemsTableViewCell.xib */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		E8503E431FC51C4E00AE6ACC /* WIG Objects */ = {
@@ -451,11 +499,8 @@
 		E8A84B9D1FC43BEB00FF6A06 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
-				E887F5101FC3B86600DC5BE7 /* LocationsViewController.h */,
-				E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */,
-				E8A84B9E1FC43C2300FF6A06 /* LocationTableViewCell.h */,
-				E8A84B9F1FC43C2300FF6A06 /* LocationTableViewCell.m */,
-				E8A84BA01FC43C2300FF6A06 /* LocationTableViewCell.xib */,
+				E81A56681FC57E41008E9873 /* Locations */,
+				E81A56691FC57E4F008E9873 /* Location */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -572,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A84BC91FC4432C00FF6A06 /* specchars.jpg in Resources */,
+				E81A567E1FC5818D008E9873 /* LocationItemsTableViewCell.xib in Resources */,
 				E8A84BD31FC4432C00FF6A06 /* Anipic3.jpg in Resources */,
 				E8A84BC81FC4432C00FF6A06 /* Zone.jpg in Resources */,
 				E8A84BD01FC4432C00FF6A06 /* Anipic2.jpg in Resources */,
@@ -585,7 +631,7 @@
 				E8A84BE41FC4432C00FF6A06 /* testbild.jpg in Resources */,
 				E8A84BD21FC4432C00FF6A06 /* Anipic1.jpg in Resources */,
 				E8A84BDC1FC4432C00FF6A06 /* gifformat.gif in Resources */,
-				E8A84BA21FC43C2300FF6A06 /* LocationTableViewCell.xib in Resources */,
+				E8A84BA21FC43C2300FF6A06 /* LocationsTableViewCell.xib in Resources */,
 				E8A84BD81FC4432C00FF6A06 /* Anipic5.jpg in Resources */,
 				E8A84BDB1FC4432C00FF6A06 /* sound_low.mp3 in Resources */,
 				E8A84BE51FC4432C00FF6A06 /* phone.mp3 in Resources */,
@@ -598,6 +644,7 @@
 				E8A84BC71FC4432C00FF6A06 /* Wherigo_Testsuite_EN.urwigo in Resources */,
 				E8A84BD61FC4432C00FF6A06 /* 230x340.jpg in Resources */,
 				E8A84BD11FC4432C00FF6A06 /* notify.fdl in Resources */,
+				E81A56791FC58177008E9873 /* LocationDebugTableViewCell.xib in Resources */,
 				E8A84BDF1FC4432C00FF6A06 /* phone.fdl in Resources */,
 				E8A84BDE1FC4432C00FF6A06 /* Icon_TelSilent.jpg in Resources */,
 				E8A84BD71FC4432C00FF6A06 /* sound_high.ogg in Resources */,
@@ -608,6 +655,7 @@
 				E887F5261FC3B86800DC5BE7 /* Base.lproj in Resources */,
 				E8A84BCB1FC4432C00FF6A06 /* bmpformat.bmp in Resources */,
 				E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */,
+				E81A56741FC58160008E9873 /* LocationHeaderTableViewCell.xib in Resources */,
 				E8A84BCE1FC4432C00FF6A06 /* sound_high.wav in Resources */,
 				E8A84BE31FC4432C00FF6A06 /* sound_high.mp3 in Resources */,
 				E8A84BCD1FC4432C00FF6A06 /* nullsound.mp3 in Resources */,
@@ -642,6 +690,8 @@
 				E8A84B6B1FC3C04F00FF6A06 /* ldo.c in Sources */,
 				E8A84B6D1FC3C04F00FF6A06 /* ldump.c in Sources */,
 				E8A84B6E1FC3C04F00FF6A06 /* lfunc.c in Sources */,
+				E81A56781FC58177008E9873 /* LocationDebugTableViewCell.m in Sources */,
+				E81A566C1FC57E6F008E9873 /* LocationViewController.m in Sources */,
 				E8A84B701FC3C04F00FF6A06 /* lgc.c in Sources */,
 				E8A84B721FC3C04F00FF6A06 /* linit.c in Sources */,
 				E8A84B731FC3C04F00FF6A06 /* liolib.c in Sources */,
@@ -661,9 +711,11 @@
 				E8A84B861FC3C05000FF6A06 /* lstrlib.c in Sources */,
 				E8A84BF41FC4E48F00FF6A06 /* WIGZCommand.m in Sources */,
 				E8A84B871FC3C05000FF6A06 /* ltable.c in Sources */,
+				E81A56731FC58160008E9873 /* LocationHeaderTableViewCell.m in Sources */,
 				E8A84B891FC3C05000FF6A06 /* ltablib.c in Sources */,
 				E8A84B8A1FC3C05000FF6A06 /* ltm.c in Sources */,
 				E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */,
+				E81A567D1FC5818D008E9873 /* LocationItemsTableViewCell.m in Sources */,
 				E8A84B8F1FC3C05000FF6A06 /* lundump.c in Sources */,
 				E8A84B911FC3C05000FF6A06 /* lvm.c in Sources */,
 				E8A84B931FC3C05000FF6A06 /* lzio.c in Sources */,
@@ -676,7 +728,7 @@
 				E887F5211FC3B86800DC5BE7 /* YouSeeViewController.m in Sources */,
 				E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */,
 				E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */,
-				E8A84BA11FC43C2300FF6A06 /* LocationTableViewCell.m in Sources */,
+				E8A84BA11FC43C2300FF6A06 /* LocationsTableViewCell.m in Sources */,
 				E887F5251FC3B86800DC5BE7 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

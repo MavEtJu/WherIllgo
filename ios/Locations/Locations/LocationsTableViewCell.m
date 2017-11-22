@@ -6,9 +6,9 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "LocationTableViewCell.h"
+#import "LocationsTableViewCell.h"
 
-@implementation LocationTableViewCell
+@implementation LocationsTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

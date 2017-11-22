@@ -9,7 +9,8 @@
 #import "LocationsViewController.h"
 
 #import "WIG.h"
-#import "LocationTableViewCell.h"
+#import "LocationsTableViewCell.h"
+#import "LocationViewController.h"
 
 @interface LocationsViewController ()
 
@@ -23,7 +24,9 @@
 {
     [super viewDidLoad];
 
-    [self.tableView registerNib:[UINib nibWithNibName:XIB_LOCATIONTABLEVIEWCELL bundle:nil] forCellReuseIdentifier:XIB_LOCATIONTABLEVIEWCELL];
+    self.title = @"Locations";
+
+    [self.tableView registerNib:[UINib nibWithNibName:XIB_LOCATIONSTABLEVIEWCELL bundle:nil] forCellReuseIdentifier:XIB_LOCATIONSTABLEVIEWCELL];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,23 +53,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LocationTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_LOCATIONTABLEVIEWCELL forIndexPath:indexPath];
+    LocationsTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_LOCATIONSTABLEVIEWCELL forIndexPath:indexPath];
 
     WIGZone *location = [self.locations objectAtIndex:indexPath.row];
     cell.labelName.text = location.name;
     cell.labelDescription.text = location.description_;
 
-    if (location.media != nil) {
-        WIGZMediaResource *resource = [location.media.resources firstObject];
+    if (location.icon != nil) {
+        WIGZMediaResource *resource = [location.icon.resources firstObject];
         cell.ivMediaIcon.image = [UIImage imageWithContentsOfFile:resource.filename];
-    }
-
-    cell.labelDebugActive.text = [NSString stringWithFormat:@"Active: %d", location.active];
-    cell.labelDebugVisible.text = [NSString stringWithFormat:@"Visible: %d", location.visible];
-    cell.labelDebugShowObjects.text = [NSString stringWithFormat:@"Show Objects: %@", location.showObjects];
-    cell.labelDebugState.text = [NSString stringWithFormat:@"State: %@", location.state];
+    } else
+        cell.ivMediaIcon.image = nil;
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    WIGZone *location = [self.locations objectAtIndex:indexPath.row];
+
+    LocationViewController *newController = [[LocationViewController alloc] init];
+    newController.title = @"Location";
+    newController.location = location;
+    [self.navigationController pushViewController:newController animated:YES];
+
+    [wig onClick:location.luaObject];
 }
 
 @end
