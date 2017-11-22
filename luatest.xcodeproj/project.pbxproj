@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */; };
+		E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E481FC51D1400AE6ACC /* WIGUI.m */; };
 		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
 		E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5111FC3B86600DC5BE7 /* TasksViewController.m */; };
 		E887F51F1FC3B86800DC5BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5131FC3B86600DC5BE7 /* main.m */; };
@@ -105,6 +106,8 @@
 /* Begin PBXFileReference section */
 		E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMediaResource.h; sourceTree = "<group>"; };
 		E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMediaResource.m; sourceTree = "<group>"; };
+		E8503E471FC51D1400AE6ACC /* WIGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGUI.h; sourceTree = "<group>"; };
+		E8503E481FC51D1400AE6ACC /* WIGUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGUI.m; sourceTree = "<group>"; };
 		E866BCE91FC2820F00B395C5 /* LuaExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaExport.h; sourceTree = "<group>"; };
 		E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaExportMetaData.m; sourceTree = "<group>"; };
 		E866BCEB1FC2821000B395C5 /* LuaContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaContext.h; sourceTree = "<group>"; };
@@ -258,24 +261,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E866BCF01FC2853300B395C5 /* cartridges */ = {
+		E8503E431FC51C4E00AE6ACC /* WIG Objects */ = {
 			isa = PBXGroup;
 			children = (
-				E8A84BA31FC442DD00FF6A06 /* testsuite */,
-				E866BCF81FC2883700B395C5 /* ohm.lua */,
-				E866BCF71FC2883700B395C5 /* ohm.luac */,
-				E866BCFA1FC28E5900B395C5 /* Wherigo.lua */,
-			);
-			path = cartridges;
-			sourceTree = "<group>";
-		};
-		E866BCFF1FC2EB3D00B395C5 /* Wherigo library */ = {
-			isa = PBXGroup;
-			children = (
-				E866BD001FC2EB9000B395C5 /* WIG.h */,
-				E866BD011FC2EB9000B395C5 /* WIG.m */,
-				E866BD071FC2F3C800B395C5 /* WIG-link.h */,
-				E866BD061FC2F3C800B395C5 /* WIG-link.m */,
 				E8A84BE61FC4DF7C00FF6A06 /* WIGZObject.h */,
 				E8A84BE71FC4DF7C00FF6A06 /* WIGZObject.m */,
 				E8A84BE91FC4E46500FF6A06 /* WIGZCharacter.h */,
@@ -294,6 +282,31 @@
 				E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */,
 				E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */,
 				E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */,
+			);
+			path = "WIG Objects";
+			sourceTree = "<group>";
+		};
+		E866BCF01FC2853300B395C5 /* cartridges */ = {
+			isa = PBXGroup;
+			children = (
+				E8A84BA31FC442DD00FF6A06 /* testsuite */,
+				E866BCF81FC2883700B395C5 /* ohm.lua */,
+				E866BCF71FC2883700B395C5 /* ohm.luac */,
+				E866BCFA1FC28E5900B395C5 /* Wherigo.lua */,
+			);
+			path = cartridges;
+			sourceTree = "<group>";
+		};
+		E866BCFF1FC2EB3D00B395C5 /* Wherigo library */ = {
+			isa = PBXGroup;
+			children = (
+				E8503E431FC51C4E00AE6ACC /* WIG Objects */,
+				E866BD001FC2EB9000B395C5 /* WIG.h */,
+				E866BD011FC2EB9000B395C5 /* WIG.m */,
+				E8503E471FC51D1400AE6ACC /* WIGUI.h */,
+				E8503E481FC51D1400AE6ACC /* WIGUI.m */,
+				E866BD071FC2F3C800B395C5 /* WIG-link.h */,
+				E866BD061FC2F3C800B395C5 /* WIG-link.m */,
 			);
 			path = "Wherigo library";
 			sourceTree = "<group>";
@@ -590,6 +603,7 @@
 				E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */,
 				E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */,
 				E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */,
+				E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */,
 				E8A84BEE1FC4E47700FF6A06 /* WIGZCartridge.m in Sources */,
 				E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */,
 				E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */,

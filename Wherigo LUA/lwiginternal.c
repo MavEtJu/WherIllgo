@@ -50,8 +50,7 @@ static int wigMessageBox(lua_State *L) {
     printf("> button2: %s\n", button2);
     printf("> callback: %s\n", callback);
     printf("Press OK to continue (fake)\n");
-    if (strcmp(callback, "1") == 0)
-        WIGMessageBoxCallback();
+    WIGUIMessageBox(text, media, button1, button2, callback);
     return 0;
 }
 

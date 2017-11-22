@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 
+void WIGUIMessageBox(const char *text, const char *media, const char *button1, const char *button2, const char *callback);
 void WIGMessageBoxCallback(void);
 
 #endif /* WIG_link_h */
