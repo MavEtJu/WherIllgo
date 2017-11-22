@@ -74,6 +74,17 @@ WIG *wig = nil;
     }
 }
 
+- (void)onClick:(NSString *)name
+{
+    NSString *myScript = [NSString stringWithFormat:@"\
+        if %@.OnClick ~= nil then   \
+            %@.OnClick()            \
+        end                         \
+        ", name, name];
+    [self runScript:myScript];
+}
+
+
 /*
  * Interaction with objects
  */
@@ -91,6 +102,7 @@ WIG *wig = nil;
             return;
         WIGZTask *task = [[WIGZTask alloc] init];
         [task importFromDict:dict];
+        task.luaObject = key;
         [zs setObject:task forKey:key];
     }];
 
@@ -127,6 +139,7 @@ WIG *wig = nil;
             return;
         WIGZone *zone = [[WIGZone alloc] init];
         [zone importFromDict:dict];
+        zone.luaObject = key;
         [zs setObject:zone forKey:key];
     }];
 
@@ -157,6 +170,7 @@ WIG *wig = nil;
         NSString *containerType = [container objectForKey:@"_classname"];
         if ([containerType isEqualToString:@"Zone"] == NO)
             return;
+//        ZItemZone.luaObject = key;
         [zs setObject:dict forKey:key];
     }];
 
@@ -187,6 +201,7 @@ WIG *wig = nil;
         NSString *containerType = [container objectForKey:@"_classname"];
         if ([containerType isEqualToString:@"ZCharacter"] == NO)
             return;
+        // ZItem.luaObject = key;
         [zs setObject:dict forKey:key];
     }];
 
@@ -204,12 +219,14 @@ WIG *wig = nil;
     NSDictionary *g = [self.ctx globalVar:@"_G"];
     WIGZCartridge *cartridge = [[WIGZCartridge alloc] init];
     [cartridge importFromDict:[g objectForKey:@"cart"]];
+    cartridge.luaObject = @"cart";
     return cartridge;
 }
 
 /*
  * Calls from WIG-link
  */
+
 - (void)messageBoxCallback
 {
     NSString *myScript = LUA_STRING(

@@ -52,6 +52,8 @@
 /* Interface to WIG-link */
 - (void)messageBoxCallback;
 
+- (void)onClick:(NSString *)name;
+
 @end
 
 extern WIG *wig;
