@@ -85,6 +85,8 @@ Visible (Boolean)
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic        ) BOOL visible;
 
+@property (nonatomic, retain) NSString *luaObject;
+
 - (void)importFromDict:(NSDictionary *)dict;
 
 @end
