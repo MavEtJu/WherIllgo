@@ -48,11 +48,11 @@ Visible     Boolean.
 
 @property (nonatomic        ) BOOL active;
 @property (nonatomic, retain) WIGZonePoint *closestPoint;
-@property (nonatomic, retain) WIGDistance *distance;
+@property (nonatomic, retain) NSNumber *distance;
 @property (nonatomic, retain) NSString *inRangeName;
 @property (nonatomic, retain) NSString *outRangeName;
 @property (nonatomic, retain) NSArray<WIGZonePoint *> *points;
-@property (nonatomic, retain) WIGDistance *proximityRange;
+@property (nonatomic, retain) NSNumber *proximityRange;
 @property (nonatomic, retain) NSString *showObjects;
 @property (nonatomic, retain) NSString *state;
 
