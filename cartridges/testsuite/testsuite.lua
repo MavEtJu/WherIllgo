@@ -1982,6 +1982,11 @@ function objTaskOnclick:OnClick()
 		Text = "Congrats, your player supports the On click event of a task."
 	}
 end
+function objDemozone:OnClick()
+	_Urwigo.MessageBox{
+		Text = "Congrats, your player supports the On click event of a zone."
+	}
+end
 function objNumInput:OnGetInput(input)
 	input = tonumber(input)
 	if input == nil then
