@@ -6,11 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "AppDelegate.h"
-
 #import "main.h"
-
-#import "WIG.h"
 
 @interface AppDelegate ()
 

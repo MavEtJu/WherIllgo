@@ -6,10 +6,6 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-#import "WIG.h"
-
 @interface ItemViewController : UITableViewController
 
 @property (nonatomic, retain) WIGZItem *item;

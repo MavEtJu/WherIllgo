@@ -6,7 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "WIGZMediaResource.h"
+#import "WIG.h"
 
 @implementation WIGZMediaResource
 

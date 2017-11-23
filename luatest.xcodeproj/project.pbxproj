@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E81A56631FC524B9008E9873 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56611FC524B9008E9873 /* TaskTableViewCell.m */; };
-		E81A56641FC524B9008E9873 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */; };
+		E81A56631FC524B9008E9873 /* TasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56611FC524B9008E9873 /* TasksTableViewCell.m */; };
+		E81A56641FC524B9008E9873 /* TasksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56621FC524B9008E9873 /* TasksTableViewCell.xib */; };
 		E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56661FC5272B008E9873 /* WIGZTask.m */; };
 		E81A566C1FC57E6F008E9873 /* ZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A566B1FC57E6F008E9873 /* ZoneViewController.m */; };
 		E81A56731FC58160008E9873 /* ZoneHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56711FC58160008E9873 /* ZoneHeaderTableViewCell.m */; };
@@ -120,9 +120,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E81A56601FC524B9008E9873 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
-		E81A56611FC524B9008E9873 /* TaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
-		E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		E81A56601FC524B9008E9873 /* TasksTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasksTableViewCell.h; sourceTree = "<group>"; };
+		E81A56611FC524B9008E9873 /* TasksTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasksTableViewCell.m; sourceTree = "<group>"; };
+		E81A56621FC524B9008E9873 /* TasksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksTableViewCell.xib; sourceTree = "<group>"; };
 		E81A56651FC5272B008E9873 /* WIGZTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZTask.h; sourceTree = "<group>"; };
 		E81A56661FC5272B008E9873 /* WIGZTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZTask.m; sourceTree = "<group>"; };
 		E81A566A1FC57E6F008E9873 /* ZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoneViewController.h; sourceTree = "<group>"; };
@@ -308,9 +308,9 @@
 			children = (
 				E887F50F1FC3B86600DC5BE7 /* TasksViewController.h */,
 				E887F5111FC3B86600DC5BE7 /* TasksViewController.m */,
-				E81A56601FC524B9008E9873 /* TaskTableViewCell.h */,
-				E81A56611FC524B9008E9873 /* TaskTableViewCell.m */,
-				E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */,
+				E81A56601FC524B9008E9873 /* TasksTableViewCell.h */,
+				E81A56611FC524B9008E9873 /* TasksTableViewCell.m */,
+				E81A56621FC524B9008E9873 /* TasksTableViewCell.xib */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -372,6 +372,7 @@
 		E845C8981FC6916E00809B28 /* Singles viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				E845C89B1FC6D79300809B28 /* Task */,
 				E81A56811FC62AB4008E9873 /* Item */,
 				E81A56691FC57E4F008E9873 /* Zone */,
 			);
@@ -394,6 +395,13 @@
 			children = (
 			);
 			path = Inventory;
+			sourceTree = "<group>";
+		};
+		E845C89B1FC6D79300809B28 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 		E8503E431FC51C4E00AE6ACC /* WIG Objects */ = {
@@ -476,8 +484,8 @@
 				E88E4DA11FC279D200E784F9 /* lua-5.1.5 */,
 				E866BCF01FC2853300B395C5 /* cartridges */,
 				E88E4DF91FC27AFB00E784F9 /* Wherigo LUA */,
-				E866BCFF1FC2EB3D00B395C5 /* Wherigo library */,
 				E8F182151FC393B400CC85C4 /* Lua Library */,
+				E866BCFF1FC2EB3D00B395C5 /* Wherigo library */,
 				E887F4F71FC3B70C00DC5BE7 /* ios */,
 				E88E4D3E1FC278D900E784F9 /* Products */,
 			);
@@ -719,7 +727,7 @@
 				E8A84BCE1FC4432C00FF6A06 /* sound_high.wav in Resources */,
 				E8A84BE31FC4432C00FF6A06 /* sound_high.mp3 in Resources */,
 				E8A84BCD1FC4432C00FF6A06 /* nullsound.mp3 in Resources */,
-				E81A56641FC524B9008E9873 /* TaskTableViewCell.xib in Resources */,
+				E81A56641FC524B9008E9873 /* TasksTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,7 +740,7 @@
 			files = (
 				E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */,
 				E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */,
-				E81A56631FC524B9008E9873 /* TaskTableViewCell.m in Sources */,
+				E81A56631FC524B9008E9873 /* TasksTableViewCell.m in Sources */,
 				E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */,
 				E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */,
 				E8A84BEE1FC4E47700FF6A06 /* WIGZCartridge.m in Sources */,

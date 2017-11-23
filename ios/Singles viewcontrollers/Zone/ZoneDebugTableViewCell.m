@@ -6,7 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "ZoneDebugTableViewCell.h"
+#import "main.h"
 
 @implementation ZoneDebugTableViewCell
 

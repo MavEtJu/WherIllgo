@@ -6,11 +6,9 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#define XIB_TASKSTABLEVIEWCELL   @"TasksTableViewCell"
 
-#define XIB_TASKTABLEVIEWCELL   @"TaskTableViewCell"
-
-@interface TaskTableViewCell : UITableViewCell
+@interface TasksTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *labelName;
 @property (nonatomic, retain) IBOutlet UILabel *labelDescription;

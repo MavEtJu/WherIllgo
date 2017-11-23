@@ -6,9 +6,9 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "TaskTableViewCell.h"
+#import "main.h"
 
-@implementation TaskTableViewCell
+@implementation TasksTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

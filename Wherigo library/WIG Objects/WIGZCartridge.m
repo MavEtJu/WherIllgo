@@ -6,7 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "WIGZCartridge.h"
+#import "WIG.h"
 
 @implementation WIGZCartridge
 

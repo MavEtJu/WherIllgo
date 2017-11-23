@@ -6,11 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "LocationsViewController.h"
-
-#import "WIG.h"
-#import "LocationsTableViewCell.h"
-#import "ZoneViewController.h"
+#import "main.h"
 
 @interface LocationsViewController ()
 

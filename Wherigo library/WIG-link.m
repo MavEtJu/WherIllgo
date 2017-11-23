@@ -6,9 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#include "WIG-link.h"
 #include "WIG.h"
-#include "WIGUI.h"
 
 void WIGMessageBoxCallback(void)
 {

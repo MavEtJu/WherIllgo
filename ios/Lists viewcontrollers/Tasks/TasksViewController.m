@@ -6,9 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "TasksViewController.h"
-#import "TaskTableViewCell.h"
-#import "WIG.h"
+#import "main.h"
 
 @interface TasksViewController ()
 
@@ -22,7 +20,7 @@
 {
     [super viewDidLoad];
 
-    [self.tableView registerNib:[UINib nibWithNibName:XIB_TASKTABLEVIEWCELL bundle:nil] forCellReuseIdentifier:XIB_TASKTABLEVIEWCELL];
+    [self.tableView registerNib:[UINib nibWithNibName:XIB_TASKSTABLEVIEWCELL bundle:nil] forCellReuseIdentifier:XIB_TASKSTABLEVIEWCELL];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,7 +47,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TaskTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_TASKTABLEVIEWCELL forIndexPath:indexPath];
+    TasksTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_TASKSTABLEVIEWCELL forIndexPath:indexPath];
 
     WIGZTask *task = [self.tasks objectAtIndex:indexPath.row];
     cell.labelName.text = task.name;

@@ -6,8 +6,6 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #define XIB_ITEM_HEADER_TABLEVIEWCELL @"ItemHeaderTableViewCell"
 
 @interface ItemHeaderTableViewCell : UITableViewCell

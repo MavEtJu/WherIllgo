@@ -9,21 +9,31 @@
 #ifndef main_h
 #define main_h
 
+#import <UIKit/UIKit.h>
+
 #import "WIG.h"
 
-#import "LocationsViewController.h"
-#import "TasksViewController.h"
 #import "MapViewController.h"
 #import "InventoryViewController.h"
-#import "YouSeesViewController.h"
+
+#import "LocationsViewController.h"
+#import "LocationsTableViewCell.h"
 
 #import "ZoneViewController.h"
 #import "ZoneHeaderTableViewCell.h"
 #import "ZoneDebugTableViewCell.h"
 #import "ZoneItemsTableViewCell.h"
 
+#import "YouSeesViewController.h"
+#import "YouSeesTableViewCell.h"
+
+#import "TasksViewController.h"
+#import "TasksTableViewCell.h"
+
 #import "ItemViewController.h"
 #import "ItemHeaderTableViewCell.h"
+
+#import "AppDelegate.h"
 
 #define XIB_UITABLEVIEWCELL @"UITableViewCell"
 

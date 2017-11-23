@@ -6,12 +6,6 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "ZoneViewController.h"
-
-#import "ZoneDebugTableViewCell.h"
-#import "ZoneItemsTableViewCell.h"
-#import "ZoneHeaderTableViewCell.h"
-
 #import "main.h"
 
 @interface ZoneViewController ()

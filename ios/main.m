@@ -6,9 +6,6 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
-
 #import "main.h"
 
 YouSeesViewController *youSeesViewController;

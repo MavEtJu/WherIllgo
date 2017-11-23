@@ -32,6 +32,8 @@
 #import "WIGZonePoint.h"
 #import "WIGZTask.h"
 
+#import "WIGUI.h"
+
 @interface WIG : NSObject
 
 @property (nonatomic, retain) WIGZCartridge *cartridge;

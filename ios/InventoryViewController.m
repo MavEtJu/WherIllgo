@@ -6,9 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "InventoryViewController.h"
-
-#import "WIG.h"
+#import "main.h"
 
 @interface InventoryViewController ()
 

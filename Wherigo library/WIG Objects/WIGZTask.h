@@ -6,8 +6,6 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "WIGZObject.h"
-
 @interface WIGZTask : WIGZObject
 
 /*

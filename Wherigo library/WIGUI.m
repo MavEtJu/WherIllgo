@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "WIG.h"
-#import "WIGUI.h"
 
 @implementation WIGUI
 

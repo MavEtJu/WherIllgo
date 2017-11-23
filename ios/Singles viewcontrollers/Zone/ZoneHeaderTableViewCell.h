@@ -6,8 +6,6 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #define XIB_ZONE_HEADER_TABLEVIEWCELL   @"ZoneHeaderTableViewCell"
 
 @interface ZoneHeaderTableViewCell : UITableViewCell

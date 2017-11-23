@@ -6,11 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "YouSeesViewController.h"
-#import "YouSeesTableViewCell.h"
-#import "ItemViewController.h"
-
-#import "WIG.h"
+#import "main.h"
 
 @interface YouSeesViewController ()
 
