@@ -29,6 +29,7 @@
 
 #import "TasksViewController.h"
 #import "TasksTableViewCell.h"
+#import "TaskViewController.h"
 
 #import "ItemViewController.h"
 #import "ItemHeaderTableViewCell.h"

@@ -147,15 +147,15 @@ enum {
         case SECTION_DEBUG: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
 
-            cell.textLabel.text = @"Debug";
-            cell.detailTextLabel.numberOfLines = 0;
+            cell.textLabel.numberOfLines = 0;
+            cell.textLabel.font = [UIFont systemFontOfSize:12];
 
             NSMutableString *s = [NSMutableString stringWithString:@""];
             [s appendFormat:@"Active: %d\n", self.zone.active];
             [s appendFormat:@"Visible: %d\n", self.zone.visible];
             [s appendFormat:@"State: %@\n", self.zone.state];
             [s appendFormat:@"ShowObjects: %@\n", self.zone.showObjects];
-            cell.detailTextLabel.text = s;
+            cell.textLabel.text = s;
             c = cell;
             break;
         }

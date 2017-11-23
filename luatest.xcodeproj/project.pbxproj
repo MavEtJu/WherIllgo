@@ -23,6 +23,7 @@
 		E81A568C1FC64C08008E9873 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A568B1FC64C08008E9873 /* ItemViewController.m */; };
 		E81A56901FC64C22008E9873 /* ItemHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A568E1FC64C22008E9873 /* ItemHeaderTableViewCell.m */; };
 		E81A56911FC64C22008E9873 /* ItemHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A568F1FC64C22008E9873 /* ItemHeaderTableViewCell.xib */; };
+		E845C89E1FC6DFC600809B28 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E845C89D1FC6DFC600809B28 /* TaskViewController.m */; };
 		E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */; };
 		E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E481FC51D1400AE6ACC /* WIGUI.m */; };
 		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
@@ -146,6 +147,8 @@
 		E81A568D1FC64C22008E9873 /* ItemHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemHeaderTableViewCell.h; sourceTree = "<group>"; };
 		E81A568E1FC64C22008E9873 /* ItemHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemHeaderTableViewCell.m; sourceTree = "<group>"; };
 		E81A568F1FC64C22008E9873 /* ItemHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E845C89C1FC6DFC600809B28 /* TaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		E845C89D1FC6DFC600809B28 /* TaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 		E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMediaResource.h; sourceTree = "<group>"; };
 		E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMediaResource.m; sourceTree = "<group>"; };
 		E8503E471FC51D1400AE6ACC /* WIGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGUI.h; sourceTree = "<group>"; };
@@ -400,6 +403,8 @@
 		E845C89B1FC6D79300809B28 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				E845C89C1FC6DFC600809B28 /* TaskViewController.h */,
+				E845C89D1FC6DFC600809B28 /* TaskViewController.m */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -745,6 +750,7 @@
 				E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */,
 				E8A84BEE1FC4E47700FF6A06 /* WIGZCartridge.m in Sources */,
 				E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */,
+				E845C89E1FC6DFC600809B28 /* TaskViewController.m in Sources */,
 				E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */,
 				E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */,
 				E81A56851FC6386C008E9873 /* YouSeesTableViewCell.m in Sources */,

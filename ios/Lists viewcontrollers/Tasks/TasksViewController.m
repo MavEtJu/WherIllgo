@@ -69,4 +69,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    WIGZTask *task = [self.tasks objectAtIndex:indexPath.row];
+
+    TaskViewController *newController = [[TaskViewController alloc] init];
+    newController.title = @"Task";
+    newController.task = task;
+    [self.navigationController pushViewController:newController animated:YES];
+
+    [wig onClick:task.luaObject];
+}
+
 @end

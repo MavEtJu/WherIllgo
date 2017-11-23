@@ -43,8 +43,8 @@
 
 
     NSArray *controllers = @[
-        tasksNav,
         locationsNav,
+        tasksNav,
         youSeeNav,
         inventoryNav,
         mapNav
