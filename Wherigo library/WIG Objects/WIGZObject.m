@@ -47,6 +47,21 @@
         }
     }
 
+    NSDictionary *commandsDict = [dict objectForKey:@"Commands"];
+    if ([commandsDict isKindOfClass:[NSDictionary class]] == YES) {
+        NSMutableDictionary<NSString *, WIGZCommand *> *commands = [NSMutableDictionary dictionaryWithCapacity:10];
+
+        [commandsDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSDictionary  * _Nonnull obj, BOOL * _Nonnull stop) {
+            WIGZCommand *command = [[WIGZCommand alloc] init];
+            [command importFromDict:obj];
+
+            [commands setValue:command forKey:key];
+        }];
+
+        self.commands = commands;
+        self.commandsArray = [self.commands allValues];
+    }
+
     NSDictionary *mediaDict = [dict objectForKey:@"Media"];
     if ([mediaDict isKindOfClass:[NSDictionary class]] == YES) {
         WIGZMedia *media = [[WIGZMedia alloc] init];

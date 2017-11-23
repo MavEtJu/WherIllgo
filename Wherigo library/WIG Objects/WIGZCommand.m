@@ -10,4 +10,19 @@
 
 @implementation WIGZCommand
 
+- (void)importFromDict:(NSDictionary *)dict
+{
+    [super importFromDict:dict];
+
+//@property (nonatomic, retain) NSArray<ZObject *> *worksWithList;
+
+    self.text = [dict objectForKey:@"Text"];
+    self.cmdwith = [[dict objectForKey:@"CmdWidth"] boolValue];;
+    self.custom = [[dict objectForKey:@"Custom"] boolValue];;
+    self.enabled = [[dict objectForKey:@"Enabled"] boolValue];;
+    self.emptyTargetListText = [dict objectForKey:@"EmptyTargetListText"];
+    self.makeReciprocal = [[dict objectForKey:@"MakeReciprocal"] boolValue];;
+    self.worksWithAll = [[dict objectForKey:@"WorksWithAll"] boolValue];;
+}
+
 @end

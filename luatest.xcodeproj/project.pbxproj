@@ -396,6 +396,8 @@
 		E845C89A1FC695FC00809B28 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				E887F51D1FC3B86800DC5BE7 /* InventoryViewController.h */,
+				E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -470,8 +472,6 @@
 				E845C8981FC6916E00809B28 /* Singles viewcontrollers */,
 				E887F5181FC3B86700DC5BE7 /* AppDelegate.h */,
 				E887F5151FC3B86700DC5BE7 /* AppDelegate.m */,
-				E887F51D1FC3B86800DC5BE7 /* InventoryViewController.h */,
-				E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */,
 				E887F5141FC3B86700DC5BE7 /* MapViewController.h */,
 				E887F51B1FC3B86700DC5BE7 /* MapViewController.m */,
 				E8A84B9C1FC40AAE00FF6A06 /* main.h */,

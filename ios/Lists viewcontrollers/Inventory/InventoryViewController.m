@@ -56,4 +56,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    WIGZItem *item = [self.items objectAtIndex:indexPath.row];
+
+    ItemViewController *newController = [[ItemViewController alloc] init];
+    newController.title = @"Item";
+    newController.item = item;
+    [self.navigationController pushViewController:newController animated:YES];
+
+    [wig onClick:item.luaObject];
+}
+
 @end
