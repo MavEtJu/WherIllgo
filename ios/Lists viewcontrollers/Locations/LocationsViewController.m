@@ -10,7 +10,7 @@
 
 #import "WIG.h"
 #import "LocationsTableViewCell.h"
-#import "LocationViewController.h"
+#import "ZoneViewController.h"
 
 @interface LocationsViewController ()
 
@@ -65,6 +65,14 @@
     } else
         cell.ivMediaIcon.image = nil;
 
+    NSMutableString *s = [NSMutableString stringWithString:@"Debug:\n"];
+    [s appendFormat:@"Active: %d\n", location.active];
+    [s appendFormat:@"Visible: %d\n", location.visible];
+    cell.labelDebug.text = s;
+
+    NSArray<WIGZItem *> *items = [wig arrayZItemsInZone:location];
+    cell.labelItems.text = [NSString stringWithFormat:@"Items: %ld", (long)[items count]];
+
     return cell;
 }
 
@@ -72,9 +80,9 @@
 {
     WIGZone *location = [self.locations objectAtIndex:indexPath.row];
 
-    LocationViewController *newController = [[LocationViewController alloc] init];
+    ZoneViewController *newController = [[ZoneViewController alloc] init];
     newController.title = @"Location";
-    newController.location = location;
+    newController.zone = location;
     [self.navigationController pushViewController:newController animated:YES];
 
     [wig onClick:location.luaObject];

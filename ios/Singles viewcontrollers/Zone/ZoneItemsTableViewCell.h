@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#define XIB_LOCATION_ITEMS_TABLEVIEWCELL   @"LocationItemsTableViewCell"
+#define XIB_ZONE_ITEMS_TABLEVIEWCELL   @"ZoneItemsTableViewCell"
 
-@interface LocationItemsTableViewCell : UITableViewCell
+@interface ZoneItemsTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *labelItems;
 

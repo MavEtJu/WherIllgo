@@ -1956,6 +1956,12 @@ function PlayersZone:OncmdZoneCommand(target)
 		Text = "Congrats, if you see these message, your player supports zone commands."
 	}
 end
+function objDemozone:OnDistant()
+	Wherigo.PlayAudio(objNotify)
+	_Urwigo.MessageBox{
+		Text = "You're distant to the demozone!"
+	}
+end
 function PlayersZone:OnEnter()
 	currentZone = "PlayersZone"
 	Wherigo.PlayAudio(objNotify)
@@ -3271,7 +3277,7 @@ function objReadTaskStatus()
 	else
 		objCorrectnessStatus = "nil"
 	end
-	objTask.Description = ((((("Here you can see the following states of the demotask : complete, not complete, correct, not correct and correction none. I think the correction flag does not work !?"..CR).."Actual correctness state : ")..objCorrectnessStatus)..CR).."Actual complete state : ")..objCompleteStatus
+	objTask.Description = ((((((("Here you can see the following states of the demotask : complete, not complete, correct, not correct and correction none. I think the correction flag does not work !?"..CR).." Actual correctness state : '")..objCorrectnessStatus).."'")..CR)..". Actual complete state : '")..objCompleteStatus.."'.")
 end
 function objReadBooleanValue()
 	if objvarBoolean == true then

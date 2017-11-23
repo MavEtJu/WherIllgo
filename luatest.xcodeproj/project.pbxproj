@@ -10,20 +10,26 @@
 		E81A56631FC524B9008E9873 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56611FC524B9008E9873 /* TaskTableViewCell.m */; };
 		E81A56641FC524B9008E9873 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */; };
 		E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56661FC5272B008E9873 /* WIGZTask.m */; };
-		E81A566C1FC57E6F008E9873 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A566B1FC57E6F008E9873 /* LocationViewController.m */; };
-		E81A56731FC58160008E9873 /* LocationHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56711FC58160008E9873 /* LocationHeaderTableViewCell.m */; };
-		E81A56741FC58160008E9873 /* LocationHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56721FC58160008E9873 /* LocationHeaderTableViewCell.xib */; };
-		E81A56781FC58177008E9873 /* LocationDebugTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56761FC58177008E9873 /* LocationDebugTableViewCell.m */; };
-		E81A56791FC58177008E9873 /* LocationDebugTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56771FC58177008E9873 /* LocationDebugTableViewCell.xib */; };
-		E81A567D1FC5818D008E9873 /* LocationItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A567B1FC5818D008E9873 /* LocationItemsTableViewCell.m */; };
-		E81A567E1FC5818D008E9873 /* LocationItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A567C1FC5818D008E9873 /* LocationItemsTableViewCell.xib */; };
+		E81A566C1FC57E6F008E9873 /* ZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A566B1FC57E6F008E9873 /* ZoneViewController.m */; };
+		E81A56731FC58160008E9873 /* ZoneHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56711FC58160008E9873 /* ZoneHeaderTableViewCell.m */; };
+		E81A56741FC58160008E9873 /* ZoneHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56721FC58160008E9873 /* ZoneHeaderTableViewCell.xib */; };
+		E81A56781FC58177008E9873 /* ZoneDebugTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56761FC58177008E9873 /* ZoneDebugTableViewCell.m */; };
+		E81A56791FC58177008E9873 /* ZoneDebugTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56771FC58177008E9873 /* ZoneDebugTableViewCell.xib */; };
+		E81A567D1FC5818D008E9873 /* ZoneItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A567B1FC5818D008E9873 /* ZoneItemsTableViewCell.m */; };
+		E81A567E1FC5818D008E9873 /* ZoneItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A567C1FC5818D008E9873 /* ZoneItemsTableViewCell.xib */; };
+		E81A56851FC6386C008E9873 /* YouSeesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56831FC6386C008E9873 /* YouSeesTableViewCell.m */; };
+		E81A56861FC6386C008E9873 /* YouSeesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A56841FC6386C008E9873 /* YouSeesTableViewCell.xib */; };
+		E81A56891FC63E78008E9873 /* WIGZItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A56881FC63E78008E9873 /* WIGZItem.m */; };
+		E81A568C1FC64C08008E9873 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A568B1FC64C08008E9873 /* ItemViewController.m */; };
+		E81A56901FC64C22008E9873 /* ItemHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A568E1FC64C22008E9873 /* ItemHeaderTableViewCell.m */; };
+		E81A56911FC64C22008E9873 /* ItemHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81A568F1FC64C22008E9873 /* ItemHeaderTableViewCell.xib */; };
 		E8503E421FC4F13100AE6ACC /* WIGZMediaResource.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */; };
 		E8503E491FC51D1400AE6ACC /* WIGUI.m in Sources */ = {isa = PBXBuildFile; fileRef = E8503E481FC51D1400AE6ACC /* WIGUI.m */; };
 		E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887F5041FC3B70C00DC5BE7 /* Assets.xcassets */; };
 		E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5111FC3B86600DC5BE7 /* TasksViewController.m */; };
 		E887F51F1FC3B86800DC5BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5131FC3B86600DC5BE7 /* main.m */; };
 		E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5151FC3B86700DC5BE7 /* AppDelegate.m */; };
-		E887F5211FC3B86800DC5BE7 /* YouSeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */; };
+		E887F5211FC3B86800DC5BE7 /* YouSeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5161FC3B86700DC5BE7 /* YouSeesViewController.m */; };
 		E887F5231FC3B86800DC5BE7 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */; };
 		E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */; };
 		E887F5251FC3B86800DC5BE7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F51B1FC3B86700DC5BE7 /* MapViewController.m */; };
@@ -119,17 +125,27 @@
 		E81A56621FC524B9008E9873 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		E81A56651FC5272B008E9873 /* WIGZTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZTask.h; sourceTree = "<group>"; };
 		E81A56661FC5272B008E9873 /* WIGZTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZTask.m; sourceTree = "<group>"; };
-		E81A566A1FC57E6F008E9873 /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
-		E81A566B1FC57E6F008E9873 /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-		E81A56701FC58160008E9873 /* LocationHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHeaderTableViewCell.h; sourceTree = "<group>"; };
-		E81A56711FC58160008E9873 /* LocationHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHeaderTableViewCell.m; sourceTree = "<group>"; };
-		E81A56721FC58160008E9873 /* LocationHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		E81A56751FC58177008E9873 /* LocationDebugTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDebugTableViewCell.h; sourceTree = "<group>"; };
-		E81A56761FC58177008E9873 /* LocationDebugTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDebugTableViewCell.m; sourceTree = "<group>"; };
-		E81A56771FC58177008E9873 /* LocationDebugTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDebugTableViewCell.xib; sourceTree = "<group>"; };
-		E81A567A1FC5818D008E9873 /* LocationItemsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationItemsTableViewCell.h; sourceTree = "<group>"; };
-		E81A567B1FC5818D008E9873 /* LocationItemsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationItemsTableViewCell.m; sourceTree = "<group>"; };
-		E81A567C1FC5818D008E9873 /* LocationItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationItemsTableViewCell.xib; sourceTree = "<group>"; };
+		E81A566A1FC57E6F008E9873 /* ZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoneViewController.h; sourceTree = "<group>"; };
+		E81A566B1FC57E6F008E9873 /* ZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoneViewController.m; sourceTree = "<group>"; };
+		E81A56701FC58160008E9873 /* ZoneHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoneHeaderTableViewCell.h; sourceTree = "<group>"; };
+		E81A56711FC58160008E9873 /* ZoneHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoneHeaderTableViewCell.m; sourceTree = "<group>"; };
+		E81A56721FC58160008E9873 /* ZoneHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E81A56751FC58177008E9873 /* ZoneDebugTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoneDebugTableViewCell.h; sourceTree = "<group>"; };
+		E81A56761FC58177008E9873 /* ZoneDebugTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoneDebugTableViewCell.m; sourceTree = "<group>"; };
+		E81A56771FC58177008E9873 /* ZoneDebugTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneDebugTableViewCell.xib; sourceTree = "<group>"; };
+		E81A567A1FC5818D008E9873 /* ZoneItemsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoneItemsTableViewCell.h; sourceTree = "<group>"; };
+		E81A567B1FC5818D008E9873 /* ZoneItemsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoneItemsTableViewCell.m; sourceTree = "<group>"; };
+		E81A567C1FC5818D008E9873 /* ZoneItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneItemsTableViewCell.xib; sourceTree = "<group>"; };
+		E81A56821FC6386C008E9873 /* YouSeesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouSeesTableViewCell.h; sourceTree = "<group>"; };
+		E81A56831FC6386C008E9873 /* YouSeesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouSeesTableViewCell.m; sourceTree = "<group>"; };
+		E81A56841FC6386C008E9873 /* YouSeesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YouSeesTableViewCell.xib; sourceTree = "<group>"; };
+		E81A56871FC63E78008E9873 /* WIGZItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZItem.h; sourceTree = "<group>"; };
+		E81A56881FC63E78008E9873 /* WIGZItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZItem.m; sourceTree = "<group>"; };
+		E81A568A1FC64C08008E9873 /* ItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		E81A568B1FC64C08008E9873 /* ItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		E81A568D1FC64C22008E9873 /* ItemHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemHeaderTableViewCell.h; sourceTree = "<group>"; };
+		E81A568E1FC64C22008E9873 /* ItemHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemHeaderTableViewCell.m; sourceTree = "<group>"; };
+		E81A568F1FC64C22008E9873 /* ItemHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMediaResource.h; sourceTree = "<group>"; };
 		E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMediaResource.m; sourceTree = "<group>"; };
 		E8503E471FC51D1400AE6ACC /* WIGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGUI.h; sourceTree = "<group>"; };
@@ -157,11 +173,11 @@
 		E887F50F1FC3B86600DC5BE7 /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
 		E887F5101FC3B86600DC5BE7 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
 		E887F5111FC3B86600DC5BE7 /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
-		E887F5121FC3B86600DC5BE7 /* YouSeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouSeeViewController.h; sourceTree = "<group>"; };
+		E887F5121FC3B86600DC5BE7 /* YouSeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouSeesViewController.h; sourceTree = "<group>"; };
 		E887F5131FC3B86600DC5BE7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E887F5141FC3B86700DC5BE7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		E887F5151FC3B86700DC5BE7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouSeeViewController.m; sourceTree = "<group>"; };
+		E887F5161FC3B86700DC5BE7 /* YouSeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouSeesViewController.m; sourceTree = "<group>"; };
 		E887F5181FC3B86700DC5BE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E887F5191FC3B86700DC5BE7 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
 		E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
@@ -311,22 +327,73 @@
 			path = Locations;
 			sourceTree = "<group>";
 		};
-		E81A56691FC57E4F008E9873 /* Location */ = {
+		E81A56691FC57E4F008E9873 /* Zone */ = {
 			isa = PBXGroup;
 			children = (
-				E81A566A1FC57E6F008E9873 /* LocationViewController.h */,
-				E81A566B1FC57E6F008E9873 /* LocationViewController.m */,
-				E81A56701FC58160008E9873 /* LocationHeaderTableViewCell.h */,
-				E81A56711FC58160008E9873 /* LocationHeaderTableViewCell.m */,
-				E81A56721FC58160008E9873 /* LocationHeaderTableViewCell.xib */,
-				E81A56751FC58177008E9873 /* LocationDebugTableViewCell.h */,
-				E81A56761FC58177008E9873 /* LocationDebugTableViewCell.m */,
-				E81A56771FC58177008E9873 /* LocationDebugTableViewCell.xib */,
-				E81A567A1FC5818D008E9873 /* LocationItemsTableViewCell.h */,
-				E81A567B1FC5818D008E9873 /* LocationItemsTableViewCell.m */,
-				E81A567C1FC5818D008E9873 /* LocationItemsTableViewCell.xib */,
+				E81A566A1FC57E6F008E9873 /* ZoneViewController.h */,
+				E81A566B1FC57E6F008E9873 /* ZoneViewController.m */,
+				E81A56701FC58160008E9873 /* ZoneHeaderTableViewCell.h */,
+				E81A56711FC58160008E9873 /* ZoneHeaderTableViewCell.m */,
+				E81A56721FC58160008E9873 /* ZoneHeaderTableViewCell.xib */,
+				E81A56751FC58177008E9873 /* ZoneDebugTableViewCell.h */,
+				E81A56761FC58177008E9873 /* ZoneDebugTableViewCell.m */,
+				E81A56771FC58177008E9873 /* ZoneDebugTableViewCell.xib */,
+				E81A567A1FC5818D008E9873 /* ZoneItemsTableViewCell.h */,
+				E81A567B1FC5818D008E9873 /* ZoneItemsTableViewCell.m */,
+				E81A567C1FC5818D008E9873 /* ZoneItemsTableViewCell.xib */,
 			);
-			path = Location;
+			path = Zone;
+			sourceTree = "<group>";
+		};
+		E81A56801FC62AA9008E9873 /* You See */ = {
+			isa = PBXGroup;
+			children = (
+				E887F5121FC3B86600DC5BE7 /* YouSeesViewController.h */,
+				E887F5161FC3B86700DC5BE7 /* YouSeesViewController.m */,
+				E81A56821FC6386C008E9873 /* YouSeesTableViewCell.h */,
+				E81A56831FC6386C008E9873 /* YouSeesTableViewCell.m */,
+				E81A56841FC6386C008E9873 /* YouSeesTableViewCell.xib */,
+			);
+			path = "You See";
+			sourceTree = "<group>";
+		};
+		E81A56811FC62AB4008E9873 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				E81A568A1FC64C08008E9873 /* ItemViewController.h */,
+				E81A568B1FC64C08008E9873 /* ItemViewController.m */,
+				E81A568D1FC64C22008E9873 /* ItemHeaderTableViewCell.h */,
+				E81A568E1FC64C22008E9873 /* ItemHeaderTableViewCell.m */,
+				E81A568F1FC64C22008E9873 /* ItemHeaderTableViewCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		E845C8981FC6916E00809B28 /* Singles viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				E81A56811FC62AB4008E9873 /* Item */,
+				E81A56691FC57E4F008E9873 /* Zone */,
+			);
+			path = "Singles viewcontrollers";
+			sourceTree = "<group>";
+		};
+		E845C8991FC6918400809B28 /* Lists viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				E81A56801FC62AA9008E9873 /* You See */,
+				E81A56681FC57E41008E9873 /* Locations */,
+				E845C89A1FC695FC00809B28 /* Inventory */,
+				E81A565F1FC52483008E9873 /* Tasks */,
+			);
+			path = "Lists viewcontrollers";
+			sourceTree = "<group>";
+		};
+		E845C89A1FC695FC00809B28 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inventory;
 			sourceTree = "<group>";
 		};
 		E8503E431FC51C4E00AE6ACC /* WIG Objects */ = {
@@ -344,6 +411,8 @@
 				E8A84BF31FC4E48F00FF6A06 /* WIGZCommand.m */,
 				E8A84BF51FC4E49D00FF6A06 /* WIGZone.h */,
 				E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */,
+				E81A56871FC63E78008E9873 /* WIGZItem.h */,
+				E81A56881FC63E78008E9873 /* WIGZItem.m */,
 				E8A84BF81FC4E4A900FF6A06 /* WIGZonePoint.h */,
 				E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */,
 				E81A56651FC5272B008E9873 /* WIGZTask.h */,
@@ -384,16 +453,14 @@
 		E887F4F71FC3B70C00DC5BE7 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				E845C8991FC6918400809B28 /* Lists viewcontrollers */,
+				E845C8981FC6916E00809B28 /* Singles viewcontrollers */,
 				E887F5181FC3B86700DC5BE7 /* AppDelegate.h */,
 				E887F5151FC3B86700DC5BE7 /* AppDelegate.m */,
 				E887F51D1FC3B86800DC5BE7 /* InventoryViewController.h */,
 				E887F51A1FC3B86700DC5BE7 /* InventoryViewController.m */,
-				E81A565F1FC52483008E9873 /* Tasks */,
-				E8A84B9D1FC43BEB00FF6A06 /* Locations */,
 				E887F5141FC3B86700DC5BE7 /* MapViewController.h */,
 				E887F51B1FC3B86700DC5BE7 /* MapViewController.m */,
-				E887F5121FC3B86600DC5BE7 /* YouSeeViewController.h */,
-				E887F5161FC3B86700DC5BE7 /* YouSeeViewController.m */,
 				E8A84B9C1FC40AAE00FF6A06 /* main.h */,
 				E887F5131FC3B86600DC5BE7 /* main.m */,
 				E887F5091FC3B70C00DC5BE7 /* Info.plist */,
@@ -494,15 +561,6 @@
 				E866BCF21FC285E900B395C5 /* lwiginternal.c */,
 			);
 			path = "Wherigo LUA";
-			sourceTree = "<group>";
-		};
-		E8A84B9D1FC43BEB00FF6A06 /* Locations */ = {
-			isa = PBXGroup;
-			children = (
-				E81A56681FC57E41008E9873 /* Locations */,
-				E81A56691FC57E4F008E9873 /* Location */,
-			);
-			path = Locations;
 			sourceTree = "<group>";
 		};
 		E8A84BA31FC442DD00FF6A06 /* testsuite */ = {
@@ -617,7 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A84BC91FC4432C00FF6A06 /* specchars.jpg in Resources */,
-				E81A567E1FC5818D008E9873 /* LocationItemsTableViewCell.xib in Resources */,
+				E81A567E1FC5818D008E9873 /* ZoneItemsTableViewCell.xib in Resources */,
 				E8A84BD31FC4432C00FF6A06 /* Anipic3.jpg in Resources */,
 				E8A84BC81FC4432C00FF6A06 /* Zone.jpg in Resources */,
 				E8A84BD01FC4432C00FF6A06 /* Anipic2.jpg in Resources */,
@@ -644,18 +702,20 @@
 				E8A84BC71FC4432C00FF6A06 /* Wherigo_Testsuite_EN.urwigo in Resources */,
 				E8A84BD61FC4432C00FF6A06 /* 230x340.jpg in Resources */,
 				E8A84BD11FC4432C00FF6A06 /* notify.fdl in Resources */,
-				E81A56791FC58177008E9873 /* LocationDebugTableViewCell.xib in Resources */,
+				E81A56911FC64C22008E9873 /* ItemHeaderTableViewCell.xib in Resources */,
+				E81A56791FC58177008E9873 /* ZoneDebugTableViewCell.xib in Resources */,
 				E8A84BDF1FC4432C00FF6A06 /* phone.fdl in Resources */,
 				E8A84BDE1FC4432C00FF6A06 /* Icon_TelSilent.jpg in Resources */,
 				E8A84BD71FC4432C00FF6A06 /* sound_high.ogg in Resources */,
 				E8A84BC61FC4432C00FF6A06 /* 540x800.jpg in Resources */,
+				E81A56861FC6386C008E9873 /* YouSeesTableViewCell.xib in Resources */,
 				E8A84B5F1FC3C03C00FF6A06 /* testsuite.lua in Resources */,
 				E8A84BE01FC4432C00FF6A06 /* Icon_TelRing.jpg in Resources */,
 				E8A84B601FC3C03C00FF6A06 /* Wherigo.lua in Resources */,
 				E887F5261FC3B86800DC5BE7 /* Base.lproj in Resources */,
 				E8A84BCB1FC4432C00FF6A06 /* bmpformat.bmp in Resources */,
 				E887F5051FC3B70C00DC5BE7 /* Assets.xcassets in Resources */,
-				E81A56741FC58160008E9873 /* LocationHeaderTableViewCell.xib in Resources */,
+				E81A56741FC58160008E9873 /* ZoneHeaderTableViewCell.xib in Resources */,
 				E8A84BCE1FC4432C00FF6A06 /* sound_high.wav in Resources */,
 				E8A84BE31FC4432C00FF6A06 /* sound_high.mp3 in Resources */,
 				E8A84BCD1FC4432C00FF6A06 /* nullsound.mp3 in Resources */,
@@ -679,6 +739,7 @@
 				E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */,
 				E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */,
 				E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */,
+				E81A56851FC6386C008E9873 /* YouSeesTableViewCell.m in Sources */,
 				E8A84B611FC3C04F00FF6A06 /* lapi.c in Sources */,
 				E8A84BFA1FC4E4A900FF6A06 /* WIGZonePoint.m in Sources */,
 				E8A84B631FC3C04F00FF6A06 /* lauxlib.c in Sources */,
@@ -688,10 +749,11 @@
 				E8A84B681FC3C04F00FF6A06 /* ldblib.c in Sources */,
 				E8A84B691FC3C04F00FF6A06 /* ldebug.c in Sources */,
 				E8A84B6B1FC3C04F00FF6A06 /* ldo.c in Sources */,
+				E81A56891FC63E78008E9873 /* WIGZItem.m in Sources */,
 				E8A84B6D1FC3C04F00FF6A06 /* ldump.c in Sources */,
 				E8A84B6E1FC3C04F00FF6A06 /* lfunc.c in Sources */,
-				E81A56781FC58177008E9873 /* LocationDebugTableViewCell.m in Sources */,
-				E81A566C1FC57E6F008E9873 /* LocationViewController.m in Sources */,
+				E81A56781FC58177008E9873 /* ZoneDebugTableViewCell.m in Sources */,
+				E81A566C1FC57E6F008E9873 /* ZoneViewController.m in Sources */,
 				E8A84B701FC3C04F00FF6A06 /* lgc.c in Sources */,
 				E8A84B721FC3C04F00FF6A06 /* linit.c in Sources */,
 				E8A84B731FC3C04F00FF6A06 /* liolib.c in Sources */,
@@ -711,11 +773,13 @@
 				E8A84B861FC3C05000FF6A06 /* lstrlib.c in Sources */,
 				E8A84BF41FC4E48F00FF6A06 /* WIGZCommand.m in Sources */,
 				E8A84B871FC3C05000FF6A06 /* ltable.c in Sources */,
-				E81A56731FC58160008E9873 /* LocationHeaderTableViewCell.m in Sources */,
+				E81A56731FC58160008E9873 /* ZoneHeaderTableViewCell.m in Sources */,
+				E81A56901FC64C22008E9873 /* ItemHeaderTableViewCell.m in Sources */,
 				E8A84B891FC3C05000FF6A06 /* ltablib.c in Sources */,
 				E8A84B8A1FC3C05000FF6A06 /* ltm.c in Sources */,
 				E81A56671FC5272B008E9873 /* WIGZTask.m in Sources */,
-				E81A567D1FC5818D008E9873 /* LocationItemsTableViewCell.m in Sources */,
+				E81A568C1FC64C08008E9873 /* ItemViewController.m in Sources */,
+				E81A567D1FC5818D008E9873 /* ZoneItemsTableViewCell.m in Sources */,
 				E8A84B8F1FC3C05000FF6A06 /* lundump.c in Sources */,
 				E8A84B911FC3C05000FF6A06 /* lvm.c in Sources */,
 				E8A84B931FC3C05000FF6A06 /* lzio.c in Sources */,
@@ -725,7 +789,7 @@
 				E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */,
 				E887F5231FC3B86800DC5BE7 /* LocationsViewController.m in Sources */,
 				E8A84BE81FC4DF7C00FF6A06 /* WIGZObject.m in Sources */,
-				E887F5211FC3B86800DC5BE7 /* YouSeeViewController.m in Sources */,
+				E887F5211FC3B86800DC5BE7 /* YouSeesViewController.m in Sources */,
 				E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */,
 				E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */,
 				E8A84BA11FC43C2300FF6A06 /* LocationsTableViewCell.m in Sources */,

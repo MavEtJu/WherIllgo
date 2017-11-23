@@ -10,4 +10,12 @@
 
 @implementation WIGZCharacter
 
+- (void)importFromDict:(NSDictionary *)dict
+{
+    [super importFromDict:dict];
+
+    self.gender = [dict objectForKey:@"Gender"];
+    self.type = [dict objectForKey:@"Type"];
+}
+
 @end

@@ -10,8 +10,8 @@
 
 #import "WIG.h"
 
-@interface LocationViewController : UITableViewController
+@interface ZoneViewController : UITableViewController
 
-@property (nonatomic, retain) WIGZone *location;
+@property (nonatomic, retain) WIGZone *zone;
 
 @end

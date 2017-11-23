@@ -33,7 +33,6 @@ WIG *wig = nil;
 
 - (void)run:(NSString *)filename
 {
-
     NSFileManager *filemgr = [NSFileManager defaultManager];
     NSString *dir = [[NSBundle mainBundle] resourcePath];
     if ([filemgr changeCurrentDirectoryPath:dir] == NO)
@@ -59,7 +58,7 @@ WIG *wig = nil;
 
     [tasksViewController reloadData];
     [locationsViewController reloadData];
-    [youSeeViewController reloadData];
+    [youSeesViewController reloadData];
     [inventoryViewController reloadData];
     [mapViewController reloadData];
 }
@@ -72,6 +71,22 @@ WIG *wig = nil;
         NSLog(@"Error parsing lua code: %@", error);
         return;
     }
+}
+
+- (void)updateLocation
+{
+//    --   @param     position        ZonePoint object with player location
+//    --   @param     t                       Time to update timers
+//    --   @param accuracy    GPS position accuracy
+    NSString *myScript = LUA_STRING(
+//     11.006991863251    49.471393994725
+//     11.008279323578    49.471352163343
+//     11.00753903389    49.470766520251
+// E 11.0076    N  49.471
+
+        cart._update(Wherigo.ZonePoint(11.0076, 49.471, 10), 1, 5)
+    );
+    [self runScript:myScript];
 }
 
 - (void)onClick:(NSString *)name
@@ -100,9 +115,11 @@ WIG *wig = nil;
         NSString *type = [dict objectForKey:@"_classname"];
         if ([type isEqualToString:@"ZTask"] == NO)
             return;
+
         WIGZTask *task = [[WIGZTask alloc] init];
         [task importFromDict:dict];
         task.luaObject = key;
+
         [zs setObject:task forKey:key];
     }];
 
@@ -125,9 +142,9 @@ WIG *wig = nil;
     return zs;
 }
 
-- (NSDictionary *)dictionaryZones
+- (NSDictionary<NSString *, WIGZone *> *)dictionaryZones
 {
-    NSMutableDictionary *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+    NSMutableDictionary<NSString *, WIGZone *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
 
     NSDictionary *g = [self.ctx globalVar:@"_G"];
     [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
@@ -137,24 +154,26 @@ WIG *wig = nil;
         NSString *type = [dict objectForKey:@"_classname"];
         if ([type isEqualToString:@"Zone"] == NO)
             return;
+
         WIGZone *zone = [[WIGZone alloc] init];
         [zone importFromDict:dict];
         zone.luaObject = key;
+
         [zs setObject:zone forKey:key];
     }];
 
     return zs;
 }
 
-- (NSArray *)arrayZones
+- (NSArray<WIGZone *> *)arrayZones
 {
-    NSDictionary *zones = [self dictionaryZones];
+    NSDictionary<NSString *, WIGZone *> *zones = [self dictionaryZones];
     return [zones allValues];
 }
 
-- (NSDictionary *)dictionaryZItemsZone
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInZone:(WIGZone *)zone
 {
-    NSMutableDictionary *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+    NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
 
     NSDictionary *g = [self.ctx globalVar:@"_G"];
     [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
@@ -170,22 +189,102 @@ WIG *wig = nil;
         NSString *containerType = [container objectForKey:@"_classname"];
         if ([containerType isEqualToString:@"Zone"] == NO)
             return;
-//        ZItemZone.luaObject = key;
-        [zs setObject:dict forKey:key];
+        NSString *_id = [container objectForKey:@"Id"];
+        if ([_id isEqualToString:zone._id] == NO)
+            return;
+
+        WIGZItem *item = [[WIGZItem alloc] init];
+        [item importFromDict:dict];
+        item.luaObject = key;
+
+        [zs setObject:item forKey:key];
     }];
 
     return zs;
 }
 
-- (NSArray *)arrayZItemsZone
+- (NSArray<WIGZItem *> *)arrayZItemsInZone:(WIGZone *)zone
 {
-    NSDictionary *zones = [self dictionaryZItemsZone];
-    return [zones allValues];
+    return [[self dictionaryZItemsInZone:zone] allValues];
 }
 
-- (NSDictionary *)dictionaryZItemsInventory
+- (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone
 {
-    NSMutableDictionary *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+    NSMutableDictionary<NSString *, WIGZone *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSDictionary *dict = obj;
+        NSString *type = [dict objectForKey:@"_classname"];
+        if ([type isEqualToString:@"Zone"] == NO)
+            return;
+        id container = [dict objectForKey:@"Container"];
+        if ([container isKindOfClass:[NSNumber class]] == YES)
+            return;
+        NSString *containerType = [container objectForKey:@"_classname"];
+        if ([containerType isEqualToString:@"Zone"] == NO)
+            return;
+        NSString *_id = [container objectForKey:@"Id"];
+        if ([_id isEqualToString:zone._id] == NO)
+            return;
+
+        WIGZone *zone = [[WIGZone alloc] init];
+        [zone importFromDict:dict];
+        zone.luaObject = key;
+
+        [zs setObject:zone forKey:key];
+    }];
+
+    return zs;
+}
+
+- (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone
+{
+    return [[self dictionaryZonesInZone:zone] allValues];
+}
+
+- (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryCharactersInZone:(WIGZone *)zone
+{
+    NSMutableDictionary<NSString *, WIGZCharacter *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSDictionary *dict = obj;
+        NSString *type = [dict objectForKey:@"_classname"];
+        if ([type isEqualToString:@"ZCharacter"] == NO)
+            return;
+        id container = [dict objectForKey:@"Container"];
+        if ([container isKindOfClass:[NSNumber class]] == YES)
+            return;
+        NSString *containerType = [container objectForKey:@"_classname"];
+        if ([containerType isEqualToString:@"Zone"] == NO)
+            return;
+        NSString *_id = [container objectForKey:@"Id"];
+        if ([_id isEqualToString:zone._id] == NO)
+            return;
+
+        WIGZCharacter *character = [[WIGZCharacter alloc] init];
+        [character importFromDict:dict];
+        character.luaObject = key;
+
+        [zs setObject:character forKey:key];
+    }];
+
+    return zs;
+}
+
+- (NSArray<WIGZCharacter *> *)arrayCharactersInZone:(WIGZone *)zone
+{
+    return [[self dictionaryCharactersInZone:zone] allValues];
+}
+
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory
+{
+    NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
 
     NSDictionary *g = [self.ctx globalVar:@"_G"];
     [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
@@ -201,25 +300,31 @@ WIG *wig = nil;
         NSString *containerType = [container objectForKey:@"_classname"];
         if ([containerType isEqualToString:@"ZCharacter"] == NO)
             return;
-        // ZItem.luaObject = key;
-        [zs setObject:dict forKey:key];
+
+        WIGZItem *item = [[WIGZItem alloc] init];
+        [item importFromDict:dict];
+        item.luaObject = key;
+
+        [zs setObject:item forKey:key];
     }];
 
     return zs;
 }
 
-- (NSArray *)arrayZItemsInventory
+- (NSArray<WIGZItem *> *)arrayZItemsInInventory
 {
-    NSDictionary *zones = [self dictionaryZItemsInventory];
+    NSDictionary<NSString *, WIGZItem *> *zones = [self dictionaryZItemsInInventory];
     return [zones allValues];
 }
 
 - (WIGZCartridge *)cartridge
 {
     NSDictionary *g = [self.ctx globalVar:@"_G"];
+
     WIGZCartridge *cartridge = [[WIGZCartridge alloc] init];
     [cartridge importFromDict:[g objectForKey:@"cart"]];
     cartridge.luaObject = @"cart";
+
     return cartridge;
 }
 

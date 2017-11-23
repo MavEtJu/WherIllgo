@@ -1,14 +1,14 @@
 //
-//  LocationDebugTableViewCell.m
+//  YouSeeViewTableViewCell.m
 //  ios
 //
-//  Created by Edwin Groothuis on 22/11/17.
+//  Created by Edwin Groothuis on 23/11/17.
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "LocationDebugTableViewCell.h"
+#import "ItemHeaderTableViewCell.h"
 
-@implementation LocationDebugTableViewCell
+@implementation ItemHeaderTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

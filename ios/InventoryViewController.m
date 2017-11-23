@@ -12,7 +12,7 @@
 
 @interface InventoryViewController ()
 
-@property (nonatomic, retain) NSArray *items;
+@property (nonatomic, retain) NSArray<WIGZItem *> *items;
 
 @end
 
@@ -33,7 +33,7 @@
 
 - (void)reloadData
 {
-    self.items = [wig arrayZItemsInventory];
+    self.items = [wig arrayZItemsInInventory];
     [self.tableView reloadData];
 }
 
@@ -51,9 +51,9 @@
 {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"A" forIndexPath:indexPath];
 
-    NSDictionary *item = [self.items objectAtIndex:indexPath.row];
-    cell.textLabel.text = [item objectForKey:@"Name"];
-    cell.detailTextLabel.text = [item objectForKey:@"Description"];
+    WIGZItem *item = [self.items objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.name;
+    cell.detailTextLabel.text = item.description_;
 
     return cell;
 }

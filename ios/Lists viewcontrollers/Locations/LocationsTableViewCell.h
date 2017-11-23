@@ -14,6 +14,8 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *labelName;
 @property (nonatomic, retain) IBOutlet UILabel *labelDescription;
+@property (nonatomic, retain) IBOutlet UILabel *labelItems;
+@property (nonatomic, retain) IBOutlet UILabel *labelDebug;
 
 @property (nonatomic, retain) IBOutlet UIImageView *ivMediaIcon;
 

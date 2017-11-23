@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YouSeeViewController : UITableViewController
+@interface YouSeesViewController : UITableViewController
 
 - (void)reloadData;
 

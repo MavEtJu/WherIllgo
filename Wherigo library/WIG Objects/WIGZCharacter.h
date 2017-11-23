@@ -10,4 +10,14 @@
 
 @interface WIGZCharacter : WIGZObject
 
+/*
+ Gender     String.
+    Gender of the not real character.
+ Type     String.
+    Type of the character. "NPC"
+ */
+
+@property (nonatomic, retain) NSString *gender;
+@property (nonatomic, retain) NSString *type;
+
 @end

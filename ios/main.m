@@ -11,7 +11,7 @@
 
 #import "main.h"
 
-YouSeeViewController *youSeeViewController;
+YouSeesViewController *youSeesViewController;
 LocationsViewController *locationsViewController;
 MapViewController *mapViewController;
 InventoryViewController *inventoryViewController;

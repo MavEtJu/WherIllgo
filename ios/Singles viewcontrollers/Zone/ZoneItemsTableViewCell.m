@@ -1,14 +1,14 @@
 //
-//  LocationHeaderTableViewCell.m
+//  LocationItemsTableViewCell.m
 //  ios
 //
 //  Created by Edwin Groothuis on 22/11/17.
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "LocationHeaderTableViewCell.h"
+#import "ZoneItemsTableViewCell.h"
 
-@implementation LocationHeaderTableViewCell
+@implementation ZoneItemsTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

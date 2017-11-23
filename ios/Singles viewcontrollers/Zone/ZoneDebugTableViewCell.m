@@ -1,14 +1,14 @@
 //
-//  LocationItemsTableViewCell.m
+//  LocationDebugTableViewCell.m
 //  ios
 //
 //  Created by Edwin Groothuis on 22/11/17.
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import "LocationItemsTableViewCell.h"
+#import "ZoneDebugTableViewCell.h"
 
-@implementation LocationItemsTableViewCell
+@implementation ZoneDebugTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

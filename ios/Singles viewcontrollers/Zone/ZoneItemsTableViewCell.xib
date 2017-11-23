@@ -13,15 +13,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LocationItemsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="ZoneItemsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrN-mU-X9h">
-                        <rect key="frame" x="24" y="19" width="272" height="22"/>
+                        <rect key="frame" x="24" y="19" width="272" height="53"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="xrN-mU-X9h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="7GI-sd-8x2"/>
-                    <constraint firstItem="xrN-mU-X9h" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="8" id="M7l-QQ-dfS"/>
+                    <constraint firstItem="xrN-mU-X9h" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="8" id="M7l-QQ-dfS"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xrN-mU-X9h" secondAttribute="trailing" constant="8" id="Y0h-Xi-iNl"/>
                     <constraint firstItem="xrN-mU-X9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="owu-mI-3gy"/>
                 </constraints>
@@ -38,6 +38,7 @@
             <connections>
                 <outlet property="labelItems" destination="xrN-mU-X9h" id="W3O-9k-4jJ"/>
             </connections>
+            <point key="canvasLocation" x="32" y="103.5"/>
         </tableViewCell>
     </objects>
 </document>

@@ -16,6 +16,7 @@
 @class WIGZone;
 @class WIGZonePoint;
 @class WIGZMedia;
+@class WIGZItem;
 @class WIGZMediaResource;
 @class WIGZTask;
 
@@ -26,6 +27,7 @@
 #import "WIGDistance.h"
 #import "WIGZone.h"
 #import "WIGZMedia.h"
+#import "WIGZItem.h"
 #import "WIGZMediaResource.h"
 #import "WIGZonePoint.h"
 #import "WIGZTask.h"
@@ -36,18 +38,22 @@
 @property (nonatomic, retain) WIGZCharacter *player;
 
 - (void)run:(NSString *)filename;
+- (void)updateLocation;
 
 /* Various ZObjects */
 - (NSArray<WIGZTask *> *)arrayZTasks;
 - (NSDictionary<NSString *, WIGZTask *> *)dictionaryZTasks;
 - (NSArray<WIGZone *> *)arrayZones;
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZones;
-- (NSArray *)arrayYouSee;
-- (NSDictionary *)dictionaryYouSee;
-- (NSArray *)arrayZItemsInventory;
-- (NSDictionary *)dictionaryZItemsInventory;
-- (NSArray *)arrayZItemsZone;
-- (NSDictionary *)dictionaryZItemsZone;
+- (NSArray<WIGZItem *> *)arrayZItemsInInventory;
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory;
+
+- (NSArray<WIGZCharacter *> *)arrayCharactersInZone:(WIGZone *)zone;
+- (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryCharactersInZone:(WIGZone *)zone;
+- (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone;
+- (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone;
+- (NSArray<WIGZItem *> *)arrayZItemsInZone:(WIGZone *)zone;
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInZone:(WIGZone *)zone;
 
 /* Interface to WIG-link */
 - (void)messageBoxCallback;

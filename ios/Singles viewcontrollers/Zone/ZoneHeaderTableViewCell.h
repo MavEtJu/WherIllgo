@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#define XIB_LOCATION_HEADER_TABLEVIEWCELL   @"LocationHeaderTableViewCell"
+#define XIB_ZONE_HEADER_TABLEVIEWCELL   @"ZoneHeaderTableViewCell"
 
-@interface LocationHeaderTableViewCell : UITableViewCell
+@interface ZoneHeaderTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *labelName;
 @property (nonatomic, retain) IBOutlet UILabel *labelDescription;

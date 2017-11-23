@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="LocationsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="379" height="75"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="KGk-i7-Jjw" customClass="LocationsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="379" height="74.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="379" height="133.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-d8-nj5">
@@ -34,27 +34,47 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuK-Ae-YE9">
+                        <rect key="frame" x="8" y="61.5" width="363" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0t-EV-85R">
+                        <rect key="frame" x="8" y="84" width="363" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="IeE-d8-nj5" secondAttribute="trailing" constant="8" id="3WK-zk-p9y"/>
                     <constraint firstItem="IeE-d8-nj5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3jX-xw-bJF"/>
                     <constraint firstItem="4WL-fF-95c" firstAttribute="top" secondItem="IeE-d8-nj5" secondAttribute="bottom" id="3zV-kb-k8V"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h0t-EV-85R" secondAttribute="bottom" constant="8" id="610-Kv-lGP"/>
                     <constraint firstItem="5St-y3-y8b" firstAttribute="leading" secondItem="IeE-d8-nj5" secondAttribute="leading" id="CRA-NB-L4H"/>
+                    <constraint firstItem="h0t-EV-85R" firstAttribute="trailing" secondItem="IeE-d8-nj5" secondAttribute="trailing" id="JN4-ZC-Cje"/>
                     <constraint firstItem="IeE-d8-nj5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Lsl-pm-9pB"/>
+                    <constraint firstItem="nuK-Ae-YE9" firstAttribute="trailing" secondItem="IeE-d8-nj5" secondAttribute="trailing" id="Nmg-DI-DbV"/>
+                    <constraint firstItem="h0t-EV-85R" firstAttribute="leading" secondItem="IeE-d8-nj5" secondAttribute="leading" id="PwV-1M-kxa"/>
+                    <constraint firstItem="nuK-Ae-YE9" firstAttribute="leading" secondItem="IeE-d8-nj5" secondAttribute="leading" id="Wyb-6b-g7i"/>
                     <constraint firstItem="4WL-fF-95c" firstAttribute="trailing" secondItem="IeE-d8-nj5" secondAttribute="trailing" id="bGh-jH-bZ5"/>
                     <constraint firstItem="5St-y3-y8b" firstAttribute="top" secondItem="4WL-fF-95c" secondAttribute="bottom" id="dP6-N9-bid"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5St-y3-y8b" secondAttribute="bottom" constant="8" id="nA3-Hf-0tR"/>
+                    <constraint firstItem="nuK-Ae-YE9" firstAttribute="top" secondItem="5St-y3-y8b" secondAttribute="bottom" constant="8" id="ozR-hc-NB5"/>
                     <constraint firstItem="4WL-fF-95c" firstAttribute="leading" secondItem="IeE-d8-nj5" secondAttribute="leading" id="py8-yk-Fug"/>
+                    <constraint firstItem="h0t-EV-85R" firstAttribute="top" secondItem="nuK-Ae-YE9" secondAttribute="bottom" constant="8" id="tl8-oF-DRg"/>
                     <constraint firstItem="5St-y3-y8b" firstAttribute="trailing" secondItem="IeE-d8-nj5" secondAttribute="trailing" id="ujn-om-cRB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="ivMediaIcon" destination="4WL-fF-95c" id="ATx-e4-E79"/>
+                <outlet property="labelDebug" destination="h0t-EV-85R" id="zEu-nJ-cR8"/>
                 <outlet property="labelDescription" destination="5St-y3-y8b" id="Zyd-LS-Vei"/>
+                <outlet property="labelItems" destination="nuK-Ae-YE9" id="XfO-xc-MFh"/>
                 <outlet property="labelName" destination="IeE-d8-nj5" id="5jF-UC-fUh"/>
             </connections>
-            <point key="canvasLocation" x="-84.5" y="-2.5"/>
+            <point key="canvasLocation" x="-84.5" y="27"/>
         </tableViewCell>
     </objects>
 </document>

@@ -73,7 +73,6 @@ Visible (Boolean)
 @property (nonatomic, retain) NSNumber *currentBearing;
 @property (nonatomic, retain) WIGDistance *currentDistance;
 @property (nonatomic, retain) NSString *description_;
-@property (nonatomic, retain) NSString *gender;
 @property (nonatomic, retain) WIGZMedia *icon;
 @property (nonatomic, retain) NSString *_id;
 @property (nonatomic, retain) NSArray<WIGZObject *> *inventory;
@@ -82,7 +81,6 @@ Visible (Boolean)
 @property (nonatomic, retain) WIGZonePoint *objectLocation;
 @property (nonatomic, retain) NSNumber *objIndex;
 @property (nonatomic, retain) WIGZCharacter *player;
-@property (nonatomic, retain) NSString *type;
 @property (nonatomic        ) BOOL visible;
 
 @property (nonatomic, retain) NSString *luaObject;

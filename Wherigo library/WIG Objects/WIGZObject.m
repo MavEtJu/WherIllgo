@@ -18,18 +18,35 @@
 //    @property (nonatomic, retain) NSDictionary<NSString *, WIGZCommand *> *commands;
 //    @property (nonatomic, retain) NSArray<WIGZCommand *> *commandsArray;
 //    @property (nonatomic, retain) WIGDistance *currentDistance;
-//    @property (nonatomic, retain) NSString *_id;
 //    @property (nonatomic, retain) NSArray<WIGZObject *> *inventory;
 //    @property (nonatomic, retain) WIGZonePoint *objectLocation;
 //    @property (nonatomic, retain) WIGZCharacter *player;
 
     self.description_ = [dict objectForKey:@"Description"];
     self.name = [dict objectForKey:@"Name"];
-    self.gender = [dict objectForKey:@"Gender"];
-    self.type = [dict objectForKey:@"Type"];
     self.visible = [[dict objectForKey:@"Visible"] boolValue];
     self.objIndex = [dict objectForKey:@"ObjIndex"];
     self.currentBearing = [dict objectForKey:@"CurrentBearing"];
+    self._id = [dict objectForKey:@"Id"];
+
+    NSDictionary *containerDict = [dict objectForKey:@"Container"];
+    if ([containerDict isKindOfClass:[NSDictionary class]] == YES) {
+        if ([[containerDict objectForKey:@"_classname"] isEqualToString:@"Zone"] == YES) {
+            WIGZone *zone = [[WIGZone alloc] init];
+            [zone importFromDict:[dict objectForKey:@"Container"]];
+            self.container = zone;
+        }
+        if ([[containerDict objectForKey:@"_classname"] isEqualToString:@"Item"] == YES) {
+            WIGZItem *item = [[WIGZItem alloc] init];
+            [item importFromDict:[dict objectForKey:@"Container"]];
+            self.container = item;
+        }
+        if ([[containerDict objectForKey:@"_classname"] isEqualToString:@"Character"] == YES) {
+            WIGZCharacter *ch = [[WIGZCharacter alloc] init];
+            [ch importFromDict:[dict objectForKey:@"Container"]];
+            self.container = ch;
+        }
+    }
 
     NSDictionary *mediaDict = [dict objectForKey:@"Media"];
     if ([mediaDict isKindOfClass:[NSDictionary class]] == YES) {

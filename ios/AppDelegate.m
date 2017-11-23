@@ -33,9 +33,9 @@
     inventoryViewController.title = @"Inventory";
     UINavigationController *inventoryNav = [[UINavigationController alloc] initWithRootViewController:inventoryViewController];
 
-    youSeeViewController = [[YouSeeViewController alloc] init];
-    youSeeViewController.title = @"You See";
-    UINavigationController *youSeeNav = [[UINavigationController alloc] initWithRootViewController:youSeeViewController];
+    youSeesViewController = [[YouSeesViewController alloc] init];
+    youSeesViewController.title = @"You See";
+    UINavigationController *youSeeNav = [[UINavigationController alloc] initWithRootViewController:youSeesViewController];
 
     tasksViewController = [[TasksViewController alloc] init];
     tasksViewController.title = @"Tasks";
@@ -47,11 +47,10 @@
 
 
     NSArray *controllers = @[
-//        locationsViewController,
-        locationsNav,
-        inventoryNav,
-        youSeeNav,
         tasksNav,
+        locationsNav,
+        youSeeNav,
+        inventoryNav,
         mapNav
     ];
     [tbc setViewControllers:controllers animated:YES];
@@ -61,6 +60,8 @@
     [self.window makeKeyAndVisible];
 
     [wig run:@"testsuite.lua"];
+
+    [wig updateLocation];
 
     return YES;
 }

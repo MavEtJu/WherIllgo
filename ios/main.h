@@ -9,13 +9,25 @@
 #ifndef main_h
 #define main_h
 
+#import "WIG.h"
+
 #import "LocationsViewController.h"
 #import "TasksViewController.h"
 #import "MapViewController.h"
 #import "InventoryViewController.h"
-#import "YouSeeViewController.h"
+#import "YouSeesViewController.h"
 
-extern YouSeeViewController *youSeeViewController;
+#import "ZoneViewController.h"
+#import "ZoneHeaderTableViewCell.h"
+#import "ZoneDebugTableViewCell.h"
+#import "ZoneItemsTableViewCell.h"
+
+#import "ItemViewController.h"
+#import "ItemHeaderTableViewCell.h"
+
+#define XIB_UITABLEVIEWCELL @"UITableViewCell"
+
+extern YouSeesViewController *youSeesViewController;
 extern LocationsViewController *locationsViewController;
 extern MapViewController *mapViewController;
 extern InventoryViewController *inventoryViewController;

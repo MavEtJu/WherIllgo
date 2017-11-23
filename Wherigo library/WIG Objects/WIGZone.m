@@ -19,7 +19,7 @@
 
     self.active = [[dict objectForKey:@"_active"] boolValue];
     self.inRangeName = [dict objectForKey:@"InRangeName"];
-    self.outRangeName = [dict objectForKey:@"OutRangeName"];
+    self.outRangeName = [dict objectForKey:@"OutOfRangeName"];
     self.showObjects = [dict objectForKey:@"ShowObjects"];
     self.state = [dict objectForKey:@"State"];
     self.distance = [[dict objectForKey:@"DistanceRange"] objectForKey:@"value"];
