@@ -87,12 +87,26 @@
     [[self topMostController] presentViewController:alert animated:YES completion:nil];
 }
 
-+ (void)WIGUIGetInput:(NSString *)inputType text:(NSString *)text options:(NSString *)o media:(NSString *)media
++ (void)WIGUIGetInput:(NSString *)inputType text:(NSString *)text options:(NSString *)o media:(NSNumber *)media
 {
     UIAlertController *alert = [UIAlertController
                                 alertControllerWithTitle:@"Input"
                                 message:text
                                 preferredStyle:UIAlertControllerStyleAlert];
+
+    if (media != nil && [media isEqualToNumber:[NSNumber numberWithInteger:0]] == NO) {
+        UIAlertAction *image = [UIAlertAction
+                                actionWithTitle:@""
+                                style:UIAlertActionStyleDefault
+                                handler:nil
+                                ];
+        WIGZMedia *m = [wig zmediaByObjIndex:media];
+        WIGZMediaResource *resource = [m.resources firstObject];
+
+        image.enabled = NO;
+        [image setValue:[[UIImage imageNamed:resource.filename] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
+        [alert addAction:image];
+    }
 
     if ([inputType isEqualToString:@"Text"] == YES) {
         UIAlertAction *submit = [UIAlertAction

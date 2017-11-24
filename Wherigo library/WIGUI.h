@@ -12,6 +12,6 @@
 + (void)WIGUIShowScreen:(NSString *)screen item:(NSNumber *)item;
 + (void)WIGUIPlayAudio:(NSNumber *)media;
 + (void)WIGUIStopSound;
-+ (void)WIGUIGetInput:(NSString *)inputType text:(NSString *)text options:(NSString *)o media:(NSString *)media;
++ (void)WIGUIGetInput:(NSString *)inputType text:(NSString *)text options:(NSString *)o media:(NSNumber *)media;
 
 @end

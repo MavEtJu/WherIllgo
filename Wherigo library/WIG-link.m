@@ -44,7 +44,6 @@ void WIGUIGetInput(const char *inputType_, const char *text_, const char *o_, co
     NSString *inputType = [NSString stringWithUTF8String:inputType_];
     NSString *text = [NSString stringWithUTF8String:text_];
     NSString *o = [NSString stringWithUTF8String:o_];
-    NSString *media = [NSString stringWithUTF8String:media_];
+    NSNumber *media = [NSNumber numberWithInteger:[[NSString stringWithUTF8String:media_] integerValue]];
     [WIGUI WIGUIGetInput:inputType text:text options:o media:media];
-    printf("Foo\n");
 }
