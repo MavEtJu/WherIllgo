@@ -44,5 +44,6 @@ extern LocationsViewController *locationsViewController;
 extern MapViewController *mapViewController;
 extern InventoryViewController *inventoryViewController;
 extern TasksViewController *tasksViewController;
+extern UITabBarController *tbc;
 
 #endif /* main_h */

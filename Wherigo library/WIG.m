@@ -160,6 +160,37 @@ WIG *wig = nil;
     return [zones allValues];
 }
 
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItems
+{
+    NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSDictionary *dict = obj;
+        NSString *type = [dict objectForKey:@"_classname"];
+        if ([type isEqualToString:@"ZItem"] == NO)
+            return;
+        id container = [dict objectForKey:@"Container"];
+        if ([container isKindOfClass:[NSNumber class]] == YES)
+            return;
+
+        WIGZItem *item = [[WIGZItem alloc] init];
+        [item importFromDict:dict];
+        item.luaObject = key;
+
+        [zs setObject:item forKey:key];
+    }];
+
+    return zs;
+}
+
+- (NSArray<WIGZItem *> *)arrayZItems
+{
+    return [[self dictionaryZItems] allValues];
+}
+
 - (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInZone:(WIGZone *)zone
 {
     NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
@@ -214,6 +245,19 @@ WIG *wig = nil;
         item.luaObject = key;
     }];
 
+    return item;
+}
+
+- (WIGZItem *)zitemByObjectId:(NSNumber *)objIndex
+{
+    NSArray<WIGZItem *> *items = [self arrayZItems];
+    __block WIGZItem *item;
+    [items enumerateObjectsUsingBlock:^(WIGZItem * _Nonnull i, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([i.objIndex isEqualToNumber:objIndex] == NO)
+            return;
+        item = i;
+        *stop = YES;
+    }];
     return item;
 }
 
@@ -353,7 +397,7 @@ WIG *wig = nil;
     return medias;
 }
 
-- (WIGZMedia *)zmediaByObjId:(NSNumber *)objIndex
+- (WIGZMedia *)zmediaByObjIndex:(NSNumber *)objIndex
 {
     NSArray *medias = [self arrayZMedias];
     __block WIGZMedia *media;

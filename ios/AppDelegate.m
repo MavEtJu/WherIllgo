@@ -18,7 +18,7 @@
 {
     wig = [[WIG alloc] init];
 
-    UITabBarController *tbc = [[UITabBarController alloc] init];
+    tbc = [[UITabBarController alloc] init];
 
     locationsViewController = [[LocationsViewController alloc] init];
     locationsViewController.title = @"LLL";
@@ -42,13 +42,26 @@
     UINavigationController *mapNav = [[UINavigationController alloc] initWithRootViewController:mapViewController];
 
 
-    NSArray *controllers = @[
-        inventoryNav,
-        locationsNav,
-        tasksNav,
-        youSeeNav,
-        mapNav
-    ];
+    NSMutableArray *controllers = [NSMutableArray arrayWithCapacity:TABBAR_MAX];
+    for (NSInteger i = 0; i < TABBAR_MAX; i++) {
+        switch (i) {
+            case TABBAR_INVENTORY:
+                [controllers addObject:inventoryNav];
+                break;
+            case TABBAR_LOCATIONS:
+                [controllers addObject:locationsNav];
+                break;
+            case TABBAR_TASKS:
+                [controllers addObject:tasksNav];
+                break;
+            case TABBAR_YOUSEE:
+                [controllers addObject:youSeeNav];
+                break;
+            case TABBAR_MAP:
+                [controllers addObject:mapNav];
+                break;
+        }
+    }
     [tbc setViewControllers:controllers animated:YES];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

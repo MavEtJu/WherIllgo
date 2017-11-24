@@ -59,12 +59,13 @@
 - (NSArray<WIGZItem *> *)arrayZItemsInZone:(WIGZone *)zone;
 - (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInZone:(WIGZone *)zone;
 - (WIGZItem *)zitemForId:(NSString *)_id;
+- (WIGZItem *)zitemByObjectId:(NSNumber *)objid;
 
 - (NSArray<WIGZCharacter *> *)arrayZCharactersInZone:(WIGZone *)zone;
 - (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryZCharactersInZone:(WIGZone *)zone;
 
 - (NSArray<WIGZMedia *> *)arrayZMedias;
-- (WIGZMedia *)zmediaByObjId:(NSNumber *)objIndex;
+- (WIGZMedia *)zmediaByObjIndex:(NSNumber *)objIndex;
 
 /* Interface to WIG-link */
 - (void)WIGMessageBoxCallback:(NSString *)text;

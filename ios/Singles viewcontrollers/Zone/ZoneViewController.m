@@ -169,4 +169,23 @@ enum {
     return c;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case SECTION_ITEMS: {
+            WIGZItem *item = [self.items objectAtIndex:indexPath.row];
+
+            ItemViewController *newController = [[ItemViewController alloc] init];
+            newController.title = @"Item";
+            newController.item = item;
+            [self.navigationController pushViewController:newController animated:YES];
+
+            [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+            [wig WIGOnClick:item.luaObject];
+
+            break;
+        }
+    }
+}
+
 @end

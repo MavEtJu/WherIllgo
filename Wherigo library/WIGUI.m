@@ -6,9 +6,7 @@
 //  Copyright © 2017 Edwin Groothuis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-#import "WIG.h"
+#import "main.h"
 
 @interface WIGUI ()
 
@@ -49,9 +47,10 @@
                                 style:UIAlertActionStyleDefault
                                 handler:nil
                                 ];
-        WIGZMedia *m = [wig zmediaByObjId:media];
+        WIGZMedia *m = [wig zmediaByObjIndex:media];
         WIGZMediaResource *resource = [m.resources firstObject];
 
+        image.enabled = NO;
         [image setValue:[[UIImage imageNamed:resource.filename] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
         [alert addAction:image];
     }
@@ -131,11 +130,37 @@
 + (void)WIGUIShowScreen:(NSString *)screen item:(NSNumber *)item
 {
     if ([screen isEqualToString:@"main"] == YES) {
+        // There is no main screen as it's all tabbed.
+        tbc.selectedIndex = TABBAR_MAIN;
     } else if ([screen isEqualToString:@"inventory"] == YES) {
+        tbc.selectedIndex = TABBAR_INVENTORY;
+        while ([inventoryViewController.navigationController popViewControllerAnimated:NO] != nil)
+            ;
     } else if ([screen isEqualToString:@"youSee"] == YES) {
+        tbc.selectedIndex = TABBAR_YOUSEE;
+        while ([youSeesViewController.navigationController popViewControllerAnimated:NO] != nil)
+            ;
     } else if ([screen isEqualToString:@"locations"] == YES) {
+        tbc.selectedIndex = TABBAR_LOCATIONS;
+        while ([locationsViewController.navigationController popViewControllerAnimated:NO] != nil)
+            ;
     } else if ([screen isEqualToString:@"tasks"] == YES) {
+        tbc.selectedIndex = TABBAR_TASKS;
+        while ([tasksViewController.navigationController popViewControllerAnimated:NO] != nil)
+            ;
     } else if ([screen isEqualToString:@"detail"] == YES) {
+        tbc.selectedIndex = TABBAR_YOUSEE;
+        while ([inventoryViewController.navigationController popViewControllerAnimated:NO] != nil)
+            ;
+        // Do something with item
+        WIGZItem *i = [wig zitemByObjectId:item];
+
+        ItemViewController *newController = [[ItemViewController alloc] init];
+        newController.title = @"Item";
+        newController.item = i;
+        [youSeesViewController.navigationController pushViewController:newController animated:YES];
+
+        [wig WIGOnClick:i.luaObject];
     } else {
         NSAssert(FALSE, @"foo");
     }
@@ -143,7 +168,7 @@
 
 + (void)WIGUIPlayAudio:(NSNumber *)media_
 {
-    WIGZMedia *media = [wig zmediaByObjId:media_];
+    WIGZMedia *media = [wig zmediaByObjIndex:media_];
     WIGZMediaResource *resource = [media.resources objectAtIndex:0];
 
     /* Crappy way to do sound but will work for now */

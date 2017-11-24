@@ -14,6 +14,7 @@ MapViewController *mapViewController;
 InventoryViewController *inventoryViewController;
 TasksViewController *tasksViewController;
 
+UITabBarController *tbc;
 
 int main(int argc, char * argv[])
 {
