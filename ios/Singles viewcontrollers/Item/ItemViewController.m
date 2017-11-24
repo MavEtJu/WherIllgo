@@ -108,7 +108,7 @@ enum {
 
             cell.textLabel.text = command.text;
             if (command.enabled == NO) {
-                cell.textLabel.textColor = [UIColor lightTextColor];
+                cell.textLabel.textColor = [UIColor lightGrayColor];
                 cell.userInteractionEnabled = NO;
             } else {
                 cell.textLabel.textColor = [UIColor darkTextColor];

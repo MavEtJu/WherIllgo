@@ -128,7 +128,7 @@ enum {
             c = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL];
             c.textLabel.text = item.name;
             if (item.visible == NO) {
-                c.textLabel.textColor = [UIColor lightTextColor];
+                c.textLabel.textColor = [UIColor lightGrayColor];
             } else {
                 c.textLabel.textColor = [UIColor darkTextColor];
             }
