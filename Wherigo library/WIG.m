@@ -89,17 +89,6 @@ WIG *wig = nil;
     [self runScript:myScript];
 }
 
-- (void)onClick:(NSString *)name
-{
-    NSString *myScript = [NSString stringWithFormat:@"\
-        if %@.OnClick ~= nil then   \
-            %@.OnClick()            \
-        end                         \
-        ", name, name];
-    [self runScript:myScript];
-}
-
-
 /*
  * Interaction with objects
  */
@@ -364,7 +353,7 @@ WIG *wig = nil;
     return medias;
 }
 
-- (WIGZMedia *)mediaByObjId:(NSNumber *)objIndex
+- (WIGZMedia *)zmediaByObjId:(NSNumber *)objIndex
 {
     NSArray *medias = [self arrayZMedias];
     __block WIGZMedia *media;
@@ -381,11 +370,29 @@ WIG *wig = nil;
  * Calls from WIG-link
  */
 
-- (void)messageBoxCallback
+- (void)WIGOnClick:(NSString *)name
 {
-    NSString *myScript = LUA_STRING(
-        Wherigo._MessageBoxResponse(1)
-    );
+    NSString *myScript = [NSString stringWithFormat:@"\
+        if %@.OnClick ~= nil then   \
+        %@.OnClick()                \
+        end                         \
+    ", name, name];
+    [self runScript:myScript];
+}
+
+- (void)WIGMessageBoxCallback:(NSString *)text;
+{
+    NSString *myScript = [NSString stringWithFormat:LUA_STRING(
+        Wherigo._MessageBoxResponse("%@")
+    ), text];
+    [self runScript:myScript];
+}
+
+- (void)WIGGetInputResponse:(NSString *)text
+{
+    NSString *myScript = [NSString stringWithFormat:LUA_STRING(
+        Wherigo._GetInputResponse("%@")
+    ), text];
     [self runScript:myScript];
 }
 

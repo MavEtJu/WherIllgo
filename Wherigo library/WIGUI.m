@@ -27,10 +27,10 @@
     return topController;
 }
 
-+ (void)WIGUIMessageBox:(NSString *)text media:(NSString *)media button1:(NSString *)button1 button2:(NSString *)button2 callback:(BOOL)callback
++ (void)WIGUIMessageBox:(NSString *)text media:(NSNumber *)media button1:(NSString *)button1 button2:(NSString *)button2 callback:(BOOL)callback
 {
     UIAlertController *alert = [UIAlertController
-                                alertControllerWithTitle:@"Message!"
+                                alertControllerWithTitle:@"Message"
                                 message:text
                                 preferredStyle:UIAlertControllerStyleAlert];
 
@@ -40,8 +40,21 @@
                             handler:^(UIAlertAction *action) {
                                 [alert dismissViewControllerAnimated:YES completion:nil];
                                 if (callback == YES)
-                                    [wig messageBoxCallback];
+                                    [wig WIGMessageBoxCallback:@"Ok"];
                             }];
+
+    if (media != nil && [media isEqualToNumber:[NSNumber numberWithInteger:0]] == NO) {
+        UIAlertAction *image = [UIAlertAction
+                                actionWithTitle:@""
+                                style:UIAlertActionStyleDefault
+                                handler:nil
+                                ];
+        WIGZMedia *m = [wig zmediaByObjId:media];
+        WIGZMediaResource *resource = [m.resources firstObject];
+
+        [image setValue:[[UIImage imageNamed:resource.filename] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
+        [alert addAction:image];
+    }
 
     UIAlertAction *b1 = nil;
     UIAlertAction *b2 = nil;
@@ -53,7 +66,7 @@
               handler:^(UIAlertAction *action) {
                   [alert dismissViewControllerAnimated:YES completion:nil];
                   if (callback == YES)
-                      [wig messageBoxCallback];
+                      [wig WIGMessageBoxCallback:@"Button1"];
               }];
     if (button2 != nil)
         b2 = [UIAlertAction
@@ -62,7 +75,7 @@
               handler:^(UIAlertAction *action) {
                   [alert dismissViewControllerAnimated:YES completion:nil];
                   if (callback == YES)
-                      [wig messageBoxCallback];
+                      [wig WIGMessageBoxCallback:@"Button2"];
               }];
 
     if (b1 != NULL)
@@ -71,6 +84,46 @@
         [alert addAction:b2];
     if (b1 == NULL && b2 == NULL)
         [alert addAction:close];
+
+    [[self topMostController] presentViewController:alert animated:YES completion:nil];
+}
+
++ (void)WIGUIGetInput:(NSString *)inputType text:(NSString *)text options:(NSString *)o media:(NSString *)media
+{
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"Input"
+                                message:text
+                                preferredStyle:UIAlertControllerStyleAlert];
+
+    if ([inputType isEqualToString:@"Text"] == YES) {
+        UIAlertAction *submit = [UIAlertAction
+                                 actionWithTitle:@"Submit"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction *action) {
+                                     UITextField *tf = alert.textFields.firstObject;
+                                     NSString *text = tf.text;
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     [wig WIGGetInputResponse:text];
+                                 }];
+        [alert addAction:submit];
+
+        [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.placeholder = @"Enter your text here";
+        }];
+    }
+
+    if ([inputType isEqualToString:@"MultipleChoice"] == YES) {
+        [[o componentsSeparatedByString:@";"] enumerateObjectsUsingBlock:^(NSString * _Nonnull choice, NSUInteger idx, BOOL * _Nonnull stop) {
+            UIAlertAction *button = [UIAlertAction
+                                     actionWithTitle:choice
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction *action) {
+                                         [alert dismissViewControllerAnimated:YES completion:nil];
+                                         [wig WIGGetInputResponse:choice];
+                                     }];
+            [alert addAction:button];
+        }];
+    }
 
     [[self topMostController] presentViewController:alert animated:YES completion:nil];
 }
@@ -90,7 +143,7 @@
 
 + (void)WIGUIPlayAudio:(NSNumber *)media_
 {
-    WIGZMedia *media = [wig mediaByObjId:media_];
+    WIGZMedia *media = [wig zmediaByObjId:media_];
     WIGZMediaResource *resource = [media.resources objectAtIndex:0];
 
     /* Crappy way to do sound but will work for now */

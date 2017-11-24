@@ -88,7 +88,18 @@ static int wigShowScreen(lua_State *L)
 static int wigGetInput(lua_State *L)
 {
     // GetInput(ZInput input)
-    
+    // WIGInternal.GetInput( input.InputType, input.Text, o, media)
+    const char *inputType = luaL_checkstring(L, 1);
+    const char *text = luaL_checkstring(L, 2);
+    const char *o = luaL_checkstring(L, 3);
+    const char *media = luaL_checkstring(L, 4);
+    printf("GetInput!\n");
+    printf("inputType: %s\n", inputType);
+    printf("text: %s\n", text);
+    printf("o: %s\n", o);
+    printf("media: %s\n", media);
+    WIGUIGetInput(inputType, text, o, media);
+    return 0;
 }
 
 static const luaL_Reg wiginternallib[] = {

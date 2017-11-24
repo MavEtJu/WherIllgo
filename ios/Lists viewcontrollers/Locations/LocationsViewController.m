@@ -81,7 +81,7 @@
     newController.zone = location;
     [self.navigationController pushViewController:newController animated:YES];
 
-    [wig onClick:location.luaObject];
+    [wig WIGOnClick:location.luaObject];
 }
 
 @end

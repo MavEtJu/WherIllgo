@@ -12,9 +12,9 @@
 #include <stdio.h>
 
 void WIGUIMessageBox(const char *text, const char *media, const char *button1, const char *button2, const char *callback);
-void WIGMessageBoxCallback(void);
 void WIGUIShowScreen(const char *screen, const char *item);
 void WIGUIPlayAudio(const char *media);
 void WIGUIStopSound(void);
+void WIGUIGetInput(const char *inputType, const char *text, const char *o, const char *media);
 
 #endif /* WIG_link_h */

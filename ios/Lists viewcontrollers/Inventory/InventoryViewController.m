@@ -65,7 +65,7 @@
     newController.item = item;
     [self.navigationController pushViewController:newController animated:YES];
 
-    [wig onClick:item.luaObject];
+    [wig WIGOnClick:item.luaObject];
 }
 
 @end

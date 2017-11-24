@@ -8,9 +8,10 @@
 
 @interface WIGUI : NSObject <AVAudioPlayerDelegate>
 
-+ (void)WIGUIMessageBox:(NSString *)text media:(NSString *)media button1:(NSString *)button1 button2:(NSString *)button2 callback:(BOOL)callback;
++ (void)WIGUIMessageBox:(NSString *)text media:(NSNumber *)media button1:(NSString *)button1 button2:(NSString *)button2 callback:(BOOL)callback;
 + (void)WIGUIShowScreen:(NSString *)screen item:(NSNumber *)item;
 + (void)WIGUIPlayAudio:(NSNumber *)media;
 + (void)WIGUIStopSound;
++ (void)WIGUIGetInput:(NSString *)inputType text:(NSString *)text options:(NSString *)o media:(NSString *)media;
 
 @end

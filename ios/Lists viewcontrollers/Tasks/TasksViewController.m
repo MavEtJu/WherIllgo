@@ -78,7 +78,7 @@
     newController.task = task;
     [self.navigationController pushViewController:newController animated:YES];
 
-    [wig onClick:task.luaObject];
+    [wig WIGOnClick:task.luaObject];
 }
 
 @end

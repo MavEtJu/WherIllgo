@@ -64,12 +64,13 @@
 - (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryZCharactersInZone:(WIGZone *)zone;
 
 - (NSArray<WIGZMedia *> *)arrayZMedias;
-- (WIGZMedia *)mediaByObjId:(NSNumber *)objIndex;
+- (WIGZMedia *)zmediaByObjId:(NSNumber *)objIndex;
 
 /* Interface to WIG-link */
-- (void)messageBoxCallback;
+- (void)WIGMessageBoxCallback:(NSString *)text;
+- (void)WIGGetInputResponse:(NSString *)text;
 
-- (void)onClick:(NSString *)name;
+- (void)WIGOnClick:(NSString *)name;
 
 @end
 
