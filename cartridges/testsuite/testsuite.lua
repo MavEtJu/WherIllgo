@@ -1361,6 +1361,12 @@ objShowScreens.Commands = {
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
+	},
+	cmdShowsoup = Wherigo.ZCommand{
+		Text = "Show soup", 
+		CmdWith = false, 
+		Enabled = true, 
+		EmptyTargetListText = "Nothing available"
 	}
 }
 objShowScreens.Commands.cmdShowlocations.Custom = true
@@ -1375,6 +1381,9 @@ objShowScreens.Commands.cmdShowitems.WorksWithAll = true
 objShowScreens.Commands.cmdShowtasks.Custom = true
 objShowScreens.Commands.cmdShowtasks.Id = "3b0355c1-69b2-4a8b-a9fc-fb0c919c8b88"
 objShowScreens.Commands.cmdShowtasks.WorksWithAll = true
+objShowScreens.Commands.cmdShowsoup.Custom = true
+objShowScreens.Commands.cmdShowsoup.Id = "3b0355c1-69b2-4a8b-a9fc-abcdef"
+objShowScreens.Commands.cmdShowsoup.WorksWithAll = true
 objShowScreens.ObjectLocation = Wherigo.INVALID_ZONEPOINT
 objShowScreens.Locked = false
 objShowScreens.Opened = false
@@ -3142,6 +3151,16 @@ function objShowScreens:OncmdShowtasks(target)
 		Callback = function(action)
 			if action ~= nil then
 				Wherigo.ShowScreen(Wherigo.TASKSCREEN)
+			end
+		end
+	}
+end
+function objShowScreens:OncmdShowsoup(target)
+	_Urwigo.MessageBox{
+		Text = "Now trying to show the soup. If nothing happens your player does not support screen commands.", 
+		Callback = function(action)
+			if action ~= nil then
+				Wherigo.ShowScreen(Wherigo.DETAILSCREEN, objSoup)
 			end
 		end
 	}
