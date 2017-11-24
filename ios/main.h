@@ -10,6 +10,7 @@
 #define main_h
 
 #import <UIKit/UIKit.h>
+#import <AVKit/AVKit.h>
 
 #import "WIG.h"
 

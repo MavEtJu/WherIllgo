@@ -45,7 +45,7 @@ enum {
 
     self.items = [wig arrayZItemsInZone:self.zone];
     self.zones = [wig arrayZonesInZone:self.zone];
-    self.characters = [wig arrayCharactersInZone:self.zone];
+    self.characters = [wig arrayZCharactersInZone:self.zone];
 }
 
 #pragma mark - Table view data source
@@ -127,6 +127,11 @@ enum {
             WIGZItem *item = [self.items objectAtIndex:indexPath.row];
             c = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL];
             c.textLabel.text = item.name;
+            if (item.visible == NO) {
+                c.textLabel.textColor = [UIColor lightTextColor];
+            } else {
+                c.textLabel.textColor = [UIColor darkTextColor];
+            }
             break;
         }
 

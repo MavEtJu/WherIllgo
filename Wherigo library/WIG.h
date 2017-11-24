@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVKit/AVKit.h>
 
 @class WIGZObject;
 @class WIGZCharacter;
@@ -38,24 +39,32 @@
 
 @property (nonatomic, retain) WIGZCartridge *cartridge;
 @property (nonatomic, retain) WIGZCharacter *player;
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 
-- (void)run:(NSString *)filename;
+- (void)runFile:(NSString *)filename;
+- (void)runScript:(NSString *)myscript;
 - (void)updateLocation;
 
 /* Various ZObjects */
 - (NSArray<WIGZTask *> *)arrayZTasks;
 - (NSDictionary<NSString *, WIGZTask *> *)dictionaryZTasks;
+
 - (NSArray<WIGZone *> *)arrayZones;
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZones;
-- (NSArray<WIGZItem *> *)arrayZItemsInInventory;
-- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory;
-
-- (NSArray<WIGZCharacter *> *)arrayCharactersInZone:(WIGZone *)zone;
-- (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryCharactersInZone:(WIGZone *)zone;
 - (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone;
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone;
+
+- (NSArray<WIGZItem *> *)arrayZItemsInInventory;
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory;
 - (NSArray<WIGZItem *> *)arrayZItemsInZone:(WIGZone *)zone;
 - (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInZone:(WIGZone *)zone;
+- (WIGZItem *)zitemForId:(NSString *)_id;
+
+- (NSArray<WIGZCharacter *> *)arrayZCharactersInZone:(WIGZone *)zone;
+- (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryZCharactersInZone:(WIGZone *)zone;
+
+- (NSArray<WIGZMedia *> *)arrayZMedias;
+- (WIGZMedia *)mediaByObjId:(NSNumber *)objIndex;
 
 /* Interface to WIG-link */
 - (void)messageBoxCallback;

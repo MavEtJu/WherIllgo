@@ -14,8 +14,6 @@
 {
     [super importFromDict:dict];
 
-// @property (nonatomic, retain) NSArray<WIGZMediaResources *> *resources;
-
     self.altText = [dict objectForKey:@"AltText"];
 
     NSArray<NSDictionary *> *resourcesArray = [dict objectForKey:@"Resources"];
@@ -28,7 +26,6 @@
         }];
         self.resources = resources;
     }
-
 }
 
 @end

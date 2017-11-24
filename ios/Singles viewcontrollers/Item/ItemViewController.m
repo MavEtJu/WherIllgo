@@ -14,85 +14,156 @@
 
 @implementation ItemViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+enum {
+    SECTION_HEADER = 0,
+    SECTION_COMMANDS,
+    SECTION_DEBUG,
+    SECTION_MAX,
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    HEADER_NAME = 0,
+    HEADER_MEDIA,
+    HEADER_DESCRIPTION,
+    HEADER_MAX,
+};
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:XIB_UITABLEVIEWCELL];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return SECTION_MAX;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    switch (section) {
+        case SECTION_HEADER:
+            return HEADER_MAX;
+        case SECTION_COMMANDS:
+            return [self.item.commands count];
+        case SECTION_DEBUG:
+            return 1;
+    }
     return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case SECTION_HEADER:
+            return @"Header";
+        case SECTION_COMMANDS:
+            return @"Commands";
+        case SECTION_DEBUG:
+            return @"Debug";
+    }
+    return @"";
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *c = nil;
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+    switch (indexPath.section) {
+        case SECTION_HEADER: {
+            switch (indexPath.row) {
+                case HEADER_NAME: {
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+                    cell.textLabel.text = self.item.name;
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+                    c = cell;
+                    break;
+                }
+                case HEADER_DESCRIPTION: {
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+                    cell.textLabel.text = self.item.description_;
+                    cell.textLabel.font = [UIFont systemFontOfSize:12];
+                    cell.textLabel.numberOfLines = 0;
 
-/*
-#pragma mark - Navigation
+                    c = cell;
+                    break;
+                }
+                case HEADER_MEDIA: {
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+                    cell.textLabel.text = self.item.media.altText;
+
+                    c = cell;
+                    break;
+                }
+            }
+            break;
+        }
+        case SECTION_COMMANDS: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+            WIGZCommand *command = [self.item.commandsArray objectAtIndex:indexPath.row];
+
+            cell.textLabel.text = command.text;
+            if (command.enabled == NO) {
+                cell.textLabel.textColor = [UIColor lightTextColor];
+                cell.userInteractionEnabled = NO;
+            } else {
+                cell.textLabel.textColor = [UIColor darkTextColor];
+                cell.userInteractionEnabled = YES;
+            }
+
+            c = cell;
+            break;
+        }
+
+        case SECTION_DEBUG: {
+            switch (indexPath.row) {
+                case 0: {
+                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+
+                    cell.textLabel.font = [UIFont systemFontOfSize:12];
+                    cell.textLabel.numberOfLines = 0;
+
+                    NSMutableString *s = [NSMutableString stringWithString:@""];
+                    [s appendFormat:@"Visible: %d\n", self.item.visible];
+                    cell.textLabel.text = s;
+
+                    c = cell;
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+    return c;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section != SECTION_COMMANDS)
+        return;
+
+    WIGZCommand *command = [self.item.commandsArray objectAtIndex:indexPath.row];
+    __block NSString *commandName;
+
+    [self.item.commands enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, WIGZCommand * _Nonnull cmd, BOOL * _Nonnull stop) {
+        if ([cmd._id isEqualToString:command._id] == YES) {
+            commandName = key;
+            *stop = YES;
+        }
+    }];
+
+    if (command.enabled == NO)
+        return;
+
+    [wig runScript:[NSString stringWithFormat:@"%@.On%@()", self.item.luaObject, commandName]];
+
+    self.item = [wig zitemForId:self.item._id];
+    [self.tableView reloadData];
+}
 
 @end

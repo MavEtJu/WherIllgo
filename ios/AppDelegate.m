@@ -43,10 +43,10 @@
 
 
     NSArray *controllers = @[
+        inventoryNav,
         locationsNav,
         tasksNav,
         youSeeNav,
-        inventoryNav,
         mapNav
     ];
     [tbc setViewControllers:controllers animated:YES];
@@ -55,7 +55,7 @@
     self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
 
-    [wig run:@"testsuite.lua"];
+    [wig runFile:@"testsuite.lua"];
 
     [wig updateLocation];
 

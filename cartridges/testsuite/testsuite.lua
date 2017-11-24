@@ -779,6 +779,11 @@ objToggleatask.Commands = {
 		EmptyTargetListText = "Nothing available"
 	}
 }
+function objToggleatask.foo()
+	print(objToggleatask.Commands.cmdCorrect)
+	print(objToggleatask.Commands.cmdCorrect._enabled)
+	print(_G.objToggleatask.Commands.cmdCorrect._enabled)
+end
 objToggleatask.Commands.cmdIncomplete.Custom = true
 objToggleatask.Commands.cmdIncomplete.Id = "d6edbb22-30be-4603-bf80-bff44af9ebe7"
 objToggleatask.Commands.cmdIncomplete.WorksWithAll = true
@@ -3339,4 +3344,5 @@ end
 
 objSoup.Commands.cmdEat.MakeReciprocal = false
 -- End user functions --
+
 return objWherigoTestsuiteEN

@@ -22,3 +22,24 @@ void WIGUIMessageBox(const char *text_, const char *media_, const char *button1_
     BOOL callback = strcmp(callback_, "0") == 0 ? 0 : 1;
     [WIGUI WIGUIMessageBox:text media:media button1:button1 button2:button2 callback:callback];
 }
+
+void WIGUIShowScreen(const char *screen_, const char *item_)
+{
+    NSString *screen = [NSString stringWithUTF8String:screen_];
+    NSNumber *item = [NSNumber numberWithInteger:[[NSString stringWithUTF8String:item_] integerValue]];
+
+    [WIGUI WIGUIShowScreen:screen item:item];
+}
+
+void WIGUIPlayAudio(const char *media_)
+{
+    NSNumber *media = [NSNumber numberWithInteger:[[NSString stringWithUTF8String:media_] integerValue]];
+
+    [WIGUI WIGUIPlayAudio:media];
+}
+
+void WIGUIStopSound(void)
+{
+    [WIGUI WIGUIStopSound];
+
+}

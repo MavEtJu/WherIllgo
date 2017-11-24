@@ -23,21 +23,24 @@
 
 #include "WIG-link.h"
 
-static int wigLogMessage (lua_State *L) {
+static int wigLogMessage(lua_State *L)
+{
     const char *s = luaL_checkstring(L, 1);
     printf("Log!\n");
     printf("> text: %s\n", s);
     return 0;
 }
 
-static int wigShowStatusText (lua_State *L) {
+static int wigShowStatusText(lua_State *L)
+{
     const char *s = luaL_checkstring(L, 1);
     printf("StatusText!\n");
     printf("> text: %s\n", s);
     return 0;
 }
 
-static int wigMessageBox(lua_State *L) {
+static int wigMessageBox(lua_State *L)
+{
     const char *text = luaL_checkstring(L, 1);
     const char *media = luaL_checkstring(L, 2);
     const char *button1 = luaL_checkstring(L, 3);
@@ -54,18 +57,48 @@ static int wigMessageBox(lua_State *L) {
     return 0;
 }
 
-static int wigPlayAudio (lua_State *L) {
+static int wigPlayAudio(lua_State *L)
+{
     const char *s = luaL_checkstring(L, 1);
     printf("Audio!\n");
     printf("id: %s\n", s);
+    WIGUIPlayAudio(s);
     return 0;
+}
+
+static int wigStopSound(lua_State *L)
+{
+    printf("StopSound!\n");
+    WIGUIStopSound();
+    return 0;
+}
+
+static int wigShowScreen(lua_State *L)
+{
+    // ShowScreen(number screen,[ZObject item])
+    const char *s = luaL_checkstring(L, 1);
+    const char *t = luaL_checkstring(L, 2);
+    printf("ShowScreen!\n");
+    printf("number: %s\n", s);
+    printf("item: %s\n", t);
+    WIGUIShowScreen(s, t);
+    return 0;
+}
+
+static int wigGetInput(lua_State *L)
+{
+    // GetInput(ZInput input)
+    
 }
 
 static const luaL_Reg wiginternallib[] = {
     {"LogMessage",      wigLogMessage},
     {"PlayAudio",       wigPlayAudio},
+    {"StopSound",       wigStopSound},
     {"ShowStatusText",  wigShowStatusText},
     {"MessageBox",      wigMessageBox},
+    {"ShowScreen",      wigShowScreen},
+    {"GetInput",        wigGetInput},
     {NULL, NULL}
 };
 

@@ -31,7 +31,7 @@ WIG *wig = nil;
     return self;
 }
 
-- (void)run:(NSString *)filename
+- (void)runFile:(NSString *)filename
 {
     NSFileManager *filemgr = [NSFileManager defaultManager];
     NSString *dir = [[NSBundle mainBundle] resourcePath];
@@ -208,6 +208,26 @@ WIG *wig = nil;
     return [[self dictionaryZItemsInZone:zone] allValues];
 }
 
+- (WIGZItem *)zitemForId:(NSString *)_id
+{
+    WIGZItem *item = [[WIGZItem alloc] init];
+
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSDictionary * _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSString *__id = [obj objectForKey:@"Id"];
+        if ([__id isKindOfClass:[NSString class]] == NO)
+            return;
+        if ([__id isEqualToString:_id] == NO)
+            return;
+        [item importFromDict:obj];
+        item.luaObject = key;
+    }];
+
+    return item;
+}
+
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone
 {
     NSMutableDictionary<NSString *, WIGZone *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
@@ -245,7 +265,7 @@ WIG *wig = nil;
     return [[self dictionaryZonesInZone:zone] allValues];
 }
 
-- (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryCharactersInZone:(WIGZone *)zone
+- (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryZCharactersInZone:(WIGZone *)zone
 {
     NSMutableDictionary<NSString *, WIGZCharacter *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
 
@@ -277,9 +297,9 @@ WIG *wig = nil;
     return zs;
 }
 
-- (NSArray<WIGZCharacter *> *)arrayCharactersInZone:(WIGZone *)zone
+- (NSArray<WIGZCharacter *> *)arrayZCharactersInZone:(WIGZone *)zone
 {
-    return [[self dictionaryCharactersInZone:zone] allValues];
+    return [[self dictionaryZCharactersInZone:zone] allValues];
 }
 
 - (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory
@@ -326,6 +346,35 @@ WIG *wig = nil;
     cartridge.luaObject = @"cart";
 
     return cartridge;
+}
+
+- (NSArray<WIGZMedia *> *)arrayZMedias
+{
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+
+    NSMutableArray *medias = [NSMutableArray arrayWithCapacity:10];
+    [[[g objectForKey:@"cart"] objectForKey:@"AllZMedias"] enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull dict, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([[dict objectForKey:@"_classname"] isEqualToString:@"ZMedia"] == NO)
+            return;
+        WIGZMedia *media = [[WIGZMedia alloc] init];
+        [media importFromDict:dict];
+        [medias addObject:media];
+    }];
+
+    return medias;
+}
+
+- (WIGZMedia *)mediaByObjId:(NSNumber *)objIndex
+{
+    NSArray *medias = [self arrayZMedias];
+    __block WIGZMedia *media;
+    [medias enumerateObjectsUsingBlock:^(WIGZMedia * _Nonnull m, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([m.objIndex isEqualToNumber:objIndex] == NO)
+            return;
+        media = m;
+        *stop = YES;
+    }];
+    return media;
 }
 
 /*
