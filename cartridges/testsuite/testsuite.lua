@@ -744,7 +744,7 @@ objToggleatask = Wherigo.ZItem{
 	Container = Player
 }
 objToggleatask.Id = "781488f7-95ee-4b2e-80b6-b37c847903d6"
-objToggleatask.Name = "Toggle a task"
+objToggleatask.Name = "Toggle a task ✓"
 objToggleatask.Description = "Here you can set the status of the demotask. Set it to complete, incomplete, correct, not correct and set correction to none. The correction is nearly never used and  often does not work ! The status of the task you can see in its description. The null task we need to show a completed task. By the way, the null task should have an icon, is your player able to see it ? Note : Simulator may fail or crash on setting correctness."
 objToggleatask.Visible = true
 objToggleatask.Commands = {
@@ -807,7 +807,7 @@ objInputs = Wherigo.ZItem{
 	Container = Player
 }
 objInputs.Id = "bbf827d2-ecfd-49d9-af13-bba908860c2c"
-objInputs.Name = "Inputs"
+objInputs.Name = "Inputs ✓"
 objInputs.Description = "Make an input. Also check the \"garmin crash symptome\". Leave the input editfield open and exit the zone. Garmin crashes because the exit message overlies the opened input. Other devices not ? By the way, same effect in emulator, it shows you a beautiful blue screen ;-)"
 objInputs.Visible = true
 objInputs.Commands = {
@@ -1150,7 +1150,7 @@ objPicsandChars.Description = "Are your player able to show specific chars and d
 objPicsandChars.Visible = true
 objPicsandChars.Commands = {
 	cmdSpecificchars = Wherigo.ZCommand{
-		Text = "Specific chars", 
+		Text = "Specific chars ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
@@ -1162,7 +1162,7 @@ objPicsandChars.Commands = {
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdPicturesize = Wherigo.ZCommand{
-		Text = "Picturesize", 
+		Text = "Picturesize ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
@@ -1245,7 +1245,7 @@ objSounds = Wherigo.ZItem{
 	Container = Player
 }
 objSounds.Id = "e7f35aa7-744d-4bf8-9d6b-d0e7306d465b"
-objSounds.Name = "Sounds"
+objSounds.Name = "Sounds ✓"
 objSounds.Description = "If you hear nothing on the sound tests, your player settings are not ok. Note : These functions does not work on garmin devices."
 objSounds.Visible = true
 objSounds.Commands = {
@@ -1334,7 +1334,7 @@ objShowScreens = Wherigo.ZItem{
 	Container = Player
 }
 objShowScreens.Id = "196964e2-6903-47a2-9ab9-21197a840aef"
-objShowScreens.Name = "Show Screens"
+objShowScreens.Name = "Show Screens ✓"
 objShowScreens.Description = "Some players (especially Garmin) do not work with show screens commands. Here you can check their behaviour."
 objShowScreens.Visible = true
 objShowScreens.Commands = {
@@ -1428,7 +1428,7 @@ objTextonbutton = Wherigo.ZItem{
 	Container = Player
 }
 objTextonbutton.Id = "6dca3e5c-50d3-4b98-8ac4-4dc897f47b6c"
-objTextonbutton.Name = "Text on button"
+objTextonbutton.Name = "Text on button ✓"
 objTextonbutton.Description = ""
 objTextonbutton.Visible = true
 objTextonbutton.Commands = {
@@ -1864,7 +1864,7 @@ objPicturesize.InputType = "MultipleChoice"
 objPicturesize.Text = "Some players fit pictures to screen, other use the exact given format. Have a look at the following pics and check how your player reacts. Choose the picturesize you want to see. Leave the loop by pressing BACK."
 objPictureformat = Wherigo.ZInput(objWherigoTestsuiteEN)
 objPictureformat.Id = "7b8c2b26-1ef1-4281-a531-c90754bfb170"
-objPictureformat.Name = "Pictureformat"
+objPictureformat.Name = "Pictureformat ✓"
 objPictureformat.Description = ""
 objPictureformat.Visible = true
 objPictureformat.Choices = {
@@ -2543,7 +2543,7 @@ function objToggleatask:OncmdIncomplete(target)
 		Text = "Look at the task in task menu or description how its state is.", 
 		Callback = function(action)
 			if action ~= nil then
-				Wherigo.ShowScreen(Wherigo.MAINSCREEN)
+				Wherigo.ShowScreen(Wherigo.TASKSCREEN)
 			end
 		end
 	}
@@ -2556,7 +2556,7 @@ function objToggleatask:OncmdComplete(target)
 		Text = "Look at the task in task menu or description how its state is.", 
 		Callback = function(action)
 			if action ~= nil then
-				Wherigo.ShowScreen(Wherigo.MAINSCREEN)
+				Wherigo.ShowScreen(Wherigo.TASKSCREEN)
 			end
 		end
 	}
@@ -2571,7 +2571,7 @@ function objToggleatask:OncmdCorrect(target)
 		Text = "Look at the task in task menu or description how its state is.", 
 		Callback = function(action)
 			if action ~= nil then
-				Wherigo.ShowScreen(Wherigo.MAINSCREEN)
+				Wherigo.ShowScreen(Wherigo.TASKSCREEN)
 			end
 		end
 	}
@@ -2586,7 +2586,7 @@ function objToggleatask:OncmdNotcorrect(target)
 		Text = "Look at the task in task menu or description how its state is.", 
 		Callback = function(action)
 			if action ~= nil then
-				Wherigo.ShowScreen(Wherigo.MAINSCREEN)
+				Wherigo.ShowScreen(Wherigo.TASKSCREEN)
 			end
 		end
 	}
@@ -2601,7 +2601,7 @@ function objToggleatask:OncmdCorrectnessnone(target)
 		Text = "Look at the task in task menu or description how its state is.", 
 		Callback = function(action)
 			if action ~= nil then
-				Wherigo.ShowScreen(Wherigo.MAINSCREEN)
+				Wherigo.ShowScreen(Wherigo.TASKSCREEN)
 			end
 		end
 	}
