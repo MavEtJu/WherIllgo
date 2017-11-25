@@ -17,7 +17,6 @@
 #import "lauxlib.h"
 #import "lualib.h"
 
-#import "lenvlib.h"
 #import "lwiginternal.h"
 
 #if LUA_VERSION_NUM <= 501
@@ -76,8 +75,7 @@ static const luaL_Reg loadedlibs[] = {
 //  {LUA_BITLIBNAME, luaopen_bit32},
   {LUA_MATHLIBNAME, luaopen_math},
 //  {LUA_DBLIBNAME, luaopen_debug},
-  {LUA_ENV, luaopen_env},
-  {LUA_WIGINTERNAL, luaopen_WIGInternal}, 
+  {LUA_WIGINTERNAL, luaopen_WIGInternal},
   {NULL, NULL}
 };
 
@@ -526,6 +524,41 @@ static inline id toObjC2(lua_State *L, int index, NSMutableDictionary *seen, NSI
         lua_setglobal(L, [key UTF8String]);
 }
 
+- (void)createEnv
+{
+    lua_newtable(L);
+
+    lua_pushliteral( L, "Platform" );
+    lua_pushliteral( L, "Geocube" );
+    lua_rawset(L, -3);
+
+    lua_pushliteral( L, "_Player" );
+    lua_pushliteral( L, "MavEtJu" );
+    lua_rawset(L, -3);
+
+    lua_pushliteral( L, "_Company" );
+    lua_pushliteral( L, "company?" );
+    lua_rawset(L, -3);
+
+    lua_pushliteral( L, "_Activity" );
+    lua_pushliteral( L, "activity?" );
+    lua_rawset(L, -3);
+
+    lua_pushliteral( L, "_CompletionCode" );
+    lua_pushliteral( L, "completioncode?" );
+    lua_rawset(L, -3);
+
+    lua_pushliteral( L, "DeviceID" );
+    lua_pushliteral( L, "deviceid?" );
+    lua_rawset(L, -3);
+
+    lua_pushliteral( L, "Version" );
+    lua_pushliteral( L, "version?" );
+    lua_rawset(L, -3);
+
+    lua_setglobal(L, "Env");
+}
+
 @end
 
 static int callMethod(lua_State *L) {
@@ -626,3 +659,4 @@ static int luaDumpVar(lua_State *L) {
     lua_pushstring(L, [result UTF8String]);
     return 1;
 }
+

@@ -722,7 +722,7 @@ objSetPlayerZone = Wherigo.ZItem{
 	Container = Player
 }
 objSetPlayerZone.Id = "5bb06635-b5bb-4cb8-ae63-61b37f390bbf"
-objSetPlayerZone.Name = "Set PlayerZone"
+objSetPlayerZone.Name = "Set PlayerZone (0/1)"
 objSetPlayerZone.Description = "Go outside, turn your GPS on and look for a proper place where you can set the zone. It will be activated in a distance of approximatelly 20 meters or 70 feet course NORTH."
 objSetPlayerZone.Visible = true
 objSetPlayerZone.Commands = {
@@ -865,7 +865,7 @@ objShowanimation = Wherigo.ZItem{
 	Container = Player
 }
 objShowanimation.Id = "324596bd-d17e-4a3b-aaab-64e070fc40c6"
-objShowanimation.Name = "Show animation"
+objShowanimation.Name = "Show animation (0/3)"
 objShowanimation.Description = "You should see a kind of animation. Each second a new picture appears. There are 2 kinds of animations, via messageboxes and changing an items picture, both 6 times (6 pictures). On some players such animations don't work, I think iPhone has problems with them."
 objShowanimation.Visible = true
 objShowanimation.Commands = {
@@ -905,7 +905,7 @@ objPhone1 = Wherigo.ZItem{
 	Container = Player
 }
 objPhone1.Id = "1d65c031-060f-4775-87cb-2e5d4b343cc6"
-objPhone1.Name = "Phone 1"
+objPhone1.Name = "Phone 1 (0/2)"
 objPhone1.Description = "The phone should ring every 4 seconds until you press stop. Are 4 seconds in timer also 4 seconds in reality ? These item uses the intervall timer with the \"on Start\" event. Maybe some players do not work with it. In that case you will hear nothing. Note : Emulator often likes to crash when a sound starts."
 objPhone1.Visible = true
 objPhone1.Commands = {
@@ -936,7 +936,7 @@ objAnimation = Wherigo.ZItem{
 	Container = Player
 }
 objAnimation.Id = "df3d9e99-b36c-41eb-af77-5a9ce10edff4"
-objAnimation.Name = "Animation"
+objAnimation.Name = "Animation (0/0)"
 objAnimation.Description = ""
 objAnimation.Visible = false
 objAnimation.Commands = {}
@@ -976,7 +976,7 @@ objSystem = Wherigo.ZItem{
 	Container = Player
 }
 objSystem.Id = "d4e40f33-e860-4c12-a112-a47e1cb35558"
-objSystem.Name = "System"
+objSystem.Name = "System (5/7)"
 objSystem.Description = "There are some things to check whether the device or player are working correct or compare differences between players."
 objSystem.Visible = true
 objSystem.Commands = {
@@ -987,13 +987,13 @@ objSystem.Commands = {
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdEnvironment = Wherigo.ZCommand{
-		Text = "Environment", 
+		Text = "Environment ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdWhattimeisit = Wherigo.ZCommand{
-		Text = "What time is it ?", 
+		Text = "What time is it ? ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
@@ -1005,19 +1005,19 @@ objSystem.Commands = {
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdBackgroundflashes = Wherigo.ZCommand{
-		Text = "Background flashes", 
+		Text = "Background flashes ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdBooleanSave = Wherigo.ZCommand{
-		Text = "Boolean Save", 
+		Text = "Boolean Save ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdSimulatorProtection = Wherigo.ZCommand{
-		Text = "Simulator Protection", 
+		Text = "Simulator Protection ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
@@ -1052,7 +1052,7 @@ objTimertests = Wherigo.ZItem{
 	Container = Player
 }
 objTimertests.Id = "7ad9a19c-33b8-42ca-8a49-a5197a63aecc"
-objTimertests.Name = "Timertests"
+objTimertests.Name = "Timertests (0/3)"
 objTimertests.Description = "Timers sometimes react in a way which the programmer does not want ;-) Here you can check, whether they countdown and interval timer work with your player correctly."
 objTimertests.Visible = true
 objTimertests.Commands = {
@@ -1092,7 +1092,7 @@ objCounterdisplay = Wherigo.ZItem{
 	Container = Player
 }
 objCounterdisplay.Id = "04769edf-b66c-4559-81d4-8338ae8d5552"
-objCounterdisplay.Name = "Counterdisplay"
+objCounterdisplay.Name = "Counterdisplay (0/1)"
 objCounterdisplay.Description = ""
 objCounterdisplay.Visible = false
 objCounterdisplay.Commands = {
@@ -1114,7 +1114,7 @@ objPhone2 = Wherigo.ZItem{
 	Container = Player
 }
 objPhone2.Id = "69b4d8c2-3282-4bef-bf3a-23336aadb06c"
-objPhone2.Name = "Phone 2"
+objPhone2.Name = "Phone 2 (0/2)"
 objPhone2.Description = "The phone should ring every 4 seconds until you press stop. Are 4 seconds in timer also 4 seconds in reality ? These item uses the intervall timer with the \"on Elapse\" event. This should work on most of the players. The very first sound is called directly after starting. Note : Emulator often likes to crash when a sound starts."
 objPhone2.Visible = true
 objPhone2.Commands = {
@@ -1145,7 +1145,7 @@ objPicsandChars = Wherigo.ZItem{
 	Container = Player
 }
 objPicsandChars.Id = "e569f7e9-abad-4630-ae70-64a700e18625"
-objPicsandChars.Name = "Pics and Chars"
+objPicsandChars.Name = "Pics and Chars (3/6)"
 objPicsandChars.Description = "Are your player able to show specific chars and displays pictures in the right dimension ? Can it read all formats, perhaps an animated gif ? Here you can check it out ..."
 objPicsandChars.Visible = true
 objPicsandChars.Commands = {
@@ -1168,7 +1168,7 @@ objPicsandChars.Commands = {
 		EmptyTargetListText = "Nothing available"
 	}, 
 	cmdPictureformat = Wherigo.ZCommand{
-		Text = "Pictureformat", 
+		Text = "Pictureformat ✓", 
 		CmdWith = false, 
 		Enabled = true, 
 		EmptyTargetListText = "Nothing available"
@@ -1212,7 +1212,7 @@ objPhone3 = Wherigo.ZItem{
 	Container = Player
 }
 objPhone3.Id = "51c6c294-36da-41d7-9e3c-5363b94087be"
-objPhone3.Name = "Phone 3"
+objPhone3.Name = "Phone 3 (0/2)"
 objPhone3.Description = "The phone should ring every 4 seconds until you press stop. These item uses the countdown timer with the \"on Elapse\" event. The very first sound is called directly after starting. Addon : Item pic, icon and name of the item change after each ring. Does it work ? "
 objPhone3.Visible = true
 objPhone3.Media = objTelSilent
@@ -1303,7 +1303,7 @@ objStandbycheck = Wherigo.ZItem{
 	Container = Player
 }
 objStandbycheck.Id = "0d2cb7d0-7843-46c3-912c-66c38f86c70d"
-objStandbycheck.Name = "Standbycheck"
+objStandbycheck.Name = "Standbycheck (0/2)"
 objStandbycheck.Description = "Lets check, how your player reacts in standby mode. Start the timer and switch the device to standby. Every 5 seconds you should hear a sound. The counter increases its value everytime the sound is being played. If sound and counter will be stopped your player sleeps in standby mode. Perhaps you have to call the item again, to see the progress. Besides the name of the item will be changed each time the sound is being played. Standbycheck.NumberOfLoops"
 objStandbycheck.Visible = true
 objStandbycheck.Commands = {
@@ -1468,7 +1468,7 @@ objObjectdetails = Wherigo.ZItem{
 	Container = Player
 }
 objObjectdetails.Id = "66a27405-3581-45eb-b950-d747357aa709"
-objObjectdetails.Name = "Objectdetails"
+objObjectdetails.Name = "Objectdetails ✓"
 objObjectdetails.Description = "Here you can check if the details of a single object can be shown. The objects to test are zone,character,item and task."
 objObjectdetails.Visible = true
 objObjectdetails.Commands = {
@@ -1517,7 +1517,7 @@ objDemoitem = Wherigo.ZItem{
 	Container = Player
 }
 objDemoitem.Id = "2095c68f-df03-4a7c-b21d-29b7e3bfe5e6"
-objDemoitem.Name = "Demoitem"
+objDemoitem.Name = "Demoitem ✓"
 objDemoitem.Description = "These object is only demo and will be called from the motheritem Objectdetails. On some players this does not work."
 objDemoitem.Visible = true
 objDemoitem.Commands = {
@@ -1590,7 +1590,7 @@ objVectorToPoint = Wherigo.ZItem{
 	Container = Player
 }
 objVectorToPoint.Id = "4858f424-2658-4a2b-ad47-25ffd9896a06"
-objVectorToPoint.Name = "VectorToPoint"
+objVectorToPoint.Name = "VectorToPoint (0/7)"
 objVectorToPoint.Description = [[Some players have problems with the function Wherigo.VectorToPoint() and Wherigo.TranslatePoint(). With this functions it is possible to calculate distance and bearing between two points and to move a point. A point, which distance and bearing to another point is calculated to the first function and translated by the second function should result in the second point.
 
 All calculations are from point lat=48, lon=0.
@@ -3104,7 +3104,7 @@ function objStandbycheck:OncmdStop(target)
 	objTimerStandbyTest:Stop()
 	objStandbycheck.Commands.cmdStop.Enabled = false
 	objStandbycheck.Commands.cmdStart.Enabled = true
-	objStandbycheck.Name = "Standbycheck"
+	objStandbycheck.Name = "Standbycheck (0/2)"
 	objStandbycheck.Description = "Lets check, how your player reacts in standby mode. Start the timer and switch the device to standby. Every 5 seconds you should hear a sound. The counter increases its value everytime the sound is being played. If sound and counter will be stopped your player sleeps in standby mode. Perhaps you have to call the item again, to see the progress. Besides the name of the item will be changed each time the sound is being played. Standbycheck.NumberOfLoops"
 	_Urwigo.MessageBox{
 		Text = "The Standbycheck was stopped.", 

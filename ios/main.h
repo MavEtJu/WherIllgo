@@ -12,6 +12,9 @@
 #import <UIKit/UIKit.h>
 #import <AVKit/AVKit.h>
 
+#import "UISmallTableViewCell.h"
+#import "UIDefaultTableViewCell.h"
+
 #import "WIG.h"
 
 #import "MapViewController.h"
@@ -28,6 +31,8 @@
 #import "YouSeesViewController.h"
 #import "YouSeesTableViewCell.h"
 
+#import "CharacterViewController.h"
+
 #import "TasksViewController.h"
 #import "TasksTableViewCell.h"
 #import "TaskViewController.h"
@@ -36,8 +41,6 @@
 #import "ItemHeaderTableViewCell.h"
 
 #import "AppDelegate.h"
-
-#define XIB_UITABLEVIEWCELL @"UITableViewCell"
 
 extern YouSeesViewController *youSeesViewController;
 extern LocationsViewController *locationsViewController;

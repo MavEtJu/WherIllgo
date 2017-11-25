@@ -27,6 +27,9 @@ WIG *wig = nil;
     self = [super init];
 
     self.ctx = [LuaContext new];
+    [self.ctx setObject:@"Geocube" forKeyedSubscript:@"_G.Env.Platform"];
+
+    [self.ctx createEnv];
 
     return self;
 }
@@ -92,6 +95,72 @@ WIG *wig = nil;
 /*
  * Interaction with objects
  */
+
+// Cartridge
+
+- (WIGZCartridge *)cartridge
+{
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+
+    WIGZCartridge *cartridge = [[WIGZCartridge alloc] init];
+    [cartridge importFromDict:[g objectForKey:@"cart"]];
+    cartridge.luaObject = @"cart";
+
+    return cartridge;
+}
+
+// WIGZObject
+- (NSArray<WIGZObject *> *)arrayZObjects
+{
+    NSMutableArray *zs = [NSMutableArray arrayWithCapacity:10];
+
+    NSArray *zobjects = [[[self.ctx globalVar:@"_G"] objectForKey:@"cart"] objectForKey:@"AllZObjects"];
+    [zobjects enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull dict, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([dict isKindOfClass:[NSDictionary class]] == NO)
+            return;
+
+        NSString *type = [dict objectForKey:@"_classname"];
+        WIGZObject *object;
+        if ([type isEqualToString:@"ZTask"] == YES)
+            object = [[WIGZTask alloc] init];
+        else if ([type isEqualToString:@"ZItem"] == YES)
+            object = [[WIGZItem alloc] init];
+        else if ([type isEqualToString:@"Zone"] == YES)
+            object = [[WIGZone alloc] init];
+        else if ([type isEqualToString:@"ZCharacter"] == YES)
+            object = [[WIGZCharacter alloc] init];
+        else if ([type isEqualToString:@"ZMedia"] == YES)
+            object = [[WIGZCharacter alloc] init];
+        else if ([type isEqualToString:@"ZTimer"] == YES)
+            object = [[WIGZTimer alloc] init];
+        else if ([type isEqualToString:@"ZInput"] == YES)
+            object = [[WIGZInput alloc] init];
+        else
+            object = [[WIGZObject alloc] init];
+        [object importFromDict:dict];
+
+        [zs addObject:object];
+    }];
+
+    return zs;
+}
+
+- (WIGZObject *)zobjectByObjIndex:(NSNumber *)objIndex
+{
+    NSArray<WIGZObject *> *objs = [self arrayZObjects];
+
+    __block WIGZObject *o;
+    [objs enumerateObjectsUsingBlock:^(WIGZObject * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj.objIndex isEqualToNumber:objIndex] == YES) {
+            o = obj;
+            *stop = YES;
+        }
+    }];
+
+    return o;
+}
+
+// WIGZTasks
 - (NSDictionary<NSString *, WIGZTask *> *)dictionaryZTasks
 {
     NSMutableDictionary *zs = [NSMutableDictionary dictionaryWithCapacity:10];
@@ -131,6 +200,7 @@ WIG *wig = nil;
     return zs;
 }
 
+// Zones
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZones
 {
     NSMutableDictionary<NSString *, WIGZone *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
@@ -160,6 +230,44 @@ WIG *wig = nil;
     return [zones allValues];
 }
 
+- (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone
+{
+    NSMutableDictionary<NSString *, WIGZone *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSDictionary *dict = obj;
+        NSString *type = [dict objectForKey:@"_classname"];
+        if ([type isEqualToString:@"Zone"] == NO)
+            return;
+        id container = [dict objectForKey:@"Container"];
+        if ([container isKindOfClass:[NSNumber class]] == YES)
+            return;
+        NSString *containerType = [container objectForKey:@"_classname"];
+        if ([containerType isEqualToString:@"Zone"] == NO)
+            return;
+        NSString *_id = [container objectForKey:@"Id"];
+        if ([_id isEqualToString:zone._id] == NO)
+            return;
+
+        WIGZone *zone = [[WIGZone alloc] init];
+        [zone importFromDict:dict];
+        zone.luaObject = key;
+
+        [zs setObject:zone forKey:key];
+    }];
+
+    return zs;
+}
+
+- (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone
+{
+    return [[self dictionaryZonesInZone:zone] allValues];
+}
+
+// ZItems
 - (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItems
 {
     NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
@@ -228,6 +336,41 @@ WIG *wig = nil;
     return [[self dictionaryZItemsInZone:zone] allValues];
 }
 
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory
+{
+    NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
+
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSDictionary *dict = obj;
+        NSString *type = [dict objectForKey:@"_classname"];
+        if ([type isEqualToString:@"ZItem"] == NO)
+            return;
+        id container = [dict objectForKey:@"Container"];
+        if ([container isKindOfClass:[NSNumber class]] == YES)
+            return;
+        NSString *containerType = [container objectForKey:@"_classname"];
+        if ([containerType isEqualToString:@"ZCharacter"] == NO)
+            return;
+
+        WIGZItem *item = [[WIGZItem alloc] init];
+        [item importFromDict:dict];
+        item.luaObject = key;
+
+        [zs setObject:item forKey:key];
+    }];
+
+    return zs;
+}
+
+- (NSArray<WIGZItem *> *)arrayZItemsInInventory
+{
+    NSDictionary<NSString *, WIGZItem *> *zones = [self dictionaryZItemsInInventory];
+    return [zones allValues];
+}
+
 - (WIGZItem *)zitemForId:(NSString *)_id
 {
     WIGZItem *item = [[WIGZItem alloc] init];
@@ -248,7 +391,7 @@ WIG *wig = nil;
     return item;
 }
 
-- (WIGZItem *)zitemByObjectId:(NSNumber *)objIndex
+- (WIGZItem *)zitemByObjIndex:(NSNumber *)objIndex
 {
     NSArray<WIGZItem *> *items = [self arrayZItems];
     __block WIGZItem *item;
@@ -261,42 +404,7 @@ WIG *wig = nil;
     return item;
 }
 
-- (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone
-{
-    NSMutableDictionary<NSString *, WIGZone *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
-
-    NSDictionary *g = [self.ctx globalVar:@"_G"];
-    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[NSDictionary class]] == NO)
-            return;
-        NSDictionary *dict = obj;
-        NSString *type = [dict objectForKey:@"_classname"];
-        if ([type isEqualToString:@"Zone"] == NO)
-            return;
-        id container = [dict objectForKey:@"Container"];
-        if ([container isKindOfClass:[NSNumber class]] == YES)
-            return;
-        NSString *containerType = [container objectForKey:@"_classname"];
-        if ([containerType isEqualToString:@"Zone"] == NO)
-            return;
-        NSString *_id = [container objectForKey:@"Id"];
-        if ([_id isEqualToString:zone._id] == NO)
-            return;
-
-        WIGZone *zone = [[WIGZone alloc] init];
-        [zone importFromDict:dict];
-        zone.luaObject = key;
-
-        [zs setObject:zone forKey:key];
-    }];
-
-    return zs;
-}
-
-- (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone
-{
-    return [[self dictionaryZonesInZone:zone] allValues];
-}
+// ZCharacters
 
 - (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryZCharactersInZone:(WIGZone *)zone
 {
@@ -335,51 +443,7 @@ WIG *wig = nil;
     return [[self dictionaryZCharactersInZone:zone] allValues];
 }
 
-- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory
-{
-    NSMutableDictionary<NSString *, WIGZItem *> *zs = [NSMutableDictionary dictionaryWithCapacity:10];
-
-    NSDictionary *g = [self.ctx globalVar:@"_G"];
-    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[NSDictionary class]] == NO)
-            return;
-        NSDictionary *dict = obj;
-        NSString *type = [dict objectForKey:@"_classname"];
-        if ([type isEqualToString:@"ZItem"] == NO)
-            return;
-        id container = [dict objectForKey:@"Container"];
-        if ([container isKindOfClass:[NSNumber class]] == YES)
-            return;
-        NSString *containerType = [container objectForKey:@"_classname"];
-        if ([containerType isEqualToString:@"ZCharacter"] == NO)
-            return;
-
-        WIGZItem *item = [[WIGZItem alloc] init];
-        [item importFromDict:dict];
-        item.luaObject = key;
-
-        [zs setObject:item forKey:key];
-    }];
-
-    return zs;
-}
-
-- (NSArray<WIGZItem *> *)arrayZItemsInInventory
-{
-    NSDictionary<NSString *, WIGZItem *> *zones = [self dictionaryZItemsInInventory];
-    return [zones allValues];
-}
-
-- (WIGZCartridge *)cartridge
-{
-    NSDictionary *g = [self.ctx globalVar:@"_G"];
-
-    WIGZCartridge *cartridge = [[WIGZCartridge alloc] init];
-    [cartridge importFromDict:[g objectForKey:@"cart"]];
-    cartridge.luaObject = @"cart";
-
-    return cartridge;
-}
+// ZMedias
 
 - (NSArray<WIGZMedia *> *)arrayZMedias
 {

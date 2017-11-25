@@ -32,6 +32,8 @@
 #import "WIGZMediaResource.h"
 #import "WIGZonePoint.h"
 #import "WIGZTask.h"
+#import "WIGZTimer.h"
+#import "WIGZInput.h"
 
 #import "WIGUI.h"
 
@@ -46,32 +48,38 @@
 - (void)updateLocation;
 
 /* Various ZObjects */
-- (NSArray<WIGZTask *> *)arrayZTasks;
+- (WIGZCartridge *)cartridge;
+
+- (NSArray<WIGZObject *> *)arrayZObjects;
+- (WIGZObject *)zobjectByObjIndex:(NSNumber *)objIndex;
+
 - (NSDictionary<NSString *, WIGZTask *> *)dictionaryZTasks;
+- (NSArray<WIGZTask *> *)arrayZTasks;
 
-- (NSArray<WIGZone *> *)arrayZones;
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZones;
-- (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone;
+- (NSArray<WIGZone *> *)arrayZones;
 - (NSDictionary<NSString *, WIGZone *> *)dictionaryZonesInZone:(WIGZone *)zone;
+- (NSArray<WIGZone *> *)arrayZonesInZone:(WIGZone *)zone;
 
-- (NSArray<WIGZItem *> *)arrayZItemsInInventory;
-- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory;
-- (NSArray<WIGZItem *> *)arrayZItemsInZone:(WIGZone *)zone;
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItems;
+- (NSArray<WIGZItem *> *)arrayZItems;
 - (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInZone:(WIGZone *)zone;
+- (NSArray<WIGZItem *> *)arrayZItemsInZone:(WIGZone *)zone;
+- (NSDictionary<NSString *, WIGZItem *> *)dictionaryZItemsInInventory;
+- (NSArray<WIGZItem *> *)arrayZItemsInInventory;
 - (WIGZItem *)zitemForId:(NSString *)_id;
-- (WIGZItem *)zitemByObjectId:(NSNumber *)objid;
+- (WIGZItem *)zitemByObjIndex:(NSNumber *)objid;
 
-- (NSArray<WIGZCharacter *> *)arrayZCharactersInZone:(WIGZone *)zone;
 - (NSDictionary<NSString *, WIGZCharacter *> *)dictionaryZCharactersInZone:(WIGZone *)zone;
+- (NSArray<WIGZCharacter *> *)arrayZCharactersInZone:(WIGZone *)zone;
 
 - (NSArray<WIGZMedia *> *)arrayZMedias;
 - (WIGZMedia *)zmediaByObjIndex:(NSNumber *)objIndex;
 
 /* Interface to WIG-link */
+- (void)WIGOnClick:(NSString *)name;
 - (void)WIGMessageBoxCallback:(NSString *)text;
 - (void)WIGGetInputResponse:(NSString *)text;
-
-- (void)WIGOnClick:(NSString *)name;
 
 @end
 

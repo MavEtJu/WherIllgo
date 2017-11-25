@@ -73,7 +73,6 @@
 		E8A84B971FC3C09300FF6A06 /* WIG-link.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BD061FC2F3C800B395C5 /* WIG-link.m */; };
 		E8A84B981FC3C09300FF6A06 /* LuaExportMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */; };
 		E8A84B991FC3C09300FF6A06 /* LuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E866BCED1FC2821000B395C5 /* LuaContext.m */; };
-		E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF31FC285E900B395C5 /* lenvlib.c */; };
 		E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */ = {isa = PBXBuildFile; fileRef = E866BCF21FC285E900B395C5 /* lwiginternal.c */; };
 		E8A84BA11FC43C2300FF6A06 /* LocationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84B9F1FC43C2300FF6A06 /* LocationsTableViewCell.m */; };
 		E8A84BA21FC43C2300FF6A06 /* LocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A84BA01FC43C2300FF6A06 /* LocationsTableViewCell.xib */; };
@@ -118,6 +117,11 @@
 		E8A84BF71FC4E49D00FF6A06 /* WIGZone.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */; };
 		E8A84BFA1FC4E4A900FF6A06 /* WIGZonePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */; };
 		E8A84BFD1FC4E4B600FF6A06 /* WIGZMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */; };
+		E8B390B61FC9430A00D73748 /* WIGZTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B390B51FC9430A00D73748 /* WIGZTimer.m */; };
+		E8B390B91FC9442200D73748 /* WIGZInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B390B81FC9442200D73748 /* WIGZInput.m */; };
+		E8B390BD1FC94A2A00D73748 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B390BC1FC94A2A00D73748 /* CharacterViewController.m */; };
+		E8B390C11FC9703200D73748 /* UIDefaultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B390C01FC9703200D73748 /* UIDefaultTableViewCell.m */; };
+		E8B390C41FC9703F00D73748 /* UISmallTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B390C31FC9703F00D73748 /* UISmallTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,9 +162,7 @@
 		E866BCEB1FC2821000B395C5 /* LuaContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaContext.h; sourceTree = "<group>"; };
 		E866BCEC1FC2821000B395C5 /* LuaExportMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaExportMetaData.h; sourceTree = "<group>"; };
 		E866BCED1FC2821000B395C5 /* LuaContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaContext.m; sourceTree = "<group>"; };
-		E866BCF11FC285E900B395C5 /* lenvlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lenvlib.h; sourceTree = "<group>"; };
 		E866BCF21FC285E900B395C5 /* lwiginternal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lwiginternal.c; sourceTree = "<group>"; };
-		E866BCF31FC285E900B395C5 /* lenvlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lenvlib.c; sourceTree = "<group>"; };
 		E866BCF41FC285E900B395C5 /* lwiginternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lwiginternal.h; sourceTree = "<group>"; };
 		E866BCF71FC2883700B395C5 /* ohm.luac */ = {isa = PBXFileReference; lastKnownFileType = file; path = ohm.luac; sourceTree = "<group>"; };
 		E866BCF81FC2883700B395C5 /* ohm.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ohm.lua; sourceTree = "<group>"; };
@@ -293,6 +295,16 @@
 		E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZonePoint.m; sourceTree = "<group>"; };
 		E8A84BFB1FC4E4B600FF6A06 /* WIGZMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZMedia.h; sourceTree = "<group>"; };
 		E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZMedia.m; sourceTree = "<group>"; };
+		E8B390B41FC9430A00D73748 /* WIGZTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZTimer.h; sourceTree = "<group>"; };
+		E8B390B51FC9430A00D73748 /* WIGZTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZTimer.m; sourceTree = "<group>"; };
+		E8B390B71FC9442200D73748 /* WIGZInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIGZInput.h; sourceTree = "<group>"; };
+		E8B390B81FC9442200D73748 /* WIGZInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIGZInput.m; sourceTree = "<group>"; };
+		E8B390BB1FC94A2A00D73748 /* CharacterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
+		E8B390BC1FC94A2A00D73748 /* CharacterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
+		E8B390BF1FC9703200D73748 /* UIDefaultTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDefaultTableViewCell.h; sourceTree = "<group>"; };
+		E8B390C01FC9703200D73748 /* UIDefaultTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDefaultTableViewCell.m; sourceTree = "<group>"; };
+		E8B390C21FC9703F00D73748 /* UISmallTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISmallTableViewCell.h; sourceTree = "<group>"; };
+		E8B390C31FC9703F00D73748 /* UISmallTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISmallTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +387,7 @@
 		E845C8981FC6916E00809B28 /* Singles viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				E8B390BA1FC94A0D00D73748 /* Character */,
 				E845C89B1FC6D79300809B28 /* Task */,
 				E81A56811FC62AB4008E9873 /* Item */,
 				E81A56691FC57E4F008E9873 /* Zone */,
@@ -416,26 +429,30 @@
 			children = (
 				E8A84BE61FC4DF7C00FF6A06 /* WIGZObject.h */,
 				E8A84BE71FC4DF7C00FF6A06 /* WIGZObject.m */,
-				E8A84BE91FC4E46500FF6A06 /* WIGZCharacter.h */,
-				E8A84BEA1FC4E46500FF6A06 /* WIGZCharacter.m */,
 				E8A84BEC1FC4E47700FF6A06 /* WIGZCartridge.h */,
 				E8A84BED1FC4E47700FF6A06 /* WIGZCartridge.m */,
+				E8A84BE91FC4E46500FF6A06 /* WIGZCharacter.h */,
+				E8A84BEA1FC4E46500FF6A06 /* WIGZCharacter.m */,
 				E8A84BF21FC4E48F00FF6A06 /* WIGZCommand.h */,
 				E8A84BF31FC4E48F00FF6A06 /* WIGZCommand.m */,
 				E8A84BEF1FC4E48400FF6A06 /* WIGDistance.h */,
 				E8A84BF01FC4E48400FF6A06 /* WIGDistance.m */,
-				E8A84BF51FC4E49D00FF6A06 /* WIGZone.h */,
-				E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */,
+				E8B390B71FC9442200D73748 /* WIGZInput.h */,
+				E8B390B81FC9442200D73748 /* WIGZInput.m */,
 				E81A56871FC63E78008E9873 /* WIGZItem.h */,
 				E81A56881FC63E78008E9873 /* WIGZItem.m */,
-				E8A84BF81FC4E4A900FF6A06 /* WIGZonePoint.h */,
-				E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */,
-				E81A56651FC5272B008E9873 /* WIGZTask.h */,
-				E81A56661FC5272B008E9873 /* WIGZTask.m */,
 				E8A84BFB1FC4E4B600FF6A06 /* WIGZMedia.h */,
 				E8A84BFC1FC4E4B600FF6A06 /* WIGZMedia.m */,
 				E8503E401FC4F13100AE6ACC /* WIGZMediaResource.h */,
 				E8503E411FC4F13100AE6ACC /* WIGZMediaResource.m */,
+				E81A56651FC5272B008E9873 /* WIGZTask.h */,
+				E81A56661FC5272B008E9873 /* WIGZTask.m */,
+				E8B390B41FC9430A00D73748 /* WIGZTimer.h */,
+				E8B390B51FC9430A00D73748 /* WIGZTimer.m */,
+				E8A84BF51FC4E49D00FF6A06 /* WIGZone.h */,
+				E8A84BF61FC4E49D00FF6A06 /* WIGZone.m */,
+				E8A84BF81FC4E4A900FF6A06 /* WIGZonePoint.h */,
+				E8A84BF91FC4E4A900FF6A06 /* WIGZonePoint.m */,
 			);
 			path = "WIG Objects";
 			sourceTree = "<group>";
@@ -468,6 +485,7 @@
 		E887F4F71FC3B70C00DC5BE7 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				E8B390BE1FC9700F00D73748 /* UI Related */,
 				E845C8991FC6918400809B28 /* Lists viewcontrollers */,
 				E845C8981FC6916E00809B28 /* Singles viewcontrollers */,
 				E887F5181FC3B86700DC5BE7 /* AppDelegate.h */,
@@ -568,8 +586,6 @@
 		E88E4DF91FC27AFB00E784F9 /* Wherigo LUA */ = {
 			isa = PBXGroup;
 			children = (
-				E866BCF11FC285E900B395C5 /* lenvlib.h */,
-				E866BCF31FC285E900B395C5 /* lenvlib.c */,
 				E866BCF41FC285E900B395C5 /* lwiginternal.h */,
 				E866BCF21FC285E900B395C5 /* lwiginternal.c */,
 			);
@@ -617,14 +633,34 @@
 			path = testsuite;
 			sourceTree = "<group>";
 		};
+		E8B390BA1FC94A0D00D73748 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				E8B390BB1FC94A2A00D73748 /* CharacterViewController.h */,
+				E8B390BC1FC94A2A00D73748 /* CharacterViewController.m */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		E8B390BE1FC9700F00D73748 /* UI Related */ = {
+			isa = PBXGroup;
+			children = (
+				E8B390BF1FC9703200D73748 /* UIDefaultTableViewCell.h */,
+				E8B390C01FC9703200D73748 /* UIDefaultTableViewCell.m */,
+				E8B390C21FC9703F00D73748 /* UISmallTableViewCell.h */,
+				E8B390C31FC9703F00D73748 /* UISmallTableViewCell.m */,
+			);
+			path = "UI Related";
+			sourceTree = "<group>";
+		};
 		E8F182151FC393B400CC85C4 /* Lua Library */ = {
 			isa = PBXGroup;
 			children = (
-				E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */,
 				E866BCEC1FC2821000B395C5 /* LuaExportMetaData.h */,
+				E866BCEA1FC2821000B395C5 /* LuaExportMetaData.m */,
 				E866BCE91FC2820F00B395C5 /* LuaExport.h */,
-				E866BCED1FC2821000B395C5 /* LuaContext.m */,
 				E866BCEB1FC2821000B395C5 /* LuaContext.h */,
+				E866BCED1FC2821000B395C5 /* LuaContext.m */,
 			);
 			path = "Lua Library";
 			sourceTree = "<group>";
@@ -743,7 +779,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8A84B9A1FC3C0EE00FF6A06 /* lenvlib.c in Sources */,
 				E8A84B9B1FC3C0EE00FF6A06 /* lwiginternal.c in Sources */,
 				E81A56631FC524B9008E9873 /* TasksTableViewCell.m in Sources */,
 				E8A84B961FC3C09300FF6A06 /* WIG.m in Sources */,
@@ -757,6 +792,7 @@
 				E8A84B611FC3C04F00FF6A06 /* lapi.c in Sources */,
 				E8A84BFA1FC4E4A900FF6A06 /* WIGZonePoint.m in Sources */,
 				E8A84B631FC3C04F00FF6A06 /* lauxlib.c in Sources */,
+				E8B390B91FC9442200D73748 /* WIGZInput.m in Sources */,
 				E8A84B651FC3C04F00FF6A06 /* lbaselib.c in Sources */,
 				E8A84B661FC3C04F00FF6A06 /* lcode.c in Sources */,
 				E8A84BF71FC4E49D00FF6A06 /* WIGZone.m in Sources */,
@@ -770,8 +806,10 @@
 				E81A566C1FC57E6F008E9873 /* ZoneViewController.m in Sources */,
 				E8A84B701FC3C04F00FF6A06 /* lgc.c in Sources */,
 				E8A84B721FC3C04F00FF6A06 /* linit.c in Sources */,
+				E8B390BD1FC94A2A00D73748 /* CharacterViewController.m in Sources */,
 				E8A84B731FC3C04F00FF6A06 /* liolib.c in Sources */,
 				E8A84B741FC3C04F00FF6A06 /* llex.c in Sources */,
+				E8B390C41FC9703F00D73748 /* UISmallTableViewCell.m in Sources */,
 				E8A84B771FC3C05000FF6A06 /* lmathlib.c in Sources */,
 				E8A84B781FC3C05000FF6A06 /* lmem.c in Sources */,
 				E8A84B7A1FC3C05000FF6A06 /* loadlib.c in Sources */,
@@ -801,8 +839,10 @@
 				E887F51F1FC3B86800DC5BE7 /* main.m in Sources */,
 				E8A84BFD1FC4E4B600FF6A06 /* WIGZMedia.m in Sources */,
 				E887F51E1FC3B86800DC5BE7 /* TasksViewController.m in Sources */,
+				E8B390C11FC9703200D73748 /* UIDefaultTableViewCell.m in Sources */,
 				E887F5231FC3B86800DC5BE7 /* LocationsViewController.m in Sources */,
 				E8A84BE81FC4DF7C00FF6A06 /* WIGZObject.m in Sources */,
+				E8B390B61FC9430A00D73748 /* WIGZTimer.m in Sources */,
 				E887F5211FC3B86800DC5BE7 /* YouSeesViewController.m in Sources */,
 				E887F5201FC3B86800DC5BE7 /* AppDelegate.m in Sources */,
 				E887F5241FC3B86800DC5BE7 /* InventoryViewController.m in Sources */,

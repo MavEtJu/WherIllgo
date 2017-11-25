@@ -29,7 +29,8 @@ enum {
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:XIB_UITABLEVIEWCELL];
+    [self.tableView registerClass:[UIDefaultTableViewCell class] forCellReuseIdentifier:XIB_UIDEFAULTTABLEVIEWCELL];
+    [self.tableView registerClass:[UISmallTableViewCell class] forCellReuseIdentifier:XIB_UISMALLTABLEVIEWCELL];
 }
 
 #pragma mark - Table view data source
@@ -69,7 +70,7 @@ enum {
         case SECTION_HEADER: {
             switch (indexPath.row) {
                 case HEADER_NAME: {
-                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UIDEFAULTTABLEVIEWCELL forIndexPath:indexPath];
 
                     cell.textLabel.text = self.task.name;
 
@@ -77,7 +78,7 @@ enum {
                     break;
                 }
                 case HEADER_MEDIA: {
-                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UIDEFAULTTABLEVIEWCELL forIndexPath:indexPath];
 
                     cell.textLabel.text = self.task.media.altText;
 
@@ -85,11 +86,9 @@ enum {
                     break;
                 }
                 case HEADER_DESCRIPTION: {
-                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UISMALLTABLEVIEWCELL forIndexPath:indexPath];
 
                     cell.textLabel.text = self.task.description_;
-                    cell.textLabel.numberOfLines = 0;
-                    cell.textLabel.font = [UIFont systemFontOfSize:12];
 
                     c = cell;
                     break;
@@ -101,10 +100,7 @@ enum {
         case SECTION_DEBUG: {
             switch (indexPath.row) {
                 case 0: {
-                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
-
-                    cell.textLabel.font = [UIFont systemFontOfSize:12];
-                    cell.textLabel.numberOfLines = 0;
+                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UISMALLTABLEVIEWCELL forIndexPath:indexPath];
 
                     NSMutableString *s = [NSMutableString stringWithString:@""];
                     [s appendFormat:@"Active: %d\n", self.task.active];

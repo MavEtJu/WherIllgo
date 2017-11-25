@@ -87,4 +87,6 @@ typedef NS_ENUM(NSUInteger, LuaErrorCode) {
 - (void)setObject:(id)object forKeyedSubscript:(NSObject <NSCopying> *)key;
 - (id)globalVar:(id)key;
 
+- (void)createEnv;
+
 @end

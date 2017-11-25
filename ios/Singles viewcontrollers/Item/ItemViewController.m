@@ -30,7 +30,8 @@ enum {
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:XIB_UITABLEVIEWCELL];
+    [self.tableView registerClass:[UIDefaultTableViewCell class] forCellReuseIdentifier:XIB_UIDEFAULTTABLEVIEWCELL];
+    [self.tableView registerClass:[UISmallTableViewCell class] forCellReuseIdentifier:XIB_UISMALLTABLEVIEWCELL];
 }
 
 #pragma mark - Table view data source
@@ -74,7 +75,7 @@ enum {
         case SECTION_HEADER: {
             switch (indexPath.row) {
                 case HEADER_NAME: {
-                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UIDEFAULTTABLEVIEWCELL forIndexPath:indexPath];
 
                     cell.textLabel.text = self.item.name;
 
@@ -82,17 +83,15 @@ enum {
                     break;
                 }
                 case HEADER_DESCRIPTION: {
-                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UISMALLTABLEVIEWCELL forIndexPath:indexPath];
 
                     cell.textLabel.text = self.item.description_;
-                    cell.textLabel.font = [UIFont systemFontOfSize:12];
-                    cell.textLabel.numberOfLines = 0;
 
                     c = cell;
                     break;
                 }
                 case HEADER_MEDIA: {
-                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+                    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UIDEFAULTTABLEVIEWCELL forIndexPath:indexPath];
 
                     cell.textLabel.text = self.item.media.altText;
 
@@ -103,7 +102,7 @@ enum {
             break;
         }
         case SECTION_COMMANDS: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:XIB_UIDEFAULTTABLEVIEWCELL forIndexPath:indexPath];
             WIGZCommand *command = [self.item.commandsArray objectAtIndex:indexPath.row];
 
             cell.textLabel.text = command.text;
@@ -122,10 +121,7 @@ enum {
         case SECTION_DEBUG: {
             switch (indexPath.row) {
                 case 0: {
-                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UITABLEVIEWCELL forIndexPath:indexPath];
-
-                    cell.textLabel.font = [UIFont systemFontOfSize:12];
-                    cell.textLabel.numberOfLines = 0;
+                    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:XIB_UISMALLTABLEVIEWCELL forIndexPath:indexPath];
 
                     NSMutableString *s = [NSMutableString stringWithString:@""];
                     [s appendFormat:@"Visible: %d\n", self.item.visible];

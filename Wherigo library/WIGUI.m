@@ -167,14 +167,59 @@
         while ([inventoryViewController.navigationController popViewControllerAnimated:NO] != nil)
             ;
         // Do something with item
-        WIGZItem *i = [wig zitemByObjectId:item];
+        WIGZObject *o = [wig zobjectByObjIndex:item];
 
-        ItemViewController *newController = [[ItemViewController alloc] init];
-        newController.title = @"Item";
-        newController.item = i;
-        [youSeesViewController.navigationController pushViewController:newController animated:YES];
+        if ([o isKindOfClass:[WIGZTask class]] == YES) {
+            tbc.selectedIndex = TABBAR_TASKS;
+            while ([tasksViewController.navigationController popViewControllerAnimated:NO] != nil)
+                ;
 
-        [wig WIGOnClick:i.luaObject];
+            WIGZTask *task = (WIGZTask *)o;
+            TaskViewController *newController = [[TaskViewController alloc] init];
+            newController.title = @"Task";
+            newController.task = task;
+            [tasksViewController.navigationController pushViewController:newController animated:YES];
+
+            [wig WIGOnClick:task.luaObject];
+        } else if ([o isKindOfClass:[WIGZItem class]] == YES) {
+            tbc.selectedIndex = TABBAR_YOUSEE;
+            while ([inventoryViewController.navigationController popViewControllerAnimated:NO] != nil)
+                ;
+
+            WIGZItem *item = (WIGZItem *)o;
+            ItemViewController *newController = [[ItemViewController alloc] init];
+            newController.title = @"Item";
+            newController.item = item;
+            [youSeesViewController.navigationController pushViewController:newController animated:YES];
+
+            [wig WIGOnClick:item.luaObject];
+        } else if ([o isKindOfClass:[WIGZCharacter class]] == YES) {
+            tbc.selectedIndex = TABBAR_YOUSEE;
+            while ([youSeesViewController.navigationController popViewControllerAnimated:NO] != nil)
+                ;
+
+            WIGZCharacter *character = (WIGZCharacter *)o;
+            CharacterViewController *newController = [[CharacterViewController alloc] init];
+            newController.title = @"Character";
+            newController.character = character;
+            [youSeesViewController.navigationController pushViewController:newController animated:YES];
+
+            [wig WIGOnClick:character.luaObject];
+        } else if ([o isKindOfClass:[WIGZone class]] == YES) {
+            tbc.selectedIndex = TABBAR_LOCATIONS;
+            while ([locationsViewController.navigationController popViewControllerAnimated:NO] != nil)
+                ;
+
+            WIGZone *zone = (WIGZone *)o;
+            ZoneViewController *newController = [[ZoneViewController alloc] init];
+            newController.title = @"Zone";
+            newController.zone = zone;
+            [locationsViewController.navigationController pushViewController:newController animated:YES];
+
+            [wig WIGOnClick:zone.luaObject];
+        } else {
+            NSAssert(FALSE, @"foo");
+        }
     } else {
         NSAssert(FALSE, @"foo");
     }
