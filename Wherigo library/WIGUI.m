@@ -163,10 +163,6 @@
         while ([tasksViewController.navigationController popViewControllerAnimated:NO] != nil)
             ;
     } else if ([screen isEqualToString:@"detail"] == YES) {
-        tbc.selectedIndex = TABBAR_YOUSEE;
-        while ([inventoryViewController.navigationController popViewControllerAnimated:NO] != nil)
-            ;
-        // Do something with item
         WIGZObject *o = [wig zobjectByObjIndex:item];
 
         if ([o isKindOfClass:[WIGZTask class]] == YES) {
