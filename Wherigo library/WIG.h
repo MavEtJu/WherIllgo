@@ -48,6 +48,8 @@
 - (void)updateLocation;
 
 /* Various ZObjects */
+- (NSString *)luaObjectById:(NSString *)_id;
+
 - (WIGZCartridge *)cartridge;
 
 - (NSArray<WIGZObject *> *)arrayZObjects;

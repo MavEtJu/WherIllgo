@@ -96,6 +96,28 @@ WIG *wig = nil;
  * Interaction with objects
  */
 
+- (NSString *)luaObjectById:(NSString *)_id
+{
+    NSDictionary *g = [self.ctx globalVar:@"_G"];
+
+    __block NSString *objectName;
+
+    [g enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSDictionary *dict = (NSDictionary *)obj;
+        NSString *objName = [dict objectForKey:@"Id"];
+        if ([objName isKindOfClass:[NSString class]] == NO)
+            return;
+        if ([objName isEqualToString:_id] == NO)
+            return;
+
+        objectName = key;
+    }];
+
+    return objectName;
+}
+
 // Cartridge
 
 - (WIGZCartridge *)cartridge
@@ -138,6 +160,7 @@ WIG *wig = nil;
         else
             object = [[WIGZObject alloc] init];
         [object importFromDict:dict];
+        object.luaObject = [self luaObjectById:object._id];
 
         [zs addObject:object];
     }];
@@ -147,17 +170,42 @@ WIG *wig = nil;
 
 - (WIGZObject *)zobjectByObjIndex:(NSNumber *)objIndex
 {
-    NSArray<WIGZObject *> *objs = [self arrayZObjects];
+    __block WIGZObject *object;
 
-    __block WIGZObject *o;
-    [objs enumerateObjectsUsingBlock:^(WIGZObject * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj.objIndex isEqualToNumber:objIndex] == YES) {
-            o = obj;
-            *stop = YES;
-        }
+    NSArray *zobjects = [[[self.ctx globalVar:@"_G"] objectForKey:@"cart"] objectForKey:@"AllZObjects"];
+    [zobjects enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull dict, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([dict isKindOfClass:[NSDictionary class]] == NO)
+            return;
+        NSNumber *oi = [dict objectForKey:@"ObjIndex"];
+        if ([oi isKindOfClass:[NSNumber class]] == NO)
+            return;
+        if ([oi isEqualToNumber:objIndex] == NO)
+            return;
+
+        NSString *type = [dict objectForKey:@"_classname"];
+        if ([type isEqualToString:@"ZTask"] == YES)
+            object = [[WIGZTask alloc] init];
+        else if ([type isEqualToString:@"ZItem"] == YES)
+            object = [[WIGZItem alloc] init];
+        else if ([type isEqualToString:@"Zone"] == YES)
+            object = [[WIGZone alloc] init];
+        else if ([type isEqualToString:@"ZCharacter"] == YES)
+            object = [[WIGZCharacter alloc] init];
+        else if ([type isEqualToString:@"ZMedia"] == YES)
+            object = [[WIGZCharacter alloc] init];
+        else if ([type isEqualToString:@"ZTimer"] == YES)
+            object = [[WIGZTimer alloc] init];
+        else if ([type isEqualToString:@"ZInput"] == YES)
+            object = [[WIGZInput alloc] init];
+        else
+            object = [[WIGZObject alloc] init];
+        [object importFromDict:dict];
+        object.luaObject = [self luaObjectById:object._id];
+
+        *stop = YES;
     }];
 
-    return o;
+    return object;
 }
 
 // WIGZTasks
@@ -455,6 +503,7 @@ WIG *wig = nil;
             return;
         WIGZMedia *media = [[WIGZMedia alloc] init];
         [media importFromDict:dict];
+        media.luaObject = [self luaObjectById:media._id];
         [medias addObject:media];
     }];
 
